@@ -3,5 +3,5 @@ import { apiConfig } from '../../muckrock';
 
 
 
-const url = apiConfig.BASE_URL;
+const url = "https://www.muckrock.com/api_v1/";
 
