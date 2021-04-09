@@ -8,3 +8,10 @@ Please register an account on Muckruck, and get your API KEY. Your token can be 
 ```
 headers = {'Authorization': 'Token %s' % token}
 ```
+```
+/frontend/muckrock.ts
+
+export const apiConfig  = {
+    "API_KEY": "YOUR API KEY HERE",
+}
+```
