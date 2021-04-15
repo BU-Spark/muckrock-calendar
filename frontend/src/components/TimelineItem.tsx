@@ -1,8 +1,6 @@
 import React from 'react';
 import { FOIAItems } from '../data';
 
-
-
 /**
  * This is a timeline item class, that builds the entire timeline
  * @param: a single foia request
@@ -12,7 +10,8 @@ import { FOIAItems } from '../data';
  *       2. Items need in each timelineItem: title? status? date submitted? etc
  */
 
-const TimelineItem = ( {data}: FOIAItems) => <div className="timeline-item">
+const TimelineItem = ( {data}: FOIAItems) => 
+<div className="timeline-item">
 <div className="timeline-item-content">
     <span className="tag" style={{ background: "#00FF00" }}>
         {data.status}
