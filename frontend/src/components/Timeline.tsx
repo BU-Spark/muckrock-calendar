@@ -2,7 +2,6 @@ import React from 'react';
 import TimelineItem from './TimelineItem';
 import { FOIA, timelineData } from '../data';
 
-
 /**
  * Timeline Class, that build up by TimelineItem
  * @returns 
