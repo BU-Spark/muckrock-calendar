@@ -1,8 +1,9 @@
 import React from 'react';
 import TimelineItem from './TimelineItem';
-import { FOIA, timelineData } from '../data';
+import { FOIA, timelineData } from '../../data';
 
-import {getFOIA} from '../service/foia'
+import {getFOIA} from '../../service/foia'
+import './Timeline.css'
 /**
  * Timeline Class, that build up by TimelineItem
  * @returns 

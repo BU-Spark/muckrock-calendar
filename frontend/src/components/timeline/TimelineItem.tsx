@@ -1,5 +1,5 @@
 import React from 'react';
-import { FOIAItems } from '../data';
+import { FOIAItems } from '../../data';
 
 /**
  * This is a timeline item class, that builds the entire timeline
