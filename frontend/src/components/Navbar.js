@@ -42,6 +42,13 @@ function Navbar() {
               </Link>
             </li>
           </ul>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <Link to='/calendar' className='nav-links' onClick={closeMobileMenu}>
+                Calendar
+              </Link>
+            </li>
+          </ul>
           {button && <Button buttonStyle='btn--outline'>LOGIN</Button>}
         </div>
       </nav>
