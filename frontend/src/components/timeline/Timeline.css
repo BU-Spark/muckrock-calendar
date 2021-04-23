@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -23,14 +19,14 @@ h1 {
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .timeline-container::after {
   background-color: #e17b77;
   content: "";
   position: absolute;
-  left: calc(50% - 2px);
+  left: calc(30% - 10px);
   width: 4px;
   height: 100%;
 }
@@ -47,8 +43,8 @@ h1 {
 .timeline-item:nth-child(odd) {
   align-self: flex-end;
   justify-content: flex-start;
-  padding-left: 30px;
-  /* padding-right: 0; */
+  padding-left: 50px;
+  padding-right: 0;
 }
 
 .timeline-item-content {
@@ -60,7 +56,7 @@ h1 {
   align-items: flex-end;
   padding: 15px;
   position: relative;
-  width: 400px;
+  /* width: 400px; */
   max-width: 70%;
   text-align: right;
 }
@@ -177,29 +173,4 @@ h1 {
   .timeline-item-content a::after {
     display: none;
   }
-}
-
-footer {
-  background-color: #222;
-  color: #fff;
-  font-size: 14px;
-  bottom: 0;
-  position: fixed;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 999;
-}
-
-footer p {
-  margin: 10px 0;
-}
-
-footer i {
-  color: red;
-}
-
-footer a {
-  color: #3c97bf;
-  text-decoration: none;
 }
