@@ -4,6 +4,7 @@ import { FOIA, timelineData } from '../../data';
 
 import {getFOIA} from '../../service/foia'
 import './Timeline.css'
+
 /**
  * Timeline Class, that build up by TimelineItem
  * @returns 
