@@ -45,7 +45,7 @@
 
 .slide-title {
     display: flex;
-    width: 50%;
+    width: 60%;
     margin: 20px auto 10px;
     justify-content: center;
     font-size: 35px;
@@ -53,7 +53,7 @@
 
 .slide-text {
     display: flex;
-    width: 50%;
+    width: 60%;
     margin: auto;
     justify-content: center;
     text-align: center;
@@ -75,7 +75,6 @@
     border-bottom: 10px solid transparent;
     opacity: .5;
     transition: opacity .6s ease;
-    display: flex
 }
 
 .carousel-indicators .active {
@@ -84,5 +83,5 @@
 
 .carousel {
     margin-top: 5vh;
-    height: 65vh
+    height: 70vh
 }
