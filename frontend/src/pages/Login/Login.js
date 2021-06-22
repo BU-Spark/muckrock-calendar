@@ -46,7 +46,7 @@ class Login extends React.Component {
                     <Button className="submit-button login-field" variant="primary" type="submit">Login</Button>
                 </form>
                 <div className="information">
-                    <Carousel interval="3500" slide={false} controls={false} fade={true} wrap={true}>
+                    <Carousel interval="3500" indicators={true} slide={false} controls={false} fade={true} wrap={true}>
                         <Carousel.Item className="carousel-slide">
                             <img
                                 className="slide-image"
