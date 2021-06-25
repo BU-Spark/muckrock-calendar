@@ -4,6 +4,7 @@ import Main from "./pages/main/Main";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from "./pages/Login/Login";
 import Home from "./pages/Home";
 
 const App = () => {
@@ -15,16 +16,18 @@ const App = () => {
     setsidebarOpen(false);
   };
   return (
-    <div className="container">
-      <Router>
-        <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-        <Switch>
-          <Route path="/" exact component={Main}></Route>
-          <Route path="/home" exact component={Home} />
-        </Switch>
-        <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
-      </Router>
-    </div>
+    // <div className="container">
+    //   <Router>
+    //     <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+    //     <Switch>
+    //       <Route path="/" exact component={Main}></Route>
+    //       <Route path="/home" exact component={Home} />
+    //     </Switch>
+    //     <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+    //   </Router>
+    // </div>
+    <Login />
+
   );
 };
 
