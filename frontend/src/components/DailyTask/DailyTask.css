@@ -1,0 +1,39 @@
+.day-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+}
+
+.task-group {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.tag {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.task {
+    padding-top: 8px;
+}
+
+.date {
+    color: white;
+    background: #3E80FF;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 15px;
+}
+
+.day {
+    color: #3E80FF;
+    margin-left: 18px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
