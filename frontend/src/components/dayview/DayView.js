@@ -7,11 +7,55 @@ class DayView extends React.Component {
         super(props)
         this.state = {
             month: '',
-            date: '',
+            date: 0,
             week: [],
-            tasks: []
+            tasks: [
+                {
+                    day: 'Fri',
+                    date: '09',
+                    detail: 'Submit request X',
+                    urgency: 'med'
+                },
+                {
+                    day: 'Fri',
+                    date: '09',
+                    detail: 'Submit request Y',
+                    urgency: 'low'
+                },
+                {
+                    day: 'Fri',
+                    date: '10',
+                    detail: 'Submit request Z',
+                    urgency: 'high'
+                },
+                {
+                    day: 'Sat',
+                    date: '10',
+                    detail: 'Submit request X',
+                    urgency: 'med'
+                },
+                {
+                    day: 'Sat',
+                    date: '11',
+                    detail: 'Submit request Y',
+                    urgency: 'low'
+                },
+                {
+                    day: 'Sat',
+                    date: '11',
+                    detail: 'Submit request Z',
+                    urgency: 'high'
+                },
+                {
+                    day: 'Sun',
+                    date: '12',
+                    detail: 'None',
+                    urgency: 'none'
+                }
+            ]
         }
         this.setTime = this.setTime.bind(this);
+        this.getTasks = this.getTasks.bind(this);
     }
 
     componentDidMount() {
@@ -30,44 +74,19 @@ class DayView extends React.Component {
         this.setState({month: month, date: date, week: week})
     }
 
+    getTasks() {
+        return (<DailyTask isToday={true} date={this.state.date} day="Wed" tasks={this.state.tasks.filter(task => task.date === this.state.date)}/>)
+    }
+
     render() {
+        const dailytasks = []
+        for (let i=0; i<7; i++) {
+            dailytasks.push(<DailyTask isToday={i===0} date={parseInt(this.state.date)+i} day={this.state.week[i]} tasks={this.state.tasks.filter(task => parseInt(task.date) === parseInt(this.state.date)+i)}/>)
+        }
+
         return(
             <div>
-                {}
-                <DailyTask isToday={true} day="Fri" date="15" tasks={[
-                {
-                    detail: 'Submit request X',
-                    urgency: 'med'
-                },
-                {
-                    detail: 'Submit request Y',
-                    urgency: 'low'
-                },
-                {
-                    detail: 'Submit request Z',
-                    urgency: 'high'
-                }                
-                ]}/>
-                <DailyTask isToday={false} day="Sat" date="16" tasks={[
-                {
-                    detail: 'Submit request X',
-                    urgency: 'med'
-                },
-                {
-                    detail: 'Submit request Y',
-                    urgency: 'low'
-                },
-                {
-                    detail: 'Submit request Z',
-                    urgency: 'high'
-                }                
-                ]}/>
-                <DailyTask isToday={false} day="Sun" date="17" tasks={[
-                    {
-                        detail: 'None',
-                        urgency: 'none'
-                    }
-                ]}/>
+                {dailytasks}
             </div>
         )
     }

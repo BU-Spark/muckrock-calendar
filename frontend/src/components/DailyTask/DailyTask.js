@@ -35,24 +35,33 @@ class DailyTask extends React.Component {
     }
 
     render() {
+        console.log(this.state.date)
         return(
-            <div className="day-group">
-                {this.state.isToday ? <p className="day day-today">{this.state.day}</p> : <p className="day day-other">{this.state.day}</p>}
-                <div className="task-group">
-                    {this.state.isToday ? <p className="date date-today">{this.state.date}</p> : <p className="date date-other">{this.state.date}</p>}
+            <div>
+                {
+                    this.state.isToday===null && this.state.tasks=== null && this.state.day === null && this.state.date === null ?
+                    null :
                     <div className="day-group">
-                        {   this.state.tasks.map((task) => {
-                                return (
-                                    <div className="task-group">
-                                        <div className="tag">{this.selectTag(task.urgency)}</div>
-                                        <div className="task">{task.detail}</div>
-                                    </div>
-                                )
-                            })
-                        }
+                    {this.state.isToday ? <p className="day day-today">{this.state.day}</p> : <p className="day day-other">{this.state.day}</p>}
+                        <div className="task-group">
+                            {this.state.isToday ? <p className="date date-today">{this.state.date}</p> : <p className="date date-other">{this.state.date}</p>}
+                            <div className="day-group">
+                                {   this.state.tasks.map((task) => {
+                                        return (
+                                            <div className="task-group">
+                                                <div className="tag">{this.selectTag(task.urgency)}</div>
+                                                <div className="task">{task.detail}</div>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
                     </div>
-                </div>
+                }
             </div>
+
+            
         )
     }
 }
