@@ -6,7 +6,7 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home";
-import DailyTask from "./components/DailyTask/DailyTask";
+import DayView from "./components/dayview/DayView";
 
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -28,7 +28,7 @@ const App = () => {
     //   </Router>
     // </div>
     // <Login />
-    <DailyTask/>
+    <DayView/>
   );
 };
 

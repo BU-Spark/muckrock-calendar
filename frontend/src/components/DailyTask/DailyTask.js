@@ -10,22 +10,10 @@ class DailyTask extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            day: "Fri",
-            date: "15",
-            tasks: [
-                {
-                    detail: 'Submit request X',
-                    urgency: 'med'
-                },
-                {
-                    detail: 'Submit request Y',
-                    urgency: 'low'
-                },
-                {
-                    detail: 'Submit request Z',
-                    urgency: 'high'
-                },                
-            ]
+            isToday: this.props.isToday,
+            day: this.props.day,
+            date: this.props.date,
+            tasks: this.props.tasks
         }
 
         this.selectTag = this.selectTag.bind(this);
@@ -49,12 +37,11 @@ class DailyTask extends React.Component {
     render() {
         return(
             <div className="day-group">
-                <p className="day">{this.state.day}</p>
+                {this.state.isToday ? <p className="day day-today">{this.state.day}</p> : <p className="day day-other">{this.state.day}</p>}
                 <div className="task-group">
-                    <div className="date">{this.state.date}</div>
+                    {this.state.isToday ? <p className="date date-today">{this.state.date}</p> : <p className="date date-other">{this.state.date}</p>}
                     <div className="day-group">
-                        {
-                            this.state.tasks.map((task) => {
+                        {   this.state.tasks.map((task) => {
                                 return (
                                     <div className="task-group">
                                         <div className="tag">{this.selectTag(task.urgency)}</div>
