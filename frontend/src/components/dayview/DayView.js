@@ -9,46 +9,47 @@ class DayView extends React.Component {
             month: '',
             date: 0,
             week: [],
+            loading: true,
             tasks: [
                 {
                     day: 'Fri',
-                    date: '09',
+                    date: '15',
                     detail: 'Submit request X',
                     urgency: 'med'
                 },
                 {
                     day: 'Fri',
-                    date: '09',
+                    date: '15',
                     detail: 'Submit request Y',
                     urgency: 'low'
                 },
                 {
                     day: 'Fri',
-                    date: '10',
+                    date: '15',
                     detail: 'Submit request Z',
                     urgency: 'high'
                 },
                 {
                     day: 'Sat',
-                    date: '10',
+                    date: '16',
                     detail: 'Submit request X',
                     urgency: 'med'
                 },
                 {
                     day: 'Sat',
-                    date: '11',
+                    date: '16',
                     detail: 'Submit request Y',
                     urgency: 'low'
                 },
                 {
                     day: 'Sat',
-                    date: '11',
+                    date: '16',
                     detail: 'Submit request Z',
                     urgency: 'high'
                 },
                 {
                     day: 'Sun',
-                    date: '12',
+                    date: '17',
                     detail: 'None',
                     urgency: 'none'
                 }
@@ -71,7 +72,7 @@ class DayView extends React.Component {
         const date = today.substring(8,10)
         // Setting up week structure
         week = week.slice(week.indexOf(day), 7).concat(week.slice(0, week.indexOf(day)))
-        this.setState({month: month, date: date, week: week})
+        this.setState({month: month, date: date, week: week, loading: false})
     }
 
     getTasks() {
@@ -86,7 +87,7 @@ class DayView extends React.Component {
 
         return(
             <div>
-                {dailytasks}
+                { this.state.loading ? <div>Loading</div> : dailytasks}
             </div>
         )
     }

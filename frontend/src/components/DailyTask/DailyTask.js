@@ -36,6 +36,7 @@ class DailyTask extends React.Component {
 
     render() {
         console.log(this.state.date)
+        console.log(this.state.tasks)
         return(
             <div>
                 {
