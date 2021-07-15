@@ -1,5 +1,6 @@
 import React from 'react'
 import DailyTask from '../dailytask/DailyTask'
+import './DayView.css'
 
 class DayView extends React.Component {
 
@@ -87,6 +88,7 @@ class DayView extends React.Component {
 
         return(
             <div>
+                <div className='month-title'>{this.state.month.toUpperCase()}</div>
                 { this.state.loading ? <div>Loading</div> : dailytasks}
             </div>
         )
