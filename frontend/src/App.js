@@ -6,6 +6,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home";
+import Project from "./pages/Project/Project";
+
 
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);

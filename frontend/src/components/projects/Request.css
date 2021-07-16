@@ -1,0 +1,64 @@
+.request {
+    position: absolute;
+    width: 383px;
+    height: 250px;
+    left: 18px;
+    top: 263px;
+}
+
+.title {
+    position: absolute;
+    width: 210px;
+    height: 29px;
+    left: 124px;
+    top: 53px;
+
+    /* header 3 */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    /* black 202122 */
+
+    color: #202122;
+}
+
+.request rect {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 36px;
+    top: 36px;
+
+    /* main blue 3E80FF */
+
+    background: #3E80FF;
+    border-radius: 8px;
+}
+
+.notes {
+    
+    position: absolute;
+    width: 298px;
+    height: 51px;
+    left: 36px;
+    top: 165px;
+
+    /* header 5 */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+
+    /* dark gray text 54595D */
+
+    color: #54595D;
+
+}
