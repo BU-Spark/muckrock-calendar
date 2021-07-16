@@ -17,8 +17,14 @@ const Navbar = () => {
         </button>
       </form>
       <div className="navbar-right">
-        <a href="#">
+        <a className = "notification-btn" href = "/Notifications">
+          <i className = "fa fa-bell"></i>
+        </a>
+        &nbsp; &nbsp;
+        <a href="/Profile">
           <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+          &nbsp;
+          Active User
         </a>
       </div>
     </nav>

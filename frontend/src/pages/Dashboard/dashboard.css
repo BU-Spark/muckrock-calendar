@@ -1,3 +1,69 @@
+div.bigger-main-dashboard-container {
+    display: flex;
+    align-items: flex-start;
+}
+div.bigger-main-dashboard-container div.main-part-dashboard {
+    flex: 7;
+}
+div.bigger-main-dashboard-container div.dashboard-calendar {
+    flex: 2;
+}
+
+div.dashboard-calendar {
+    border-left: 1px solid gray;
+    padding: 5px 15px;
+    height: 100% !important;;
+    max-height: 100% !important;;
+}
+div.dashboard-calendar h4 button.gotoCalendar {
+    color: blue;
+    border: 0px;
+    background-color: transparent;
+    transition: ease-in-out 0.3s;
+    border-radius: 150px;
+    margin-left: 10px;
+
+}
+div.dashboard-calendar h4 button.gotoCalendar:hover {
+    color: black;
+    border: 2px solid rgb(123, 123, 255);;
+    background-color: rgb(57, 57, 255);
+    transition: ease-in-out 0.3s;
+    border-radius: 150px;
+    margin-left: 10px;
+}
+div.dashboard-calendar-item {
+    border-bottom: 1px solid gray;
+    padding: 20px 0px;
+}
+div.dashboard-calendar-item p {
+    font-size: 13px !important;
+    margin: 0px 0px 10px 0px !important;
+}
+div.dashboard-calendar-item h6 {
+    border: 0px;
+    border-radius: 0px;
+    margin: 0px 0px 8px 0px !important;
+    padding: 1px 10px;
+    font-weight: 400 !important;
+    font-size: 15px;
+}
+h6.red-tag {
+    border-left: 4px solid red !important;
+}
+h6.yellow-tag {
+    border-left: 4px solid yellow !important;
+}
+h6.green-tag {
+    border-left: 4px solid green !important;
+}
+h6.blue-tag {
+    border-left: 4px solid blue !important;
+}
+h6.black-tag {
+    border-left: 4px solid rgb(56, 56, 56) !important;
+}
+/* --------------------------- */
 div.main-dashboard-section {
     display: flex;
     padding: 5px 15px;
@@ -43,3 +109,12 @@ div.dashboard-item div.dashboard-item-bottom {
     padding: 2px 27px;
     align-items: center;
 }
+
+
+/* ================================================= */
+@media only screen and (max-width: 850px) {
+    div.bigger-main-dashboard-container div.dashboard-calendar  {
+      flex: 0;
+      display: none;
+    }
+  }
