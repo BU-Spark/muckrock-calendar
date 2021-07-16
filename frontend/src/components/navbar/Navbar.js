@@ -1,11 +1,9 @@
 import "./Navbar.css";
 
+
 const Navbar = ({ sidebarOpen, openSidebar }) => {
   return (
     <nav className="navbar">
-      <div className="nav_icon" onClick={() => openSidebar()}>
-        <i className="fa fa-bars" aria-hidden="true"></i>
-      </div>
       <form action="/" method="get">
         <input
           className="search_input"

@@ -1,0 +1,78 @@
+button {
+    border: 0px;
+    background-color: transparent;
+}
+h5, p {
+    margin: 0px !important;
+}
+span.infoActions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span.infoActions div button, span.infoActions div {
+    display: flex;
+    align-items: center;
+}
+span.infoActions div button {
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: 0.30s !important;
+}
+span.infoActions div button:hover {
+    background-color: rgb(149, 149, 255);
+    transition: 0.30s !important;
+}
+/* =========================== */
+.panel-group {
+    margin-top: 30px;
+}
+.panel-collapse {
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height .5s ease;
+}
+.panel-close {
+    max-height: 0;
+}
+/* ======================= */
+form#newProjectForm {
+    border: 1px solid rgb(149, 149, 255);
+    margin: 10px;
+    padding: 7px;
+    border-radius: 4px;
+}
+form#newProjectForm input, form#newProjectForm textarea {
+    border: 0px;
+    border-left: 2px solid black !important;
+    width: 70%;
+    margin-bottom: 15px;
+    padding: 0px 2%;
+}
+form#newProjectForm button {
+    background-color: #227e3e;
+    color: white;
+    padding: 7px 10%;
+    transition: ease-in-out 0.3s;
+}
+form#newProjectForm button:hover {
+    background-color: #41aa61;
+    padding: 7px 15%;
+    transition: ease-in-out 0.3s;
+}
+/*=========================== */
+.appear {
+    display: block;
+}
+.disappear {
+    display: none;
+}
+.active-projects-navbtn {
+    color: blue;
+    border-bottom: 2px solid blue;
+}
+.inactive-projects-navbtn {
+    color: black;
+    border: 0px;
+}

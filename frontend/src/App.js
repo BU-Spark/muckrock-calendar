@@ -1,20 +1,13 @@
 import { useState } from "react";
 import "./App.css";
-import Main from "./pages/main/Main";
-import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/sidebar/Sidebar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home";
-
+import Dashboard from "./pages/Dashboard/dashboard";
+import Projects from "./pages/Projects/projects";
+import Calendar from "./pages/Calendar/calendar";
+import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 const App = () => {
-  const [sidebarOpen, setsidebarOpen] = useState(false);
-  const openSidebar = () => {
-    setsidebarOpen(true);
-  };
-  const closeSidebar = () => {
-    setsidebarOpen(false);
-  };
+  
   return (
     // <div className="container">
     //   <Router>
@@ -26,7 +19,19 @@ const App = () => {
     //     <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
     //   </Router>
     // </div>
-    <Login />
+    // <Login />
+    // <Dashboard></Dashboard>
+    <BrowserRouter>
+      <div className="container">
+        <Switch>
+          <Route path="/" exact component={Dashboard}><Dashboard></Dashboard></Route>
+          <Route path="/Dashboard" exact component={Dashboard}><Dashboard></Dashboard></Route>
+          <Route path="/Projects" exact component={Projects}><Projects></Projects></Route>
+          <Route path="/Calendar" exact component={Calendar}><Calendar></Calendar></Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
+    
 
   );
 };
