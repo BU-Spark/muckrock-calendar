@@ -22,7 +22,7 @@ const App = () => {
     // <Login />
     // <Dashboard></Dashboard>
     <BrowserRouter>
-      <div className="container">
+      <div className="main-container">
         <Switch>
           <Route path="/" exact component={Dashboard}><Dashboard></Dashboard></Route>
           <Route path="/Dashboard" exact component={Dashboard}><Dashboard></Dashboard></Route>

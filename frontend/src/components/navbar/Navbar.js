@@ -1,7 +1,7 @@
 import "./Navbar.css";
 
 
-const Navbar = ({ sidebarOpen, openSidebar }) => {
+const Navbar = () => {
   return (
     <nav className="navbar">
       <form action="/" method="get">
@@ -9,14 +9,14 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
           className="search_input"
           type="text"
           id="header-search"
-          placeholder="Search"
+          placeholder="Search ..."
           name="s"
         />
-        <button className="search_button" type="submit">
-          Search
+        <button className="search-btn" type="submit">
+          <i class = "fa fa-search"></i>
         </button>
       </form>
-      <div className="navbar__right">
+      <div className="navbar-right">
         <a href="#">
           <i className="fa fa-user-circle-o" aria-hidden="true"></i>
         </a>

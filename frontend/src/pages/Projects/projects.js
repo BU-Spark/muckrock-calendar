@@ -45,9 +45,10 @@ class Projects extends Component {
 
     render() {
         return (
-            <div className = "container">
+            <div className = "projectspage-container">
                 <Navbar></Navbar>
                 <SidebarComp></SidebarComp>
+                <br></br>
                 <div>
                     <h3>Projects</h3>
                     <span className="pageOrganization">  
