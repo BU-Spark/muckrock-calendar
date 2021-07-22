@@ -14,43 +14,43 @@ class DayView extends React.Component {
             tasks: [
                 {
                     day: 'Fri',
-                    date: '15',
+                    date: '23',
                     detail: 'Submit request X',
                     urgency: 'med'
                 },
                 {
                     day: 'Fri',
-                    date: '15',
+                    date: '23',
                     detail: 'Submit request Y',
                     urgency: 'low'
                 },
                 {
                     day: 'Fri',
-                    date: '15',
+                    date: '23',
                     detail: 'Submit request Z',
                     urgency: 'high'
                 },
                 {
                     day: 'Sat',
-                    date: '16',
+                    date: '24',
                     detail: 'Submit request X',
                     urgency: 'med'
                 },
                 {
                     day: 'Sat',
-                    date: '16',
+                    date: '24',
                     detail: 'Submit request Y',
                     urgency: 'low'
                 },
                 {
                     day: 'Sat',
-                    date: '16',
+                    date: '24',
                     detail: 'Submit request Z',
                     urgency: 'high'
                 },
                 {
                     day: 'Sun',
-                    date: '17',
+                    date: '25',
                     detail: 'None',
                     urgency: 'none'
                 }
@@ -87,7 +87,7 @@ class DayView extends React.Component {
         }
 
         return(
-            <div>
+            <div className="daily-group">
                 <div className='month-title'>{this.state.month.toUpperCase()}</div>
                 { this.state.loading ? <div>Loading</div> : dailytasks}
             </div>
