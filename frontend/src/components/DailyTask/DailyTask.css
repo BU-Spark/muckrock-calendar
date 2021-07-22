@@ -30,7 +30,6 @@
 }
 
 .day {
-    margin-left: 17px;
     margin-bottom: 0px;
     font-size: 15px;
     font-weight: bold;
@@ -50,4 +49,24 @@
 
 .date-other {
     background: #C8CCD1;
+}
+
+.Mon, .Wed {
+    margin-left: 14px;
+}
+
+.Thu {
+    margin-left: 15px;
+}
+
+.Sun, .Tue {
+    margin-left: 17px;
+}
+
+.Sat {
+    margin-left: 19px;
+}
+
+.Fri {
+    margin-left: 20px
 }

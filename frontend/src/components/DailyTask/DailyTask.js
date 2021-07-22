@@ -41,7 +41,7 @@ class DailyTask extends React.Component {
                     this.state.isToday===null && this.state.tasks=== null && this.state.day === null && this.state.date === null ?
                     null :
                     <div className="day-group">
-                    {this.state.isToday ? <p className="day day-today">{this.state.day}</p> : <p className="day day-other">{this.state.day}</p>}
+                    {this.state.isToday ? <p className={"day day-today " + this.state.day}>{this.state.day}</p> : <p className={"day day-other " + this.state.day}>{this.state.day}</p>}
                         <div className="task-group">
                             {this.state.isToday ? <p className="date date-today">{this.state.date}</p> : <p className="date date-other">{this.state.date}</p>}
                             <div className="day-group">
