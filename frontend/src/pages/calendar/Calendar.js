@@ -33,20 +33,27 @@ class Calendar extends React.Component {
     render() {
         return(
             <div>
-                {/* <div className="header">
+                <div className="header">
                     <div className="title">Your Calendar</div>
                     <div className="current-month">{this.state.month} {this.state.year}</div>
                 </div>
-                <div className="button">
-                    <button className="calendar-view-select" onClick={this.onDayClick}>Day</button>
-                    <button className="calendar-view-select" onClick={this.onMonthClick}>Month</button>
-                </div>
                 { this.state.onDayView ? 
-                  <DayView />:
-                  <MonthView />
-                } */}
-                <MonthView />
-
+                    <React.Fragment>
+                        <div className="buttons">
+                            <button className="calendar-button selected" onClick={this.onDayClick}>Day</button>
+                            <button className="calendar-button" onClick={this.onMonthClick}>Month</button>
+                        </div>
+                        <DayView />
+                    </React.Fragment>
+                    :
+                    <React.Fragment>
+                        <div className="buttons">
+                            <button className="calendar-button" onClick={this.onDayClick}>Day</button>
+                            <button className="calendar-button selected" onClick={this.onMonthClick}>Month</button>
+                        </div>
+                        <MonthView />
+                    </React.Fragment>
+                }
             </div>
         )
     }
