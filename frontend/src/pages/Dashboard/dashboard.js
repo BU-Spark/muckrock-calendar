@@ -1,19 +1,36 @@
 import React from 'react';
 import './dashboard.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import slide_1 from '../../images/accept-tasks.png';
-import slide_2 from '../../images/files-sent.png';
-import slide_3 from '../../images/secure-data.png';
-import slide_4 from '../../images/online-calendar.png';
 import Navbar from "../../components/navbar/Navbar";
 import SidebarComp from "../../components/sidebar/Sidebar";
+import axios from 'axios';
+import {dbData} from "./dbData"
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
+
+        this.getDBInfo = this.getDBInfo.bind(this);
+        axios({
+            url: `https://www.muckrock.com/api_v1/foia/?user=`,
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json;charset=UTF-8',
+            }
+        }).then((res) => {
+            console.log(res)
+        }).catch((err) => {
+            console.log("Error")
+            console.log(err)
+        })
     }
 
     handleChange(e) {
         e.preventDefault()
+    }
+
+    getDBInfo =() => {
+        console.log("outside of constructor")
     }
 
     render() {
@@ -25,6 +42,7 @@ class Dashboard extends React.Component {
                 <div className = "bigger-main-dashboard-container">
                     <div className = "main-part-dashboard">
                         <h2> &nbsp; &nbsp; Your Dashboard </h2>
+                        {/* <button className="apiCallBtn"> Hello World - Call API</button> */}
                         <div className = "main-dashboard-section">
                             <div className = "main-3-sections">
                                 <div className = "section-top">

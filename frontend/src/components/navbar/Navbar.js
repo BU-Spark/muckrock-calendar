@@ -13,7 +13,7 @@ const Navbar = () => {
           name="s"
         />
         <button className="search-btn" type="submit">
-          <i class = "fa fa-search"></i>
+          <i className = "fa fa-search"></i>
         </button>
       </form>
       <div className="navbar-right">

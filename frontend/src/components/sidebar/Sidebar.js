@@ -24,7 +24,7 @@ class SidebarComp extends React.Component {
       <Sidebar
         sidebar={
           <div className="sidebar__menu">
-            <button onClick={() => this.onSetSidebarOpen(false)}> <i class = "fa fa-bars"></i></button>
+            <button onClick={() => this.onSetSidebarOpen(false)}> <i className = "fa fa-bars"></i></button>
             <div className="sidebar__link active_menu_link">
               <i className="fa fa-home"></i>
               <a href = "/Dashboard">Dashboard</a>
@@ -57,7 +57,7 @@ class SidebarComp extends React.Component {
         styles={{ sidebar: { background: "white" } }}
       >
         <button onClick={() => this.onSetSidebarOpen(true)}>
-          <i class = "fa fa-bars"></i>
+          <i className = "fa fa-bars"></i>
         </button>
       </Sidebar>
       
