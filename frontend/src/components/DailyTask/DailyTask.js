@@ -19,19 +19,35 @@ class DailyTask extends React.Component {
         this.selectTag = this.selectTag.bind(this);
     }
 
-    selectTag(urgency) {
-        switch(urgency) {
-            case 'low':
-                return <img src={Blue}/>
-            case 'med':
-                return <img src={Yellow}/>
-            case 'high':
-                return <img src={Red}/>
-            case 'done':
-                return <img src={Green}/>
-            default:
-                return <img src={Grey}/>
-        }    
+    selectTag(task) {
+        try {
+            var date_initial = ""
+            var date_final = new Date(task.date_due).getTime()
+            var date_current = new Date().getTime()
+            var percentage = 0
+            if (task.datetime_submitted == null) {
+                date_initial = task.date_followup
+            } else {
+                date_initial = task.datetime_submitted.substring(0,10)
+            }
+            date_initial = new Date(date_initial).getTime()
+            percentage = (date_current - date_initial)/(date_final - date_initial)
+
+            switch (true) {
+                case percentage < 0.5: 
+                    return <img src={Blue}/>
+                case percentage < 0.75:
+                    return <img src={Yellow}/>
+                case percentage < 1:
+                    return <img src={Red}/>
+                case percentage > 1:
+                    return <img src={Green}/>
+                default:
+                    return <img src={Blue}/>
+            }
+        } catch(error) {
+            console.log(error)
+        }
     }
 
     render() {
@@ -47,9 +63,9 @@ class DailyTask extends React.Component {
                             <div className="day-group">
                                 {   this.state.tasks.map((task) => {
                                         return (
-                                            <div className="task-group">
-                                                <div className="tag">{this.selectTag(task.urgency)}</div>
-                                                <div className="task">{task.detail}</div>
+                                            <div className="task-group" key={task.id}>
+                                                <div className="tag">{this.selectTag(task)}</div>
+                                                <div className="task">{task.title}</div>
                                             </div>
                                         )
                                     })

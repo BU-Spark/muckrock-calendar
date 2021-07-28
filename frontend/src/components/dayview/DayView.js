@@ -1,96 +1,90 @@
 import React from 'react'
 import DailyTask from '../dailytask/DailyTask'
 import './DayView.css'
+import {testData} from '../../testData';
 
 class DayView extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            month: '',
-            date: 0,
-            week: [],
             loading: true,
-            tasks: [
-                {
-                    day: 'Fri',
-                    date: '23',
-                    detail: 'Submit request X',
-                    urgency: 'med'
-                },
-                {
-                    day: 'Fri',
-                    date: '23',
-                    detail: 'Submit request Y',
-                    urgency: 'low'
-                },
-                {
-                    day: 'Fri',
-                    date: '23',
-                    detail: 'Submit request Z',
-                    urgency: 'high'
-                },
-                {
-                    day: 'Sat',
-                    date: '24',
-                    detail: 'Submit request X',
-                    urgency: 'med'
-                },
-                {
-                    day: 'Sat',
-                    date: '24',
-                    detail: 'Submit request Y',
-                    urgency: 'low'
-                },
-                {
-                    day: 'Sat',
-                    date: '24',
-                    detail: 'Submit request Z',
-                    urgency: 'high'
-                },
-                {
-                    day: 'Sun',
-                    date: '25',
-                    detail: 'None',
-                    urgency: 'none'
-                }
-            ]
+            differentMonths: false,
+            // currentDate: '',
+            tasks: testData,
+            currentMonth: '',
+            nextMonth: '',
+            group_one: [],
+            group_two: [] // not referenced when differentMonths is false
         }
-        this.setTime = this.setTime.bind(this);
-        this.getTasks = this.getTasks.bind(this);
     }
 
-    componentDidMount() {
-        this.setTime()
-    }
-
-    setTime() {
+    async componentDidMount() {
+        // setup weekly structure
         var week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-        const today = String(new Date())
-        // Setting date information
-        const day = today.substring(0,3)
-        const month = today.substring(4,7)
-        const date = today.substring(8,10)
-        // Setting up week structure
+        var currentDate = new Date()
+        const today = currentDate.toISOString().substring(0,10)
+        const day = String(currentDate).substring(0,3)
         week = week.slice(week.indexOf(day), 7).concat(week.slice(0, week.indexOf(day)))
-        this.setState({month: month, date: date, week: week, loading: false})
-    }
 
-    getTasks() {
-        return (<DailyTask isToday={true} date={this.state.date} day="Wed" tasks={this.state.tasks.filter(task => task.date === this.state.date)}/>)
+        // retrieve dates for entire next week
+        var dates = []
+        var currentMonth = currentDate.getMonth()+1
+        for (let i = 0; i < 7; i++) {
+            dates.push(currentDate.toISOString().substring(0,10))
+            currentDate.setDate(currentDate.getDate() + 1);
+        }
+
+        // set relevant months
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        const month_one = months[currentMonth]
+        const month_two = months[currentMonth+1]
+
+
+        // filter tasks by dates and create DailyTask components
+        var tasks = this.state.tasks[0].results
+        var group_one = []
+        var group_two = []
+        var current = new Date()
+        for (let i=0; i<dates.length; i++) {
+            const compareDate = current.toISOString().substring(8,10)
+            if (dates[i].substring(5,7) == today.substring(5,7)) {
+                group_one.push(<DailyTask key={i} isToday={today==dates[i]} date={parseInt(dates[i].substring(8,10))} day={week[i]} tasks={tasks.filter(task => parseInt(task.date_due.substring(8,10)) === parseInt(compareDate))} />)
+            } else {
+                group_two.push(<DailyTask key={i} isToday={today==dates[i]} date={parseInt(dates[i].substring(8,10))} day={week[i]} tasks={tasks.filter(task => parseInt(task.date_due.substring(8,10)) === parseInt(compareDate))} />)
+            }
+            current.setDate(current.getDate() + 1)
+        }
+
+        if (group_two.length > 0) {
+            this.setState({differentMonths: true})
+        }
+
+        this.setState({loading: false, group_one: group_one, group_two: group_two, currentMonth: month_one, nextMonth: month_two})
     }
 
     render() {
-        const dailytasks = []
-        for (let i=0; i<7; i++) {
-            dailytasks.push(<DailyTask isToday={i===0} date={parseInt(this.state.date)+i} day={this.state.week[i]} tasks={this.state.tasks.filter(task => parseInt(task.date) === parseInt(this.state.date)+i)}/>)
-        }
-
         return(
-            <div className="daily-group">
-                <div className='month-title'>{this.state.month.toUpperCase()}</div>
-                { this.state.loading ? <div>Loading</div> : dailytasks}
-            </div>
+            <React.Fragment>
+                {this.state.loading ? 
+                    <div>
+                        Loading
+                    </div>
+                    :
+                    this.state.differentMonths ? 
+                    <div>
+                        <div className="month-title">{this.state.currentMonth}</div>
+                        <div className="daily-group">{this.state.group_one}</div>
+                        <div className="month-title">{this.state.nextMonth}</div>
+                        <div className="daily-group">{this.state.group_two}</div>
+                    </div>
+                    :
+                    <div>
+                        <div className="month-title">{this.state.nextMonth}</div>
+                        <div className="daily-group">{this.state.group_one}</div>
+                    </div>
+                }
+            </React.Fragment>
         )
     }
 }
