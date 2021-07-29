@@ -20,6 +20,19 @@ class DayView extends React.Component {
     }
 
     async componentDidMount() {
+        // pull api information
+        // axios({
+        //     url: `https://www.muckrock.com/api_v1/foia/?user=`,
+        //     method: 'GET',
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json;charset=UTF-8',
+        //     }
+        // }).then((res) => {
+        //     this.setState(res[0].results)
+        // }).catch((err) => {
+        //     console.log(err)
+        // })
         // setup weekly structure
         var week = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
         var currentDate = new Date()

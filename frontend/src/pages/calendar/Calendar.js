@@ -35,7 +35,6 @@ class Calendar extends React.Component {
             <div>
                 <div className="header">
                     <div className="title">Your Calendar</div>
-                    <div className="current-month">{this.state.month} {this.state.year}</div>
                 </div>
                 { this.state.onDayView ? 
                     <React.Fragment>

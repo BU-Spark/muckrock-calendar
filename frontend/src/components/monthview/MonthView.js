@@ -20,9 +20,14 @@ class MonthView extends React.Component {
                 color: "#ffffff",
                 bgColor: "#3E80FF",
                 borderColor: "#3E80FF",
-            }]
+            }],
+            month: "",
+            year: ""
         }
+        this.calendarRef = React.createRef();
         this.getRequestInformation = this.getRequestInformation.bind(this);
+        this.handleClickNextButton = this.handleClickNextButton.bind(this);
+        this.handleClickPrevButton = this.handleClickPrevButton.bind(this);
     }
 
     async componentDidMount() {
@@ -30,6 +35,7 @@ class MonthView extends React.Component {
     }
 
     getRequestInformation() {
+        // pull api information
         // axios({
         //     url: `https://www.muckrock.com/api_v1/foia/?user=`,
         //     method: 'GET',
@@ -38,40 +44,82 @@ class MonthView extends React.Component {
         //         'Content-Type': 'application/json;charset=UTF-8',
         //     }
         // }).then((res) => {
-        //     console.log(res)
+        //     this.setState(res[0].results)
         // }).catch((err) => {
         //     console.log(err)
         // })
         const results = testData[0].results
-        const month = new Date().toISOString().substring(0,7)
-        const events = results.filter((event) => event.date_due.substring(0,7) == month)
         var schedules = []
         var index = 0;
-        for (const event of events) {
+        for (const event of results) {
             schedules.push({
                 id: index,
                 calendarId: '1',
                 isVisible: true,
                 category: 'allday',
                 title: event.title,
-                body: "Website: " + event.absolute_url,
+                body: `Status: ${event.status} | 
+                ${event.absolute_url}`,
                 start: event.date_due,
                 end: event.date_due,
                 isReadOnly: true
             })
             index+=1;
         }
-        this.setState({schedules: schedules})
+
+        // set month and year
+        const today = new Date().toString()
+        const month = today.substring(4,7)
+        const year = today.substring(11,15)
+
+        this.setState({schedules: schedules, month: month, year: year})
+    }
+
+    handleClickNextButton = () => {
+        // set new date
+        const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+        var newDate = new Date(this.state.year, months.indexOf(this.state.month)+1).toString()
+        const month = newDate.substring(4,7)
+        const year = newDate.substring(11,15)
+        this.setState({month: month, year: year})
+
+        // change calendar month
+        const calendarInstance = this.calendarRef.current.getInstance();
+        calendarInstance.next()
+    }
+
+    handleClickPrevButton = () => {
+        // set new date
+        const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+        var newDate = new Date(this.state.year, months.indexOf(this.state.month)-1).toString()
+        const month = newDate.substring(4,7)
+        const year = newDate.substring(11,15)
+        this.setState({month: month, year: year})
+
+        // change calendar month
+        const calendarInstance = this.calendarRef.current.getInstance();
+        calendarInstance.prev()
     }
 
     render() {
         return(
             <div className="calendar-month">
-                <TuiCalendar
-                    view='month'
-                    schedules={this.state.schedules}
-                    calendars={this.state.calendar}
-                />
+                <div className="calendar-details">
+                    <div className="cal-date">{this.state.month} {this.state.year}</div>
+                    <button className="cal-button" onClick={this.handleClickPrevButton}>Prev</button>
+                    <button className="cal-button" onClick={this.handleClickNextButton}>Next</button>
+                </div>
+                <div className="tui-cal">
+                    <TuiCalendar
+                        view='month'
+                        schedules={this.state.schedules}
+                        calendars={this.state.calendar}
+                        ref={this.calendarRef}
+                        height="650px"
+                        disableClick={true}
+                        useDetailPopup
+                    />
+                </div>
             </div>
         )
     }
