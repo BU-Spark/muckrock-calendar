@@ -26,7 +26,7 @@ const Requests = () => {
             <hr className="PChecker"/>
             <hr className="RChecker"/>
             <hr className="divider"/>
-            <div className="ProjContainer" >
+            <div className="ProjContainer1" >
           <RequestCard
             img={Blue}
             title="Request Title"

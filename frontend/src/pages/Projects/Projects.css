@@ -24,20 +24,6 @@
   color: white;
 }
 
-.top-line {
-  border: none;
-  border-bottom: 1px solid #E5E5E5;
-  margin-bottom: 13px;
-  width: 100%;
-  margin-top: 5%;
-}
-
-.side-line {
-  height: 650px;
-  width: 1;
-  margin-left: 5%;
-  background-color: #E5E5E5;
-}
 
 .headerP {
   position: absolute;
@@ -293,14 +279,12 @@
 
   color: #54595D;
 }
-
 .ProjContainer > * {
 	margin-top: 2%;
-  display: inline-block;
-  top: 263px;
-  margin: 30px;
-  width: 383px;
-}
+  top: 300px;
+  margin: 20px;
+  width: 900px;
+} 
 
 .App-link {
   color: #61dafb;

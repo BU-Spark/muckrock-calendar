@@ -30,8 +30,8 @@ const App = () => {
     //     <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
     //   </Router>
     // </div>
-    <Requests /> 
-    /* <Projects /> */
+    //  <Requests /> 
+    <Projects />
 
   );
 };

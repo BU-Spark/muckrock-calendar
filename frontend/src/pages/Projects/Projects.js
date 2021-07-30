@@ -6,9 +6,9 @@ import Blue from '../../images/Bluesquare.png';
 import Green from '../../images/Greensquare.png';
 import Red from '../../images/Redsquare.png';
 import Yellow from '../../images/Yellowsquare.png';
-import './Projects.css';
 import Navbar from '../../components/navbar/Navbar';
 import SidebarComp from '../../components/sidebar/Sidebar';
+import './Projects.css';
 
 const Projects = () => {
   
@@ -36,19 +36,19 @@ const Projects = () => {
         <span className="addFiltertxt">Add Filter</span>
 
         <div className="ProjContainer">
-          <ProjectCard
-            title="Project X"
-            num="(240)"
-            name="Agency Name"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper. Fermentum, non, orci et tortor volutpat egestas."
-          />
-          <ProjectCard
-            title="Project Y"
-            num="(45)"
-            name="Agency Name"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper. Fermentum, non, orci et tortor volutpat egestas."
-          />
-        </div>
+            <ProjectCard
+              title="Project X"
+              num="(240)"
+              name="Agency Name"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper. Fermentum, non, orci et tortor volutpat egestas."
+            />
+              <ProjectCard
+              title="Project Y"
+              num="(45)"
+              name="Agency Name"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper. Fermentum, non, orci et tortor volutpat egestas."
+            />
+          </div>
 
         {/* Requests
 
