@@ -43,11 +43,14 @@ class DayView extends React.Component {
         // retrieve dates for entire next week
         var dates = []
         var currentMonth = currentDate.getMonth()
+        var tzoffset = (new Date()).getTimezoneOffset() * 60000 // handles offset in milliseconds
+        
         for (let i = 0; i < 7; i++) {
-            console.log(currentDate.toISOString().substring(0,10))
-            dates.push(currentDate.toISOString().substring(0,10))
+            dates.push(new Date(currentDate - tzoffset).toISOString().substring(0,10))
             currentDate.setDate(currentDate.getDate() + 1);
         }
+
+        console.log(dates)
 
         // set relevant months
         const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
