@@ -42,8 +42,9 @@ class DayView extends React.Component {
 
         // retrieve dates for entire next week
         var dates = []
-        var currentMonth = currentDate.getMonth()+1
+        var currentMonth = currentDate.getMonth()
         for (let i = 0; i < 7; i++) {
+            console.log(currentDate.toISOString().substring(0,10))
             dates.push(currentDate.toISOString().substring(0,10))
             currentDate.setDate(currentDate.getDate() + 1);
         }
