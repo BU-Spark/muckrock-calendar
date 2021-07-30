@@ -1,26 +1,30 @@
 import "./Navbar.css";
 
-const Navbar = ({ sidebarOpen, openSidebar }) => {
+
+const Navbar = () => {
   return (
     <nav className="navbar">
-      <div className="nav_icon" onClick={() => openSidebar()}>
-        <i className="fa fa-bars" aria-hidden="true"></i>
-      </div>
       <form action="/" method="get">
         <input
           className="search_input"
           type="text"
           id="header-search"
-          placeholder="Search"
+          placeholder="Search ..."
           name="s"
         />
-        <button className="search_button" type="submit">
-          Search
+        <button className="search-btn" type="submit">
+          <i class = "fa fa-search"></i>
         </button>
       </form>
-      <div className="navbar__right">
-        <a href="#">
+      <div className="navbar-right">
+        <a className = "notification-btn" href = "/Notifications">
+          <i className = "fa fa-bell"></i>
+        </a>
+        &nbsp; &nbsp;
+        <a href="/Profile">
           <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+          &nbsp;
+          Active User
         </a>
       </div>
     </nav>

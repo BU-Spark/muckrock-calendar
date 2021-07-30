@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects/Projects";
 import Project from "./components/project/Project";
 import Request from "./components/request/Request";
+import Requests from "./pages/Requests/Requests";
 
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -29,7 +30,8 @@ const App = () => {
     //     <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
     //   </Router>
     // </div>
-    <Login />
+    <Requests /> 
+    /* <Projects /> */
 
   );
 };

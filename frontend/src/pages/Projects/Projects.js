@@ -1,20 +1,22 @@
-import logo from './logo.svg';
-import proj from './Vectorproj.png';
-import filter from './Vectorfilter.png';
-import ProjectCard from './Project.js';
-import RequestCard from './Request.js';
-import Blue from './Bluesquare.png';
-import Green from './Greensquare.png';
-import Red from './Redsquare.png';
-import Yellow from './Yellowsquare.png';
-import './App.css';
+import proj from '../../images/Vectorproj.png';
+import filter from '../../images/Vectorfilter.png';
+import ProjectCard from '../../components/project/Project';
+import RequestCard from '../../components/request/Request';
+import Blue from '../../images/Bluesquare.png';
+import Green from '../../images/Greensquare.png';
+import Red from '../../images/Redsquare.png';
+import Yellow from '../../images/Yellowsquare.png';
+import './Projects.css';
+import Navbar from '../../components/navbar/Navbar';
+import SidebarComp from '../../components/sidebar/Sidebar';
 
 const Projects = () => {
+  
   return (
     <div className="App">
+      <Navbar />
+      <SidebarComp />
       <header className="App-header">
-        <hr className="top-line"/>
-        <hr className="side-line"/>
         <span className="headerP">Your Projects</span>
         <span className="projects">Projects</span>
         <span className="requests">Requests</span>
@@ -27,7 +29,7 @@ const Projects = () => {
 
         {/* Projects */}
 
-        {/* <span className="Projectnum">15 Active Projects</span>
+        <span className="Projectnum">15 Active Projects</span>
         <button className="addProject"><img src={proj}></img></button>
         <span className="addProjecttxt">Add Project</span>
         <button className="addFilter"><img src={filter}></img></button>
@@ -46,19 +48,19 @@ const Projects = () => {
             name="Agency Name"
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper. Fermentum, non, orci et tortor volutpat egestas."
           />
-        </div> */}
+        </div>
 
-        {/* Requests */}
+        {/* Requests
 
         <span className="Requestnum">874 Active Requests</span>
         <button className="addFilter"><img src={filter}></img></button>
         <span className="addFiltertxt">Add Filter</span>
 
-        <div className="ProjContainer">
+        <div className="ProjContainer" >
           <RequestCard
             img={Blue}
             title="Request Title"
-            name="Agency Name"
+            name="Agency Name" 
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
           />
           <RequestCard
@@ -91,7 +93,7 @@ const Projects = () => {
             name="Agency Name"
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
           />
-        </div>
+        </div> */}
       </header>
     </div>
   );

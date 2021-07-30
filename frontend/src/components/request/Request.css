@@ -1,10 +1,12 @@
 .RequestContainer {
-    position: absolute;
+    position: relative;
     height: 250px;
     left: 6%;
     right: 0%;
     top: 36%;
     width: 20%;
+    display: block;
+    float: left;
 
     /* off white F8F9FA */
 
@@ -52,7 +54,7 @@
     position: absolute;
     width: 298px;
     height: 17px;
-    left: -10%;
+    left: 29%;
     top: 124px;
     
     font-family: Inter;

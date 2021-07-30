@@ -166,7 +166,7 @@
 .RChecker {
   width: 4%;
 	height: 0px;
-  border: 2px solid #3E80FF;
+  border: 2px solid #EAECF0;
   top: 26%;
   left: 15%;
   position: absolute;
@@ -296,6 +296,10 @@
 
 .ProjContainer > * {
 	margin-top: 2%;
+  display: inline-block;
+  top: 263px;
+  margin: 30px;
+  width: 383px;
 }
 
 .App-link {
