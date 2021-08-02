@@ -10,6 +10,9 @@ import Projects from "./pages/Projects/Projects";
 import Project from "./components/project/Project";
 import Request from "./components/request/Request";
 import Requests from "./pages/Requests/Requests";
+import DayView from "./components/dayview/DayView";
+import MonthView from './components/monthview/MonthView';
+import Calendar from './pages/calendar/Calendar'
 
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -31,8 +34,11 @@ const App = () => {
     //   </Router>
     // </div>
     //  <Requests /> 
-    <Projects />
+    // <Projects />
 
+    // <Login />
+    // <DayView/>
+    <Calendar/>
   );
 };
 

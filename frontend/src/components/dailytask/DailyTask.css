@@ -1,0 +1,72 @@
+.day-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0px;
+}
+
+.task-group {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.tag {
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.task {
+    padding-top: 8px;
+}
+
+.date {
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding-top: 9px;
+    font-size: 15px;
+}
+
+.day {
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.day-today {
+    color: #3E80FF;
+}
+
+.date-today {
+    background: #3E80FF;
+}
+
+.day-other {
+    color: #C8CCD1;
+}
+
+.date-other {
+    background: #C8CCD1;
+}
+
+.Mon, .Wed {
+    margin-left: 14px;
+}
+
+.Thu {
+    margin-left: 15px;
+}
+
+.Sun, .Tue {
+    margin-left: 17px;
+}
+
+.Sat {
+    margin-left: 19px;
+}
+
+.Fri {
+    margin-left: 20px
+}
