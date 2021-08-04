@@ -1,3 +1,4 @@
 front/src/service/muckrock.js
 frontend/src/service/muckrock.ts
 frontend/node_modules
+node_modules/
