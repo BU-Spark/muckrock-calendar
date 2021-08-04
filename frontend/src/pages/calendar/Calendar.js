@@ -15,13 +15,7 @@ class Calendar extends React.Component {
         this.onMonthClick = this.onMonthClick.bind(this);
     }
 
-    componentDidMount(){
-        var currentDay = new Date().toString()
-        const month = currentDay.substring(4,7)
-        const year = currentDay.substring(11,15)
-        this.setState({month: month, year: year})
-    }
-
+    // switch views between daily and monthly calendar components
     onDayClick() {
         this.setState({onDayView: true})
     }
@@ -36,6 +30,7 @@ class Calendar extends React.Component {
                 <div className="header">
                     <div className="title">Your Calendar</div>
                 </div>
+                {/* Set calendar daily and monthly components */}
                 { this.state.onDayView ? 
                     <React.Fragment>
                         <div className="buttons">

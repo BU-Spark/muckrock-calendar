@@ -18,6 +18,7 @@ class DailyTask extends React.Component {
         this.selectTag = this.selectTag.bind(this);
     }
 
+    // return tag component based on the percentage of completion (calculated as a ratio of current day and date due in respect to date submitted)
     selectTag(task) {
         try {
             var date_initial = ""
@@ -61,6 +62,7 @@ class DailyTask extends React.Component {
                         <div className="task-group">
                             {this.state.isToday ? <p className="date date-today">{this.state.date}</p> : <p className="date date-other">{this.state.date}</p>}
                             {this.state.tasks.length==0 ? 
+                                // handles days with no tasks
                                 <div className="day-group">
                                     <div className="task-group" key="">
                                         <div className="tag"><img src={Grey}/></div>
@@ -68,6 +70,7 @@ class DailyTask extends React.Component {
                                     </div>
                                 </div>
                                 :
+                                // handles days with tasks
                                 <div className="day-group">
                                     {   this.state.tasks.map((task) => {
                                             return (

@@ -35,7 +35,7 @@ class MonthView extends React.Component {
     }
 
     getRequestInformation() {
-        // pull api information
+        // retrieve information from api, use when access granted from muckrock
         // axios({
         //     url: `https://www.muckrock.com/api_v1/foia/?user=`,
         //     method: 'GET',

@@ -20,7 +20,7 @@ class DayView extends React.Component {
     }
 
     async componentDidMount() {
-        // pull api information
+        // retrieve information from api, use when access granted from muckrock
         // axios({
         //     url: `https://www.muckrock.com/api_v1/foia/?user=`,
         //     method: 'GET',
@@ -95,7 +95,7 @@ class DayView extends React.Component {
                     </div>
                     :
                     <div>
-                        <div className="month-title">{this.state.nextMonth}</div>
+                        <div className="month-title">{this.state.currentMonth}</div>
                         <div className="daily-group">{this.state.group_one}</div>
                     </div>
                 }
