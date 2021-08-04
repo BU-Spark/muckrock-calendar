@@ -23,6 +23,7 @@ const App = () => {
     setsidebarOpen(false);
   };
   return (
+
     // <div className="container">
     //   <Router>
     //     <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
@@ -33,12 +34,11 @@ const App = () => {
     //     <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
     //   </Router>
     // </div>
-    //  <Requests /> 
+     <Requests /> 
     // <Projects />
-
     // <Login />
     // <DayView/>
-    <Calendar/>
+    // <Calendar/>
   );
 };
 

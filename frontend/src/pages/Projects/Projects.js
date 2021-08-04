@@ -18,8 +18,8 @@ const Projects = () => {
       <SidebarComp />
       <header className="App-header">
         <span className="headerP">Your Projects</span>
-        <span className="projects">Projects</span>
-        <span className="requests">Requests</span>
+        <Link to="/Projects" className="projects">Projects</Link>
+        <Link to="/Requests" className="requests">Requests</Link>
         <span className="Sort">Sort by: </span>
         <button className="Sortbtn">Last Updated </button>
         
