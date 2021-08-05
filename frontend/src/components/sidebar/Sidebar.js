@@ -24,12 +24,13 @@ class SidebarComp extends React.Component {
       <Sidebar
         sidebar={
           <div className="sidebar__menu">
-            <button onClick={() => this.onSetSidebarOpen(false)}> <i className = "fa fa-bars"></i></button>
+            <button className="menuBtnInside" onClick={() => this.onSetSidebarOpen(false)}> <i className = "fa fa-bars largerIcon"></i>  </button>
             <div className="sidebar__link active_menu_link">
               <i className="fa fa-home"></i>
               <a href = "/Dashboard">Dashboard</a>
             </div>
-            <h2>MuckRock</h2>
+            <h2 className="dashboardTitle">MuckRock</h2>
+            <hr/>
             <div className="sidebar__link">
               <i className="fa fa-user-secret" aria-hidden="true"></i>
               <a href="/Projects">List of Projects</a>

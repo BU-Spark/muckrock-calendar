@@ -6,6 +6,10 @@
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+.sidebar__menu {
+  padding: 2% 30px 2% 5px !important;
+}
+
 .sidebar__menu button {
   font-size: 150%;
   margin-right: 15px !important;
@@ -40,16 +44,27 @@
   font-size: 18px;
   display: none;
 }
-
+.menuBtnInside {
+  text-align: left;
+  width: 100%;
+  margin-left: 7px;
+}
+.largerIcon {
+  font-size: 30px !important;
+  /* margin-bottom: 10px !important; */
+}
 .sidebar__menu > h2 {
-  color: #3ea175;
-  font-size: 16px;
+  color: #206e9e;
+  font-size: 20px;
   margin-top: 15px;
   margin-bottom: 5px;
   padding: 0 10px;
   font-weight: 700;
 }
-
+.sidebar__menu > hr {
+  color: #206e9e;
+  border-bottom: 4px solid #206e9e;
+}
 .sidebar__link {
   color: #f3f4f6;
   padding: 10px;
@@ -58,23 +73,24 @@
 }
 
 .active_menu_link {
-  background: rgba(62, 161, 117, 0.3);
-  color: #3ea175;
+  color: #206e9e;
+  background-color: #d0eafa;
 }
 
 .active_menu_link a {
-  color: #3ea175 !important;
+  color: #2a7db1;
 }
 
 .sidebar__link > a {
   text-decoration: none;
-  color: #a5aaad;
+  color: #3d94ca;
   font-weight: 700;
 }
 
 .sidebar__link > i {
   margin-right: 10px;
   font-size: 18px;
+  color: #3d94ca;
 }
 
 .sidebar_responsive {

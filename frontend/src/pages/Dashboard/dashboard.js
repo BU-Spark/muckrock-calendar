@@ -4,21 +4,37 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "../../components/navbar/Navbar";
 import SidebarComp from "../../components/sidebar/Sidebar";
 import axios from 'axios';
-import {dbData} from "./dbData"
+import {dbData} from "./dbData";
+import { apiConfig } from '../../service/muckrock';
+
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
 
+        function getRequests(res) {
+            var rres = res.data.results;
+            var finalRequests = [];
+            for (var i = 0; i < rres.length; i++) {
+                console.log(rres[i])
+            }
+            return finalRequests;
+        }
+
         this.getDBInfo = this.getDBInfo.bind(this);
         axios({
-            url: `https://www.muckrock.com/api_v1/foia/?user=`,
-            method: 'GET',
+            url: 'https://www.muckrock.com/api_v1/foia/',
+            method: "GET",
             headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json;charset=UTF-8',
+                'Content-Type' : 'application/json',
+                "Access-Control-Allow-Origin": "*",
+                'Access-Control-Allow-Origin': '*',
+                "Access-Control-Allow-Headers": "*",
+                "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST,PUT",
+                "Access-Control-Allow-Credentials": true,
+                'Authorization': 'Token ' + apiConfig.API_KEY
             }
         }).then((res) => {
-            console.log(res)
+            var requests = getRequests(res);
         }).catch((err) => {
             console.log("Error")
             console.log(err)
