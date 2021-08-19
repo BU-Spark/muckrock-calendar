@@ -6,6 +6,10 @@ import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home";
+import Projects from "./pages/Projects/Projects";
+import Project from "./components/project/Project";
+import Request from "./components/request/Request";
+import Requests from "./pages/Requests/Requests";
 import DayView from "./components/dayview/DayView";
 import MonthView from './components/monthview/MonthView';
 import Calendar from './pages/calendar/Calendar'
@@ -19,6 +23,7 @@ const App = () => {
     setsidebarOpen(false);
   };
   return (
+
     // <div className="container">
     //   <Router>
     //     <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
@@ -29,9 +34,11 @@ const App = () => {
     //     <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
     //   </Router>
     // </div>
+     <Requests /> 
+    // <Projects />
     // <Login />
     // <DayView/>
-    <Calendar/>
+    // <Calendar/>
   );
 };
 

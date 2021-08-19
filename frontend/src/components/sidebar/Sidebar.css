@@ -6,6 +6,11 @@
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
+.sidebar__menu button {
+  font-size: 150%;
+  margin-right: 15px !important;
+  margin-top: 15px !important;
+}
 
 .sidebar__title {
   display: flex;
