@@ -9,13 +9,13 @@ import Yellow from '../../images/Yellowsquare.png';
 import Navbar from '../../components/navbar/Navbar';
 import SidebarComp from '../../components/sidebar/Sidebar';
 import './Projects.css';
+import {Link} from "react-router-dom";
+
 
 const Projects = () => {
   
   return (
     <div className="App">
-      <Navbar />
-      <SidebarComp />
       <header className="App-header">
         <span className="headerP">Your Projects</span>
         <Link to="/Projects" className="projects">Projects</Link>

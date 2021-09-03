@@ -4,7 +4,6 @@ import { apiConfig } from './muckrock';
 /**
  * This file provides all the service functions
  */
-const url = "https://www.muckrock.com/api_v1";
 
 const auth_headers = {'Authorization': 'Token ' + apiConfig.API_KEY,
                  'Access-Control-Allow-Origin': '*',
@@ -20,11 +19,6 @@ const get_headers = {
                 "Access-Control-Allow-Credentials": true,
                 "Content-Type": "application/json"};
                
-
-//TODO: Fix CORS issue:
-// Access to XMLHttpRequest at 'https://www.muckrock.com/api_v1/foia' from origin 'http://localhost:3000' 
-// has been blocked by CORS policy: Request header field access-control-allow-origin is not allowed 
-// by Access-Control-Allow-Headers in preflight response.
 export const getFOIA =  () => {
     // await axios({
     //     method: 'get',
@@ -35,10 +29,16 @@ export const getFOIA =  () => {
     // }).catch(error => {
     //     console.log(error);
     // })
-     axios.get(url + '/foia', {
+    
+    // We get the base URL from the env variables. This allows us to change the base URL 
+    // of the API between dev and production(or in the future). Could also put this in another 
+    // file and call a constant here instead.
+
+    // We're using the NPM proxy to help us.
+     axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/foia', {
         headers: get_headers,
         withCredentials: true
-    })
+    }).then(res => console.log(res))
 }
 
 

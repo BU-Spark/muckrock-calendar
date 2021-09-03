@@ -1,6 +1,7 @@
 import "./Sidebar.css";
 import React from "react";
 import Sidebar from "react-sidebar";
+import {Link} from "react-router-dom";
 
 // import logo from "../../assets/logo.png";
 
@@ -35,12 +36,16 @@ class SidebarComp extends React.Component {
               <a href="/Projects">List of Projects</a>
             </div>
             <div className="sidebar__link">
+              <i className="fa fa-quote-right"></i>
+              <a href="/Requests">Requests</a>
+            </div>
+            <div className="sidebar__link">
               <i className="fa fa-calendar"></i>
               <a href="/Calendar">Calendar</a>
             </div>
             <div className="sidebar__link">
               <i className="fa fa-bell"></i>
-              <a href="/Notifications">Notifications</a>
+              <a href="/monthview">monthview</a>
             </div>
             <div className="sidebar__link">
               <i className="fa fa-cog"></i>
@@ -48,8 +53,10 @@ class SidebarComp extends React.Component {
             </div>
             <div className="sidebar__link">
               <i className="fa fa-quote-right"></i>
-              <a href="/About">About</a>
+              {/* All the others really should be like this! */}
+              <Link to="/requests">Requests</Link>
             </div>
+           
           </div>
         }
         open={this.state.sidebarOpen}

@@ -24,17 +24,21 @@ const App = () => {
   };
   return (
 
-    // <div className="container">
-    //   <Router>
-    //     <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-    //     <Switch>
-    //       <Route path="/" exact component={Main}></Route>
-    //       <Route path="/home" exact component={Home} />
-    //     </Switch>
-    //     <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
-    //   </Router>
-    // </div>
-     <Requests /> 
+    <div className="container">
+      <Router>
+        <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+        <Switch>
+          <Route path="/" exact component={Main}></Route>
+          <Route path="/home" exact component={Home} />
+          <Route path="/requests" exact component={Requests}/>
+          <Route path="/projects"><Projects/></Route>
+          <Route path="/calendar"><Calendar/></Route>
+          <Route path="/monthview"><MonthView/></Route>
+
+        </Switch>
+        <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+      </Router>
+    </div>
     // <Projects />
     // <Login />
     // <DayView/>

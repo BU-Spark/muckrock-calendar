@@ -9,13 +9,12 @@ import Yellow from '../../images/Yellowsquare.png';
 import './Requests.css';
 import Navbar from '../../components/navbar/Navbar';
 import SidebarComp from '../../components/sidebar/Sidebar';
+import {Link} from "react-router-dom";
+import { getFOIA } from '../../service/foia';
 
 const Requests = () => {
     return (
-        <div className="RequestsPage">
-            <Navbar />
-            <SidebarComp />
-
+        <div className="RequestsPage">  
             <header className="App-header">
             <span className="headerP">Your Projects</span>
             <Link to="/Projects" className="projects">Projects</Link>
