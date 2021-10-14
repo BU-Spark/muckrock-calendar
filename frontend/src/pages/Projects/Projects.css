@@ -25,8 +25,8 @@
 }
 
 .headerP {
-  /* position: absolute; */
-  /* width: 236px; */
+  position: absolute;
+  width: 1000px;
   height: 44px;
   left: 6%;
   top: 15%;

@@ -4,7 +4,7 @@ import './Project.css';
 
 const Project = (props) => {
     // Key == project ID
-    const { title, id, summary, img} = props;
+    const { title, num_articles, summary, img} = props;
 
     const testGetRequest = async () => {
 
@@ -28,7 +28,7 @@ const Project = (props) => {
         <div className="ProjectContainer">
             <img src={img} className="ProjectImage"/>                     
             <div className="ProjectTitle">{title}</div>
-            <div className="ProjectNum">{id}</div>
+            <div className="ProjectNum">{num_articles}</div>
             <div className="ProjectSummary">{summary}</div>
             <div className="ProjectInfoContainer">
                 <div className="ProjectProgress1"/>

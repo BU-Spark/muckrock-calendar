@@ -12,6 +12,7 @@ import './Projects.css';
 import {Link} from "react-router-dom";
 import ProjectListing from '../../components/projectListing/ProjectListing'; 
 import { projectTestData } from '../../components/projectListing/projectTestData';
+import { getFOIA } from '../../service/foia';
 
 
 const Projects = () => {
@@ -37,7 +38,9 @@ const Projects = () => {
         <button className="addFilter"><img src={filter}></img></button>
         <span className="addFiltertxt">Add Filter</span>
 
-        <ProjectListing className="projectListing" projects={projectTestData}/>
+        <div className="ProjContainer">
+          <ProjectListing className="ProjContainer" projects={projectTestData}/>
+        </div>
 
       {/* 
         <div className="ProjContainer">

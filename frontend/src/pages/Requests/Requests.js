@@ -11,6 +11,7 @@ import Navbar from '../../components/navbar/Navbar';
 import SidebarComp from '../../components/sidebar/Sidebar';
 import {Link} from "react-router-dom";
 import { getFOIA } from '../../service/foia';
+import RequestListing from '../../components/requestlisting/RequestListing';
 
 const Requests = () => {
     return (
@@ -25,44 +26,48 @@ const Requests = () => {
             <hr className="PChecker"/>
             <hr className="RChecker"/>
             <hr className="divider"/>
-            <div className="ProjContainer1" >
-          <RequestCard
-            img={Blue}
-            title="Request Title"
-            name="Agency Name" 
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
-          />
-          <RequestCard
-            img={Blue}
-            title="Request Title"
-            name="Agency Name"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
-          />
-          <RequestCard
-            img={Red}
-            title="Request Title"
-            name="Agency Name"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
-          />
-          <RequestCard
-            img={Green}
-            title="Request Title"
-            name="Agency Name"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
-          />
-          <RequestCard
-            img={Red}
-            title="Request Title"
-            name="Agency Name"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
-          />
-          <RequestCard
-            img= {Yellow}
-            title="Request Title"
-            name="Agency Name"
-            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
-          />
-        </div>
+
+            <RequestListing className="ProjContainer1"/>
+
+            {/* <div className="ProjContainer1" >
+                  
+              <RequestCard
+                img={Blue}
+                title="Request Title"
+                name="Agency Name" 
+                desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
+              />
+              <RequestCard
+                img={Blue}
+                title="Request Title"
+                name="Agency Name"
+                desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
+              />
+              <RequestCard
+                img={Red}
+                title="Request Title"
+                name="Agency Name"
+                desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
+              />
+              <RequestCard
+                img={Green}
+                title="Request Title"
+                name="Agency Name"
+                desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
+              />
+              <RequestCard
+                img={Red}
+                title="Request Title"
+                name="Agency Name"
+                desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
+              />
+              <RequestCard
+                img= {Yellow}
+                title="Request Title"
+                name="Agency Name"
+                desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
+              />
+            </div> */}
         </header>
     </div>
     );

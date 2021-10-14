@@ -1,7 +1,7 @@
 .ProjectContainer {
-  position: absolute;
-  margin: 2px;
-  width: 500px;
+  position: relative;
+  padding: 150px;
+  width: 800px;
   height: 25%;
   left: 6%;
   top: 38%;
@@ -48,11 +48,9 @@
 }
 
 .ProjectNum {
-  position: absolute;
-  width: 68px;
-  height: 29px;
-  left: 243px;
-  top: 53px;
+  position: relative;
+  right: 100%;
+  top: 1%;
 
   /* header 3 */
 
