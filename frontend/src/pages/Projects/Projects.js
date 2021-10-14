@@ -10,6 +10,8 @@ import Navbar from '../../components/navbar/Navbar';
 import SidebarComp from '../../components/sidebar/Sidebar';
 import './Projects.css';
 import {Link} from "react-router-dom";
+import ProjectListing from '../../components/projectListing/ProjectListing'; 
+import { projectTestData } from '../../components/projectListing/projectTestData';
 
 
 const Projects = () => {
@@ -17,7 +19,7 @@ const Projects = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <span className="headerP">Your Projects</span>
+        <span className="headerP">Projects</span>
         <Link to="/Projects" className="projects">Projects</Link>
         <Link to="/Requests" className="requests">Requests</Link>
         <span className="Sort">Sort by: </span>
@@ -35,6 +37,9 @@ const Projects = () => {
         <button className="addFilter"><img src={filter}></img></button>
         <span className="addFiltertxt">Add Filter</span>
 
+        <ProjectListing className="projectListing" projects={projectTestData}/>
+
+      {/* 
         <div className="ProjContainer">
             <ProjectCard
               title="Project X"
@@ -48,7 +53,7 @@ const Projects = () => {
               name="Agency Name"
               desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper. Fermentum, non, orci et tortor volutpat egestas."
             />
-          </div>
+          </div> */}
 
         {/* Requests
 

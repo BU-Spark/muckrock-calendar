@@ -1,14 +1,35 @@
+import { getFOIA } from '../../service/foia';
+import axios from 'axios';
 import './Project.css';
 
 const Project = (props) => {
-    const { title, num, name, desc} = props;
+    // Key == project ID
+    const { title, id, summary, img} = props;
+
+    const testGetRequest = async () => {
+
+        try{
+            const url = 'https://www.muckrock.com/api_v1/foia/'
+            const foia = await axios.get(url)
+            const res = foia.data
+            const {results} = res
+            console.log('hello')
+
+            console.log(results[0])
+
+            return results[0]
+
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
     return (
         <div className="ProjectContainer">
-            <div className="ProjectImage"/>
+            <img src={img} className="ProjectImage"/>                     
             <div className="ProjectTitle">{title}</div>
-            <div className="ProjectNum">{num}</div>
-            <div className="ProjectAgencyName">{name}</div>
-            <div className="ProjectDescription">{desc}</div>
+            <div className="ProjectNum">{id}</div>
+            <div className="ProjectSummary">{summary}</div>
             <div className="ProjectInfoContainer">
                 <div className="ProjectProgress1"/>
                 <div className="ProjectProgress2"/>

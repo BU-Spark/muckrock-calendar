@@ -19,7 +19,7 @@ const get_headers = {
                 "Access-Control-Allow-Credentials": true,
                 "Content-Type": "application/json"};
                
-export const getFOIA =  () => {
+export const getFOIA = () => {
     // await axios({
     //     method: 'get',
     //     url: url + '/foia',

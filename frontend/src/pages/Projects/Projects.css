@@ -24,10 +24,9 @@
   color: white;
 }
 
-
 .headerP {
-  position: absolute;
-  width: 236px;
+  /* position: absolute; */
+  /* width: 236px; */
   height: 44px;
   left: 6%;
   top: 15%;
@@ -40,7 +39,6 @@
   font-size: 36px;
   line-height: 44px;
   /* identical to box height */
-
 
   /* black 202122 */
 
@@ -63,12 +61,15 @@
   line-height: 22px;
   /* identical to box height */
 
-
   /* main blue 3E80FF */
 
-  color: #3E80FF;
+  color: #3e80ff;
 
   text-shadow: 0px 5px 15px rgba(62, 128, 255, 0.25);
+}
+
+.projectListing {
+  flex: 1;
 }
 
 .requests {
@@ -87,10 +88,9 @@
   line-height: 22px;
   /* identical to box height */
 
-
   /* gray C8CCD1 */
 
-  color: #C8CCD1;
+  color: #c8ccd1;
 }
 
 .Sort {
@@ -109,11 +109,9 @@
   line-height: 22px;
   /* identical to box height */
 
-
   /* gray C8CCD1 */
 
-  color: #C8CCD1;
-
+  color: #c8ccd1;
 }
 
 .Sortbtn {
@@ -133,7 +131,6 @@
   border: none;
   /* identical to box height */
 
-
   /* dark gray text 54595D */
 
   /* color: #54595D; */
@@ -141,8 +138,8 @@
 
 .PChecker {
   width: 4%;
-	height: 0px;
-  border: 2px solid #3E80FF;
+  height: 0px;
+  border: 2px solid #3e80ff;
   top: 26%;
   left: 6%;
   position: absolute;
@@ -151,8 +148,8 @@
 
 .RChecker {
   width: 4%;
-	height: 0px;
-  border: 2px solid #EAECF0;
+  height: 0px;
+  border: 2px solid #eaecf0;
   top: 26%;
   left: 15%;
   position: absolute;
@@ -161,8 +158,8 @@
 
 .divider {
   width: 92%;
-	height: 0px;
-  border: 2px solid #EAECF0;
+  height: 0px;
+  border: 2px solid #eaecf0;
   top: 26%;
   left: 6%;
   position: absolute;
@@ -184,10 +181,9 @@
   line-height: 22px;
   /* identical to box height */
 
-
   /* dark gray text 54595D */
 
-  color: #54595D;
+  color: #54595d;
 }
 
 .Requestnum {
@@ -206,10 +202,9 @@
   line-height: 22px;
   /* identical to box height */
 
-
   /* dark gray text 54595D */
 
-  color: #54595D;
+  color: #54595d;
 }
 
 .addProject {
@@ -219,7 +214,7 @@
   left: 77%;
   top: 34%;
 
-  background: #3E80FF;
+  background: #3e80ff;
   border-radius: 6px;
   border: none;
 }
@@ -240,10 +235,9 @@
   line-height: 22px;
   /* identical to box height */
 
-
   /* dark gray text 54595D */
 
-  color: #54595D;
+  color: #54595d;
 }
 
 .addFilter {
@@ -253,7 +247,7 @@
   left: 90%;
   top: 34%;
 
-  background: #3E80FF;
+  background: #3e80ff;
   border-radius: 6px;
   border: none;
 }
@@ -274,17 +268,16 @@
   line-height: 22px;
   /* identical to box height */
 
-
   /* dark gray text 54595D */
 
-  color: #54595D;
+  color: #54595d;
 }
 .ProjContainer > * {
-	margin-top: 2%;
+  margin-top: 2%;
   top: 300px;
   margin: 20px;
   width: 900px;
-} 
+}
 
 .App-link {
   color: #61dafb;
