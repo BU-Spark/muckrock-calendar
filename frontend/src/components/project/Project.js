@@ -28,7 +28,7 @@ const Project = (props) => {
         <div className="ProjectContainer">
             <img src={img} className="ProjectImage"/>                     
             <div className="ProjectTitle">{title}</div>
-            <div className="ProjectNum">{num_articles}</div>
+            <div className="ProjectNum">[{num_articles} Articles]</div>
             <div className="ProjectSummary">{summary}</div>
             <div className="ProjectInfoContainer">
                 <div className="ProjectProgress1"/>

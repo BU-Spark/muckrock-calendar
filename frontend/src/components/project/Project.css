@@ -2,9 +2,11 @@
   position: relative;
   padding: 150px;
   width: 800px;
-  height: 25%;
+  height: 19%;
   left: 6%;
   top: 38%;
+  margin-top: 30px;
+  margin-bottom: 30px;
 
   /* off white F8F9FA */
 
@@ -28,7 +30,7 @@
 
 .ProjectTitle {
   position: absolute;
-  width: 200px;
+  width: 400px;
   height: 50px;
   left: 124px;
   top: 53px;
@@ -48,16 +50,16 @@
 }
 
 .ProjectNum {
-  position: relative;
-  right: 100%;
-  top: 1%;
+  position: absolute;
+  top: 53px;
+  right: 60px;
 
   /* header 3 */
 
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   /* identical to box height */
 
@@ -90,7 +92,7 @@
   width: 90%;
   height: 17px;
   left: 4%;
-  top: 142px;
+  top: 130px;
 
   /* header 5 */
 
@@ -113,7 +115,7 @@
   width: 350px;
   height: 4px;
   left: 4%;
-  top: 94%;
+  top: 92%;
 
   /* white fff */
 
@@ -127,7 +129,7 @@
   width: 700px;
   height: 8px;
   left: 3%;
-  top: 93%;
+  top: 91%;
 
   /* main blue 3E80FF */
 

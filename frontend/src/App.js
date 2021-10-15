@@ -24,7 +24,7 @@ const App = () => {
   };
   return (
 
-    <div className="container">
+    <div>
       <Router>
         <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
         <Switch>

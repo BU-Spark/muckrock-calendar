@@ -20,27 +20,40 @@ const Projects = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <span className="headerP">Projects</span>
-        <Link to="/Projects" className="projects">Projects</Link>
-        <Link to="/Requests" className="requests">Requests</Link>
-        <span className="Sort">Sort by: </span>
-        <button className="Sortbtn">Last Updated </button>
-        
-        <hr className="PChecker"/>
-        <hr className="RChecker"/>
+
+        <div className="container">
+          <span className="headerP">Projects</span>
+        </div>
+
+        <div className="container">
+          <Link to="/Projects" className="projects">Projects</Link>
+          <Link to="/Requests" className="requests">Requests</Link>
+
+          <span className="Sort">Sort by: </span>
+          <button className="Sortbtn">Last Updated </button>
+
+          {/* <hr className="PChecker"/>
+          <hr className="RChecker"/> */}
+        </div>
         <hr className="divider"/>
 
-        {/* Projects */}
+      </header>
 
+
+      <div className="container">
         <span className="Projectnum">15 Active Projects</span>
         <button className="addProject"><img src={proj}></img></button>
         <span className="addProjecttxt">Add Project</span>
         <button className="addFilter"><img src={filter}></img></button>
         <span className="addFiltertxt">Add Filter</span>
+      
+      </div>
 
-        <div className="ProjContainer">
-          <ProjectListing className="ProjContainer" projects={projectTestData}/>
-        </div>
+      {/* Projects */}
+
+      <div className="contentContainer">
+        <ProjectListing projects={projectTestData}/>
+      </div>
 
       {/* 
         <div className="ProjContainer">
@@ -102,7 +115,6 @@ const Projects = () => {
             desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dolor, quisque in lorem accumsan massa ullamcorper."
           />
         </div> */}
-      </header>
     </div>
   );
 }
