@@ -1,6 +1,6 @@
 import proj from '../../images/Vectorproj.png';
 import filter from '../../images/Vectorfilter.png';
-import ProjectCard from '../../components/project/Project';
+import ProjectCard from '../../components/projectCard/Project';
 import RequestCard from '../../components/request/Request';
 import Blue from '../../images/Bluesquare.png';
 import Green from '../../images/Greensquare.png';
@@ -9,7 +9,7 @@ import Yellow from '../../images/Yellowsquare.png';
 import './Requests.css';
 import Navbar from '../../components/navbar/Navbar';
 import SidebarComp from '../../components/sidebar/Sidebar';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { getFOIA } from '../../service/foia';
 import RequestListing from '../../components/requestlisting/RequestListing';
 

@@ -1,6 +1,6 @@
 import proj from '../../images/Vectorproj.png';
 import filter from '../../images/Vectorfilter.png';
-import ProjectCard from '../../components/project/Project';
+import ProjectCard from '../../components/projectCard/Project';
 import RequestCard from '../../components/request/Request';
 import Blue from '../../images/Bluesquare.png';
 import Green from '../../images/Greensquare.png';

@@ -1,8 +1,8 @@
-import Project from "../project/Project"
+import Project from "../projectCard/Project"
 
-/**  Component to list all projects put into the props 
+/**  Component that takes a list of Project components and displays them
 */
-const ProjectListing = ({ projects }) => {
+const ProjectListings = ({ projects }) => {
     const { results } = projects
 
     return (
@@ -21,4 +21,4 @@ const ProjectListing = ({ projects }) => {
 
 }
 
-export default ProjectListing;
+export default ProjectListings;

@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects/Projects";
-import Project from "./components/project/Project";
+import Project from "./components/projectCard/Project";
 import Request from "./components/request/Request";
 import Requests from "./pages/Requests/Requests";
 import DayView from "./components/dayview/DayView";
@@ -30,7 +30,8 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={Main}></Route>
           <Route path="/home" exact component={Home} />
-          <Route path="/requests" exact component={Requests}/>
+          {/* <Route path="/requests" exact component={Requests}/> */}
+          <Route path="/requests"><Requests/></Route>
           <Route path="/projects"><Projects/></Route>
           <Route path="/calendar"><Calendar/></Route>
           <Route path="/monthview"><MonthView/></Route>
