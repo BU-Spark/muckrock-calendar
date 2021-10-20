@@ -1,8 +1,9 @@
 .RequestContainer {
   position: relative;
-  height: 250px;
-  width: 50%;
-  left: 6%;
+  margin: 12px;
+  height: 200px;
+  width: 27%;
+  left: 5%;
   right: 0%;
   top: 36%;
   display: block;
@@ -40,7 +41,7 @@
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 29px;
   /* identical to box height */
 
