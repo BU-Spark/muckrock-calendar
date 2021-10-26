@@ -3,11 +3,14 @@ import Project from "../projectCard/Project"
 /**  Component that takes a list of Project components and displays them
 */
 const ProjectListings = ({ projects }) => {
-    const { results } = projects
+
+    // console.log(typeof(projects))
+    // console.log(projects)
+
 
     return (
         <div>
-            {results.map(curr_project => (
+            {projects.map(curr_project => (
                 <Project
                 key = {curr_project.id}
                 num_articles = {curr_project.articles.length}

@@ -1,7 +1,7 @@
 .contentContainer {
   margin-top: 25px;
   margin-bottom: 15px;
-  position: fixed;
+  position: relative;
   width: 87%;
   left: 6%;
   /* flex: 0.2; */

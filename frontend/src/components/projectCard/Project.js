@@ -6,24 +6,6 @@ const Project = (props) => {
     // Key == project ID
     const { title, num_articles, summary, img} = props;
 
-    const testGetRequest = async () => {
-
-        try{
-            const url = 'https://www.muckrock.com/api_v1/foia/'
-            const foia = await axios.get(url)
-            const res = foia.data
-            const {results} = res
-            console.log('hello')
-
-            console.log(results[0])
-
-            return results[0]
-
-        } catch (err) {
-            console.error(err)
-        }
-    }
-
     return (
         <div className="ProjectContainer">
             <img src={img} className="ProjectImage"/>                     
