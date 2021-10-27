@@ -68,8 +68,7 @@
   /* identical to box height */
 
   /* main blue 3E80FF */
-  color: #3e80ff;
-  text-shadow: 0px 5px 15px rgba(62, 128, 255, 0.25);
+  color: #c8ccd1;
 }
 
 .lh_requestslink {
@@ -92,6 +91,7 @@
 
   color: #c8ccd1;
 }
+
 
 .lh_sortbtn {
   position: relative;

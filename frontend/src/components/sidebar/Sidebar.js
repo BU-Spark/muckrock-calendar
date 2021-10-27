@@ -5,6 +5,8 @@ import {Link} from "react-router-dom";
 
 // import logo from "../../assets/logo.png";
 
+
+
 class SidebarComp extends React.Component {
   constructor(props) {
     super(props);
@@ -63,9 +65,13 @@ class SidebarComp extends React.Component {
         onSetOpen={this.onSetSidebarOpen}
         styles={{ sidebar: { background: "white" } }}
       >
-        <button onClick={() => this.onSetSidebarOpen(true)}>
-          <i className= "fa fa-bars"></i>
-        </button>
+
+         {/*This is the Hamburger menu. The divs are just decoration. Look at Sidebar.css*/}
+        <div className="hamburger__menu" onClick={() => this.onSetSidebarOpen(true)}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </Sidebar>
       
 
