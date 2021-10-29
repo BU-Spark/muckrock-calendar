@@ -1,9 +1,14 @@
 import "./Navbar.css";
 
 
-const Navbar = () => {
+const Navbar = ({click}) => {
   return (
     <nav className="navbar">
+      <div className="hamburger__menu" onClick={click}>
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
       <form action="/" method="get">
         <input
           className="search_input"

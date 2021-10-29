@@ -77,28 +77,6 @@
   font-size: 18px;
 }
 
-.hamburger__menu {
-  margin-left: 0.7%;
-  margin-top: 1%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-}
-
-.hamburger__menu:hover > div {
-  background: #dd219e;
-}
-
-.hamburger__menu > div {
-  width: 100%;
-  height: 10%;
-  background: #f4f4f4;
-}
-
 .sidebar_responsive {
   display: inline !important;
   z-index: 9999 !important;

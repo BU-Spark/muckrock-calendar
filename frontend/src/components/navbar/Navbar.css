@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
+  padding: 10px 20px;
   border: 0px;
   border-bottom: 1px solid black;
   /* padding: 0 30px 0 30px;
@@ -13,6 +13,7 @@
 }
 
 .navbar form {
+  width: 45%;
   border: 1px solid rgb(95, 95, 95);
   border-radius: 5px;
   padding: 5px 15px;
@@ -26,7 +27,7 @@
   border: 0px;
   border-bottom: 2px solid black;
   margin-right: 15px;
-  width: 450px;
+  width: 90%;
 }
 
 .navbar form button.search-btn {
@@ -70,13 +71,6 @@ div.navbar-right a.notification-btn {
   text-align: center;
 }
 
-
-
-/* .navbar__right > a {
-  margin-left: 20px;
-  text-decoration: none;
-} */
-
 .navbar__right > a > i {
   color: #a5aaad;
   font-size: 16px;
@@ -105,13 +99,27 @@ div.navbar-right a.notification-btn {
   z-index: 999;
 } 
 
-/* @media only screen and (max-width: 978px) {
-  .nav_icon {
-    display: inline;
-  }
+/*
+Starting css for hamburger styling
+*/
+
+.hamburger__menu {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
-@media only screen and (max-width: 480px) {
-  .navbar__left {
-    display: none;
-  }
-}*/
+
+.hamburger__menu:hover > div {
+  background: #3E80FF;
+  box-shadow: 0px 5px 15px rgb(62 128 255 / 50%);
+}
+
+.hamburger__menu > div {
+  width: 100%;
+  height: 10%;
+  background: #C8CCD1;
+}

@@ -13,9 +13,12 @@ import Requests from "./pages/Requests/Requests";
 import DayView from "./components/dayview/DayView";
 import MonthView from './components/monthview/MonthView';
 import Calendar from './pages/calendar/Calendar'
+import Backdrop from "./components/backdrop/Backdrop";
+import SideDrawer from "./components/sidedrawer/SideDrawer";
 
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
+  const [sideToggle, setSideToggle] = useState(false);
   const openSidebar = () => {
     setsidebarOpen(true);
   };
@@ -26,7 +29,9 @@ const App = () => {
 
     <div>
       <Router>
-        <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+        <Navbar click={() => setSideToggle(true)} />
+        <SideDrawer show={sideToggle} click={() => setSideToggle(true)} />
+        <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
         <Switch>
           <Route path="/" exact component={Main}></Route>
           <Route path="/home" exact component={Home} />
@@ -37,7 +42,6 @@ const App = () => {
           <Route path="/monthview"><MonthView/></Route>
 
         </Switch>
-        <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
       </Router>
     </div>
     // <Projects />
