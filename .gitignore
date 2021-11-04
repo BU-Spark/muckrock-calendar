@@ -4,4 +4,3 @@ frontend/node_modules
 node_modules/
 
 frontend/.env
-package-lock.json
