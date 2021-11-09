@@ -1,4 +1,4 @@
-import Project from "../projectCard/Project"
+import Project from "../ProjectCard/Project"
 
 /**  Component that takes a list of Project components and displays them
 */

@@ -1,11 +1,11 @@
 import proj from '../../images/Vectorproj.png';
 import filter from '../../images/Vectorfilter.png';
-import './Projects.css';
-import ProjectListing from '../../components/projectListing/ProjectListing'; 
-import { projectTestData } from '../../components/projectListing/projectTestData';
+import './ProjectsPage.css';
+import ProjectListing from '../../components/ProjectListing/ProjectListing'; 
+import { projectTestData } from '../../components/ProjectListing/projectTestData';
 import { getFOIA, get_headers } from '../../service/foia';
 import { getProjects } from '../../service/foia';
-import ListingHeader from '../../components/listing_header/ListingHeader';
+import ListingHeader from '../../components/ListingHeader/ListingHeader';
 import { useState, createContext, useContext } from 'react';
 import axios from 'axios';
 

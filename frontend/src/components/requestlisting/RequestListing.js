@@ -2,7 +2,7 @@ import Blue from '../../images/Bluesquare.png';
 import Green from '../../images/Greensquare.png';
 import Red from '../../images/Redsquare.png';
 import Yellow from '../../images/Yellowsquare.png';
-import RequestCard from '../../components/request/Request';
+import RequestCard from '../Request/Request';
 import { requestTestData } from './requestTestData';
 
 const RequestListing = () => {

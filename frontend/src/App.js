@@ -1,20 +1,20 @@
 import { useState } from "react";
 import "./App.css";
-import Main from "./pages/main/Main";
-import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/sidebar/Sidebar";
+import MainPage from "./pages/MainPage/MainPage";
+import Navbar from "./components/NavBar/Navbar";
+//import Sidebar from "./components/SideBar/SideBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "./pages/Login/Login";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects/Projects";
-import Project from "./components/projectCard/Project";
-import Request from "./components/request/Request";
-import Requests from "./pages/Requests/Requests";
-import DayView from "./components/dayview/DayView";
-import MonthView from './components/monthview/MonthView';
-import Calendar from './pages/calendar/Calendar'
-import Backdrop from "./components/backdrop/Backdrop";
-import SideDrawer from "./components/sidedrawer/SideDrawer";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import HomePage from "./pages/HomePage/HomePage";
+import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
+import Project from "./components/ProjectCard/Project";
+//import Request from "./components/Request/Request";
+import RequestsPage from "./pages/RequestsPage/RequestsPage";
+//import DayView from "./components/DayView/DayView";
+import MonthView from './components/MonthView/MonthView';
+import CalendarPage from './pages/CalendarPage/CalendarPage';
+import Backdrop from "./components/Backdrop/Backdrop";
+import SideDrawer from "./components/SideDrawer/SideDrawer";
 
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -33,12 +33,11 @@ const App = () => {
         <SideDrawer show={sideToggle} click={() => setSideToggle(true)} />
         <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
         <Switch>
-          <Route path="/" exact component={Main}></Route>
-          <Route path="/home" exact component={Home} />
-          {/* <Route path="/requests" exact component={Requests}/> */}
-          <Route path="/requests"><Requests/></Route>
-          <Route path="/projects"><Projects/></Route>
-          <Route path="/calendar"><Calendar/></Route>
+          <Route path="/" exact component={MainPage}></Route>
+          <Route path="/home" exact component={HomePage} />
+          <Route path="/requests"><RequestsPage/></Route>
+          <Route path="/projects"><ProjectsPage/></Route>
+          <Route path="/calendar"><CalendarPage/></Route>
           <Route path="/monthview"><MonthView/></Route>
 
         </Switch>
