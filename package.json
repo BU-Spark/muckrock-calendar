@@ -1,0 +1,30 @@
+{
+  "name": "muckrock-calendar",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://www.muckrock.com/api_v1/",
+  "scripts": {
+    "start": "cd frontend && react-scripts start",
+    "build": "cd frontend && react-scripts build",
+    "test": "cd frontend && react-scripts test",
+    "eject": "cd frontend && react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
