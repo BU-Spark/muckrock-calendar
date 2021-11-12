@@ -25,6 +25,11 @@
     padding-left: 0px;
 }
 
+.sidedrawer__menu {
+    text-align: center;
+    user-select: none;
+}
+
   
 .sidedrawer__menu > h2 {
     color: #3ea175;
@@ -70,7 +75,7 @@
 }
 
 .sidedrawer__logoholder {
-    margin: 38px 38px;
+    margin: 38px auto;
     justify-content: center;
     display: inline-block;
 }
@@ -87,6 +92,7 @@
     background: #3E80FF;
     border-radius: 10px;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .sidedrawer__muckrocklogo h2{

@@ -12,7 +12,11 @@ const SideDrawer = ({show, click}) => {
     return <div className={sideDrawerClass.join(" ")}>
         <ul className="sidedrawer__links" onClick={click}>
             <div className="sidedrawer__menu">
-                <div className="sidedrawer__logoholder"><div className="sidedrawer__muckrocklogo"><h2>M</h2></div></div>
+                <div className="sidedrawer__logoholder">
+                    <div className="sidedrawer__muckrocklogo">
+                        <h2>M</h2>
+                    </div>
+                </div>
                 <div className="sidedrawer__link active_menu_link">
                     <i className="fa fa-home"></i>
                     <a href = "/Dashboard">Dashboard</a>
