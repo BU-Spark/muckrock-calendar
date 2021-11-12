@@ -1,9 +1,6 @@
 .ProjectContainer {
   position: relative;
   padding: 150px;
-  width: 800px;
-  height: 250px;
-  left: 6%;
   margin-top: 30px;
   margin-bottom: 30px;
 
@@ -28,12 +25,10 @@
 }
 
 .ProjectTitle {
-  position: relative;
+  position: absolute;
   width: 400px;
   height: 50px;
-  left: 124px;
-  top: 53px;
-
+  top: 36px;
   /* header 3 */
 
   font-family: Inter;

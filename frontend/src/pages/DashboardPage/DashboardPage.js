@@ -1,7 +1,6 @@
 import proj from '../../images/Vectorproj.png';
 import filter from '../../images/Vectorfilter.png';
-import ProjectListing from '../../components/ProjectListing/ProjectListing'; 
-//import { projectTestData } from '../components/ProjectListing/projectTestData';
+import DashboardListing from '../../components/DashboardListing/DashboardListing'; 
 import { getFOIA, get_headers } from '../../service/foia';
 import { getProjects } from '../../service/foia';
 import ListingHeader from '../../components/ListingHeader/ListingHeader';
@@ -40,15 +39,21 @@ function DashBoard() {
 
   handleGetProjects()
   return (
-    <div>
-      <div className = "dashboard_container">
+    <div className = "dashboard_container">
+      <div className = "progress_pane">
+        <div className="section_title">In Progress</div>
+        <DashboardListing projects={ projectsList }/>
       </div>
-      <div className = "dashboard_container" >
+      <div className = "followup_pane" >
+        <div className="section_title">Follow Up</div>
+        <DashboardListing projects={ projectsList }/>
       </div>
-      <div className = "dashboard_container" >
+      <div className = "completed_pane" >
+        <div className="section_title">Completed</div>
+        <DashboardListing projects={ projectsList }/>
       </div>
     </div>
   );
 }
-
+ 
 export default DashBoard;

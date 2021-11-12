@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
-import Project from "./components/ProjectCard/Project";
+import Project from "./components/ProjectCard/ProjectCard";
 import Request from "./components/RequestCard/RequestCard";
 import RequestsPage from "./pages/RequestsPage/RequestsPage";
 import DayView from "./components/DayView/DayView";
