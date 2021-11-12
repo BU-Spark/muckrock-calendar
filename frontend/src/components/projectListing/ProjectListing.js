@@ -1,4 +1,4 @@
-import Project from "../ProjectCard/Project"
+import ProjectCard from "../ProjectCard/Project"
 
 /**  Component that takes a list of Project components and displays them
 */
@@ -11,7 +11,7 @@ const ProjectListings = ({ projects }) => {
     return (
         <div>
             {projects.map(curr_project => (
-                <Project
+                <ProjectCard
                 key = {curr_project.id}
                 num_articles = {curr_project.articles.length}
                 img = {curr_project.image}

@@ -13,7 +13,7 @@ import axios from 'axios';
 
 export const ProjectsContext = createContext()
 
-const Projects = () => {
+const ProjectsPage = () => {
 
   // projectsList is the list of projects that will be displayed
   // Calling setProjectsList will cause a re-render to display updated projectsList
@@ -53,7 +53,7 @@ const Projects = () => {
       <ListingHeader headerTitle="Projects"/>
 
       <div className="container">
-        <span className="Projectnum"># Active Projects</span>
+        <span className="Projectnum">{projectsList.length} Active Projects</span>
         <button className="addProject"><img src={proj}></img></button>
         <span className="addProjecttxt">Add Project</span>
         <button className="addFilter"><img src={filter}></img></button>
@@ -70,4 +70,4 @@ const Projects = () => {
   );
 }
 
-export default Projects;
+export default ProjectsPage;

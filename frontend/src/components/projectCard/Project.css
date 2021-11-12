@@ -28,7 +28,7 @@
 }
 
 .ProjectTitle {
-  position: absolute;
+  position: relative;
   width: 400px;
   height: 50px;
   left: 124px;

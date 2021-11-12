@@ -13,7 +13,11 @@ import axios from 'axios';
 
 const MainPage = () => {
   return (
-    <title> HI </title>
+    <main>
+      <div className = "main_container">
+        
+      </div>
+    </main>
   );
 }
 

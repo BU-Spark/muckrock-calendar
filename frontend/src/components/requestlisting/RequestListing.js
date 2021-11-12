@@ -2,21 +2,18 @@ import Blue from '../../images/Bluesquare.png';
 import Green from '../../images/Greensquare.png';
 import Red from '../../images/Redsquare.png';
 import Yellow from '../../images/Yellowsquare.png';
-import RequestCard from '../Request/Request';
-import { requestTestData } from './requestTestData';
+import RequestCard from '../RequestCard/RequestCard';
 
-const RequestListing = () => {
-    const { results } = requestTestData
-
+const RequestListing = ({ requests }) => {
+ 
     return (
-        <div className="ProjContainer1">
-            {results.map(curr_request => (
+        <div>
+            {requests.map(curr_request => (
                 <RequestCard
-                img = {Blue}
+                key = {curr_request.id}
+                img = {curr_request.image}
                 title = {curr_request.title}
-                name = {curr_request.name}
-                //What is desc?
-                desc = {curr_request.date_due}
+                summary = {curr_request.summary}
                 />
             ))}
         </div>

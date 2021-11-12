@@ -7,10 +7,12 @@ import { getProjects } from '../../service/foia';
 import ListingHeader from '../../components/ListingHeader/ListingHeader';
 import { useState, createContext, useContext } from 'react';
 import axios from 'axios';
+import './DashboardPage.css';
 
 
-export const ProjectsContext = createContext()
-function Home() {
+export const ProjectsContext = createContext();
+
+function DashBoard() {
 
   const [projectsList, setProjectsList] = useState([]);
   const handleGetProjects = async() => {
@@ -39,31 +41,14 @@ function Home() {
   handleGetProjects()
   return (
     <div>
-    <title> "hi" </title>
-    
-    <ProjectsContext.Provider value={{projectsList, setProjectsList}}>
-    <div>
-
-      <div className="contentContainer">
-        {/* <ProjectListing projects={ projectTestData.results }/> */}
-        <title>In Progress</title>
-        <ProjectListing projects={ projectsList }/>
+      <div className = "dashboard_container">
       </div>
-      <div className="contentContainer">
-        {/* <ProjectListing projects={ projectTestData.results }/> */}
-        <title>Follow Up</title>
-        <ProjectListing projects={ projectsList }/>
+      <div className = "dashboard_container" >
       </div>
-      <div className="contentContainer">
-        {/* <ProjectListing projects={ projectTestData.results }/> */}
-        <title>Completed</title>
-        <ProjectListing projects={ projectsList }/>
+      <div className = "dashboard_container" >
       </div>
-    </div>
-    </ProjectsContext.Provider>
-    
     </div>
   );
 }
 
-export default Home;
+export default DashBoard;
