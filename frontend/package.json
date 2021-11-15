@@ -1,5 +1,5 @@
 {
-  "homepage": "https://yap-ryan.github.io/se-muckrock-calendar",
+  "homepage": "https://bu-spark.github.io/se-muckrock-calendar",
   "name": "muckrock-calendar",
   "version": "0.1.0",
   "private": true,
@@ -34,7 +34,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build --git git",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
