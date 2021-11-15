@@ -1,4 +1,0 @@
-/* Preents the scroll bar from affecting div size */
-html {
-    overflow-y: scroll;
-}
