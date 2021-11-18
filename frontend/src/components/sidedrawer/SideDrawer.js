@@ -38,11 +38,6 @@ const SideDrawer = ({show, click}) => {
                     <i className="fa fa-cog"></i>
                     <a href="/Settings">Settings</a>
                 </div>
-                <div className="sidedrawer__link">
-                    <i className="fa fa-quote-right"></i>
-                    {/* All the others really should be like this! */}
-                    <Link to="/requests">Requests</Link>
-                </div>
             </div>
         </ul>
 
