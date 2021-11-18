@@ -4,6 +4,8 @@ import Main from "./pages/main/Main";
 import Navbar from "./components/navbar/Navbar";
 import Sidebar from "./components/sidebar/Sidebar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
+
 import Login from "./pages/Login/Login";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects/Projects";
@@ -28,21 +30,21 @@ const App = () => {
   return (
 
     <div>
-      <Router>
+      <HashRouter basename={process.env.PUBLIC_URL} hashType="slash" >
         <Navbar click={() => setSideToggle(true)} />
         <SideDrawer show={sideToggle} click={() => setSideToggle(true)} />
         <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
         <Switch>
-          <Route path="/" exact component={Main}></Route>
-          <Route path="/home" exact component={Home} />
+          <Route exact path="/" component={Main} />
+          <Route exact path="/home"  component={Home} />
           {/* <Route path="/requests" exact component={Requests}/> */}
-          <Route path="/requests"><Requests/></Route>
-          <Route path="/projects"><Projects/></Route>
-          <Route path="/calendar"><Calendar/></Route>
-          <Route path="/monthview"><MonthView/></Route>
+          <Route exact path="/requests" component={Requests} />
+          <Route exact path="/projects" component={Projects}/>
+          <Route exact path="/calendar" component={Calendar}/>
+          <Route exact path="/monthview" component={MonthView}/>
 
         </Switch>
-      </Router>
+      </HashRouter>
     </div>
     // <Projects />
     // <Login />
