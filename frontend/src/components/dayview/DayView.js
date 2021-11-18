@@ -1,6 +1,6 @@
-import React from 'react'
-import DailyTask from '../dailytask/DailyTask'
-import './DayView.css'
+import React from 'react';
+import DailyTask from '../DailyTask/DailyTask';
+import './DayView.css';
 import {testData} from '../../testData';
 
 class DayView extends React.Component {

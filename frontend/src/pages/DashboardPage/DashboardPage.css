@@ -1,0 +1,56 @@
+  
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+  
+.dashboard_container {
+    width: 100%;
+    height: 100%;
+}
+
+.section_title {
+    position: absolute;
+    width: 33.3%;
+    top:75px;
+    float: center;
+    justify-content: center;
+
+    /* header 3 */
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    /* identical to box height */
+
+    /* black 202122 */
+
+     color: #202122;
+}
+  
+.progress_pane {
+      width: 33.3%;
+      height: 100%;
+      float: left;
+      background-color: white;
+      border-collapse: collapse;
+}
+  
+.followup_pane {
+      width: 33.3%;
+      height: 100%;
+      float: left;
+      background-color: white;
+      border-collapse: collapse;
+}
+  
+.completed_pane {
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    background-color: white;
+    border-collapse: collapse;
+}

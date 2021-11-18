@@ -1,6 +1,6 @@
-import './Request.css';
+import './RequestCard.css';
 
-const Request = (props) => {
+const RequestCard = (props) => {
     const { img, title, name, desc } = props;
     return (
         <div className="RequestContainer">
@@ -12,4 +12,4 @@ const Request = (props) => {
     )
 };
 
-export default Request;
+export default RequestCard;
