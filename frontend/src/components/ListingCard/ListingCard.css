@@ -1,0 +1,199 @@
+.ListingContainer {
+    position: relative;
+    padding: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    /* off white F8F9FA */
+  
+    background: #DCE8FF;
+    box-shadow: 0px 5px 15px rgba(200, 204, 209, 0.25);
+    border-radius: 15px;
+  }
+  
+  .ListingTitle {
+    position: absolute;
+    width: 90%;
+    height: 75px;
+    top: 36px;
+    left:4px;
+    /* header 3 */
+  
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    /* identical to box height */
+  
+    /* black 202122 */
+  
+    color: #202122;
+  }
+  
+  .ListingNum {
+    position: absolute;
+    top: 53px;
+    right: 60px;
+  
+    /* header 3 */
+  
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 29px;
+    /* identical to box height */
+  
+    /* dark gray text 54595D */
+  
+    color: #54595d;
+  }
+  
+  .ListingAgencyName {
+    position: absolute;
+    width: 10%;
+    height: 17px;
+    left: 4%;
+    top: 124px;
+  
+    font-family: Inter;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+  
+    /* dark gray text 54595D */
+  
+    color: #54595d;
+  }
+  
+  .ListingSummary {
+    position: absolute;
+    width: 90%;
+    height: 17px;
+    left: 4%;
+    top: 130px;
+  
+    /* header 5 */
+  
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+  
+    /* dark gray text 54595D */
+  
+    color: #54595d;
+  }
+  .ListingInfoContainer {
+    float: left;
+  }
+  .ListingProgress1 {
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    left: 4%;
+    top: 92%;
+  
+    /* white fff */
+  
+    background: #ffff;
+    border-radius: 10px;
+    z-index: 50;
+  }
+  
+  .ListingProgress2 {
+    position: absolute;
+    width: 90%;
+    height: 8px;
+    left: 3%;
+    top: 91%;
+  
+    /* main blue 3E80FF */
+  
+    background: #3e80ff;
+    border-radius: 10px;
+  }
+  
+  .ListingTag1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+  
+    position: absolute;
+    width: 27px;
+    height: 20px;
+    left: 90%;
+    top: 78%;
+  
+    /* green success 2BDB91 */
+  
+    background: #2bdb91;
+    border-radius: 4px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+  }
+  
+  .ListingTag2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+  
+    position: absolute;
+    width: 27px;
+    height: 20px;
+    left: 82%;
+    top: 78%;
+  
+    /* yellow warning FFCF3E */
+  
+    background: #ffcf3e;
+    border-radius: 4px;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+  }
+  
+  .TagName {
+    position: static;
+    width: 19px;
+    height: 12px;
+    left: 4px;
+    top: 4px;
+  
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+  
+    /* black 202122 */
+  
+    color: #202122;
+  
+    /* Inside Auto Layout */
+  
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 10px;
+  }
+  
