@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/se-muckrock-calendar/static/css/main.1de6a2ca.chunk.css",
-    "main.js": "/se-muckrock-calendar/static/js/main.563b5c2a.chunk.js",
-    "main.js.map": "/se-muckrock-calendar/static/js/main.563b5c2a.chunk.js.map",
+    "main.css": "/se-muckrock-calendar/static/css/main.a487f6de.chunk.css",
+    "main.js": "/se-muckrock-calendar/static/js/main.48c7c16a.chunk.js",
+    "main.js.map": "/se-muckrock-calendar/static/js/main.48c7c16a.chunk.js.map",
     "runtime-main.js": "/se-muckrock-calendar/static/js/runtime-main.5021a04c.js",
     "runtime-main.js.map": "/se-muckrock-calendar/static/js/runtime-main.5021a04c.js.map",
     "static/css/2.ed3440b4.chunk.css": "/se-muckrock-calendar/static/css/2.ed3440b4.chunk.css",
-    "static/js/2.ed60d796.chunk.js": "/se-muckrock-calendar/static/js/2.ed60d796.chunk.js",
-    "static/js/2.ed60d796.chunk.js.map": "/se-muckrock-calendar/static/js/2.ed60d796.chunk.js.map",
+    "static/js/2.5cac833a.chunk.js": "/se-muckrock-calendar/static/js/2.5cac833a.chunk.js",
+    "static/js/2.5cac833a.chunk.js.map": "/se-muckrock-calendar/static/js/2.5cac833a.chunk.js.map",
     "index.html": "/se-muckrock-calendar/index.html",
     "static/css/2.ed3440b4.chunk.css.map": "/se-muckrock-calendar/static/css/2.ed3440b4.chunk.css.map",
-    "static/css/main.1de6a2ca.chunk.css.map": "/se-muckrock-calendar/static/css/main.1de6a2ca.chunk.css.map",
-    "static/js/2.ed60d796.chunk.js.LICENSE.txt": "/se-muckrock-calendar/static/js/2.ed60d796.chunk.js.LICENSE.txt",
+    "static/css/main.a487f6de.chunk.css.map": "/se-muckrock-calendar/static/css/main.a487f6de.chunk.css.map",
+    "static/js/2.5cac833a.chunk.js.LICENSE.txt": "/se-muckrock-calendar/static/js/2.5cac833a.chunk.js.LICENSE.txt",
     "static/media/accept-tasks.d21dbad8.png": "/se-muckrock-calendar/static/media/accept-tasks.d21dbad8.png",
     "static/media/files-sent.06f26f21.png": "/se-muckrock-calendar/static/media/files-sent.06f26f21.png",
     "static/media/online-calendar.0df353e2.png": "/se-muckrock-calendar/static/media/online-calendar.0df353e2.png",
@@ -20,8 +20,8 @@
   "entrypoints": [
     "static/js/runtime-main.5021a04c.js",
     "static/css/2.ed3440b4.chunk.css",
-    "static/js/2.ed60d796.chunk.js",
-    "static/css/main.1de6a2ca.chunk.css",
-    "static/js/main.563b5c2a.chunk.js"
+    "static/js/2.5cac833a.chunk.js",
+    "static/css/main.a487f6de.chunk.css",
+    "static/js/main.48c7c16a.chunk.js"
   ]
 }
