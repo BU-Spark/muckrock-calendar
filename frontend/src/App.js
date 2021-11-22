@@ -41,10 +41,6 @@ const App = () => {
         </Switch>
       </Router>
     </div>
-    // <Projects />
-    // <Login />
-    // <DayView/>
-    // <Calendar/>
   );
 };
 

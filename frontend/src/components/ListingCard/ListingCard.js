@@ -2,6 +2,7 @@ import { getFOIA } from '../../service/foia';
 import axios from 'axios';
 import './ListingCard.css';
 
+/** Component that holds a single project/request for the kanban board **/
 const ListingCard = (props) => {
     // Key == project ID
     const { title, summary} = props;

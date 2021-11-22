@@ -1,7 +1,7 @@
 import { getFOIA } from '../../service/foia';
 import axios from 'axios';
 import './ProjectCard.css';
-
+/** Component that holds a single project for the project listing page **/
 const ProjectCard = (props) => {
     // Key == project ID
     const { title, num_articles, summary, img} = props;

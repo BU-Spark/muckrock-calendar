@@ -1,13 +1,7 @@
 import ListingCard from "../ListingCard/ListingCard"
 
-/**  Component that takes a list of Project components and displays them
-*/
+/** Component that takes a list of Project components and displays them **/
 const DashboardListing = ({ projects }) => {
-
-    // console.log(typeof(projects))
-    // console.log(projects)
-
-
     return (
         <div>
             {projects.map(curr_project => (
@@ -19,7 +13,6 @@ const DashboardListing = ({ projects }) => {
             ))}
         </div>
     )
-
 }
 
 export default DashboardListing;
