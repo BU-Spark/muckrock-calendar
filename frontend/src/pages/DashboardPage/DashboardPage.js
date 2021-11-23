@@ -1,10 +1,6 @@
-import proj from '../../images/Vectorproj.png';
-import filter from '../../images/Vectorfilter.png';
 import DashboardListing from '../../components/DashboardListing/DashboardListing'; 
-import { getFOIA, get_headers } from '../../service/foia';
-import { getProjects } from '../../service/foia';
-import ListingHeader from '../../components/ListingHeader/ListingHeader';
-import { useState, createContext, useContext } from 'react';
+import { get_headers } from '../../service/foia';
+import { useState, createContext } from 'react';
 import axios from 'axios';
 import './DashboardPage.css';
 

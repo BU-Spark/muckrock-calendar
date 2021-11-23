@@ -1,5 +1,3 @@
-import { getFOIA } from '../../service/foia';
-import axios from 'axios';
 import './ProjectCard.css';
 
 const ProjectCard = (props) => {
@@ -8,7 +6,7 @@ const ProjectCard = (props) => {
 
     return (
         <div className="ProjectContainer">
-            <img src={img} className="ProjectImage"/>                     
+            <img src={img} alt="" className="ProjectImage"/>                     
             <div className="ProjectTitle">{title}</div>
             <div className="ProjectNum">[{num_articles} Articles]</div>
             <div className="ProjectSummary">{summary}</div>

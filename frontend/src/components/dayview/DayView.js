@@ -63,10 +63,10 @@ class DayView extends React.Component {
         var current = new Date()
         for (let i=0; i<dates.length; i++) {
             const compareDate = new Date(current - tzoffset).toISOString().substring(0,10)
-            if (dates[i].substring(5,7) == today.substring(5,7)) {
-                group_one.push(<DailyTask key={i} isToday={today==dates[i]} date={parseInt(dates[i].substring(8,10))} day={week[i]} tasks={tasks.filter(task => task.date_due.substring(0,10) === compareDate)} />)
+            if (dates[i].substring(5,7) === today.substring(5,7)) {
+                group_one.push(<DailyTask key={i} isToday={today===dates[i]} date={parseInt(dates[i].substring(8,10))} day={week[i]} tasks={tasks.filter(task => task.date_due.substring(0,10) === compareDate)} />)
             } else {
-                group_two.push(<DailyTask key={i} isToday={today==dates[i]} date={parseInt(dates[i].substring(8,10))} day={week[i]} tasks={tasks.filter(task => task.date_due.substring(0,10) === compareDate)} />)
+                group_two.push(<DailyTask key={i} isToday={today===dates[i]} date={parseInt(dates[i].substring(8,10))} day={week[i]} tasks={tasks.filter(task => task.date_due.substring(0,10) === compareDate)} />)
             }
             current.setDate(current.getDate() + 1)
         }

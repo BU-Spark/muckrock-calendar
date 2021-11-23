@@ -1,5 +1,4 @@
-import { getFOIA } from '../../service/foia';
-import axios from 'axios';
+
 import './ListingCard.css';
 
 const ListingCard = (props) => {

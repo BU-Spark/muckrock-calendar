@@ -1,7 +1,3 @@
-import Blue from '../../images/Bluesquare.png';
-import Green from '../../images/Greensquare.png';
-import Red from '../../images/Redsquare.png';
-import Yellow from '../../images/Yellowsquare.png';
 import RequestCard from '../RequestCard/RequestCard';
 
 const RequestListing = ({ requests }) => {
