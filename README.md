@@ -64,28 +64,39 @@ export const apiConfig  = {
 }
 ```
 
-## CORS and API URLs
+You will need this for user authentication/login.
 
-Because of CORS we cannot make third party requests (ie from localhost or our server) directly to the API for security reasons. To solve this issue during development we utilize the [CRA proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) to handle unknown route requests and proxy them while changing their origin. This solves the CORS issue while on development. To do this add `"proxy": "INSERT MUCKROCK API URL HERE"` to the package.json inside of the frontend folder.
+## CORS and API URLs (Bypassing CORS on local machine)
+
+Because of CORS we cannot make third party requests (ie from localhost or our server) directly to the API for security reasons. To solve this issue during development we utilize the [CRA proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) to handle unknown route requests and proxy them while changing their origin. This solves the CORS issue while on development. To do this add `"proxy": "https://www.muckrock.com/api_v1"` to the package.json inside of the frontend folder.
 
 The problem arises is that we do not know the domain under which this website will be posted so how can we write API request in the format of `/foia` if we're not sure they will share a common sub-domain!
 
-To solve this issue an environment variable called `REACT_APP_MUCKROCK_BASE_URL` is utilized to dynamically set the base URL for the API. During dev we set this to nothing (when you want to test locally on your computer), but on production (we are using GitHub pages for now) we set this to the real base URL.
+To solve this issue an environment variable called `REACT_APP_MUCKROCK_BASE_URL` is utilized to dynamically set the base URL for the API. During dev we set this to nothing (when you want to test locally on your computer), but on production (ie when you compile a build and push it to gh-pages branch) we set this to the real base URL (https://www.muckrock.com/api_v1).
 
 This means you'll need to create a `.env` in the format specified by the `./.envTemplate` file.
 
+Summary:
+
+- Add `"proxy"` option to package.json
+- Add `REACT_APP_MUCKROCK_BASE_URL` to .env file and leave empty during local dev
+
 Ask Ian if have any questions.
 
-## DEPLOYMENT
+## Deploying to GitHub Pages
 
 We are using GitHub Pages.
 Current URL: https://bu-spark.github.io/se-muckrock-calendar/#/
 
-You must push the build folder to gh-pages branch and the website should automatically update.
+You must push a build folder to gh-pages branch and the website should automatically update.
 
 In package.json in side frontend folder you should have the scripts:
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build",
 
-    npm run deploy will automatically run predeploy which will make an initial build.
-    You must also make a PAT on github and use that as your password to publish.
+```
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+```
+
+Running 'npm run deploy' will automatically run predeploy beforehand which will compile a build.
+In order to publish, gh-pages will ask for your github credentials.
+You must also make a PAT (Personal Access Token) on github and use that as your password to publish.
