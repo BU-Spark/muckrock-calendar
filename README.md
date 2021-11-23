@@ -68,7 +68,7 @@ You will need this for user authentication/login.
 
 ## CORS and API URLs (Bypassing CORS on local machine)
 
-Because of CORS we cannot make third party requests (ie from localhost or our server) directly to the API for security reasons. To solve this issue during development we utilize the [CRA proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) to handle unknown route requests and proxy them while changing their origin. This solves the CORS issue while on development. To do this add `"proxy": "https://www.muckrock.com/api_v1"` to the package.json inside of the frontend folder.
+Because of CORS we cannot make third party requests (ie from localhost or our server) directly to the API for security reasons. To solve this issue during development we utilize the [CRA proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) to handle unknown route requests and proxy them while changing their origin. This solves the CORS issue while on development. To do this we added `"proxy": "https://www.muckrock.com/api_v1"` to the package.json inside of the frontend folder.
 
 The problem arises is that we do not know the domain under which this website will be posted so how can we write API request in the format of `/foia` if we're not sure they will share a common sub-domain!
 
@@ -78,7 +78,7 @@ This means you'll need to create a `.env` in the format specified by the `./.env
 
 Summary:
 
-- Add `"proxy"` option to package.json
+- Add `"proxy"` option to package.json (should already be there)
 - Add `REACT_APP_MUCKROCK_BASE_URL` to .env file and leave empty during local dev
 
 Ask Ian if have any questions.
@@ -100,3 +100,11 @@ In package.json in side frontend folder you should have the scripts:
 Running 'npm run deploy' will automatically run predeploy beforehand which will compile a build.
 In order to publish, gh-pages will ask for your github credentials.
 You must also make a PAT (Personal Access Token) on github and use that as your password to publish.
+
+NOTICE: Make sure you have `REACT_APP_MUCKROCK_BASE_URL=https://www.muckrock.com/api_v1` in .env before you
+publish since CRA proxy will no longer function here. This is done to make sure requests are sent to correct url,
+as the muckrock api url is pulled from `REACT_APP_MUCKROCK_BASE_URL` in .env file.
+
+With the proxy deactivated, you will run into an issue with CORS in production.
+We can temporarily bypass this by disabling chrome web security as CORS is enforced by the browser.
+Look at tutorials online how to do this: https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome.
