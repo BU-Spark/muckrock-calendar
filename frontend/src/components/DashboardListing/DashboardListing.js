@@ -1,8 +1,8 @@
-import ProjectCard from "../ProjectCard/ProjectCard"
+import ListingCard from "../ListingCard/ListingCard"
 
 /**  Component that takes a list of Project components and displays them
 */
-const ProjectListings = ({ projects }) => {
+const DashboardListing = ({ projects }) => {
 
     // console.log(typeof(projects))
     // console.log(projects)
@@ -11,10 +11,8 @@ const ProjectListings = ({ projects }) => {
     return (
         <div>
             {projects.map(curr_project => (
-                <ProjectCard
+                <ListingCard
                 key = {curr_project.id}
-                num_articles = {curr_project.articles.length}
-                img = {curr_project.image}
                 title = {curr_project.title}
                 summary = {curr_project.summary}
                 />
@@ -24,4 +22,4 @@ const ProjectListings = ({ projects }) => {
 
 }
 
-export default ProjectListings;
+export default DashboardListing;

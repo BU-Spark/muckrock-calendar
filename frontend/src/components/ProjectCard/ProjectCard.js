@@ -1,8 +1,8 @@
 import { getFOIA } from '../../service/foia';
 import axios from 'axios';
-import './Project.css';
+import './ProjectCard.css';
 
-const Project = (props) => {
+const ProjectCard = (props) => {
     // Key == project ID
     const { title, num_articles, summary, img} = props;
 
@@ -23,4 +23,4 @@ const Project = (props) => {
     )
 };
 
-export default Project;
+export default ProjectCard;

@@ -1,7 +1,7 @@
 import React from 'react'
-import './calendar.css'
-import DayView from '../../components/dayview/DayView'
-import MonthView from '../../components/monthview/MonthView'
+import './CalendarPage.css'
+import DayView from '../../components/DayView/DayView'
+import MonthView from '../../components/MonthView/MonthView'
 
 class Calendar extends React.Component {
     constructor(props) {

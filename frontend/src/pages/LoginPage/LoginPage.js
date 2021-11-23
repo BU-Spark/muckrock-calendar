@@ -2,7 +2,7 @@ import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import {TextField} from '@material-ui/core';
-import './login.css';
+import './LoginPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import slide_1 from '../../images/accept-tasks.png';
 import slide_2 from '../../images/files-sent.png';
