@@ -1,26 +1,44 @@
 # muckrock-calendar
-A calendar/timeline view of MuckRock requests. A sister service in coloaboration with MuckRock
+A calendar/timeline view of MuckRock requests. A sister service in collaboration with MuckRock
 
-## To start
+## To run locally
 
-Please register an account on Muckruck, and get your API KEY. Your token can be obtained on the bottom left-hand side of your [profile page](https://www.muckrock.com/accounts/profile/). When making a request, token should be placed under /frontend/muckrock.ts, the token should be included as an authentication header. 
+Clone the repository and change into the dev branch (this is the most updated branch while we develop). Open in your preferred IDE, and move into the 'frontend' folder.
 
+In terminal:
 ```
-headers = {'Authorization': 'Token %s' % token}
-```
-```
-/frontend/service/muckrock.ts
-
-export const apiConfig  = {
-    "API_KEY": "YOUR API KEY HERE",
-}
+cd frontend
 ```
 
+Then, you must download all dependencies.
 
-## CORS and API URLs
+In terminal:
+```
+npm install
+```
 
-Because of CORS we cannot make requests from localhost(or our server) directly to the API for security reasons. To solve this issue during development(when an exception on the serer is not present) we utilize the [CRA proxy](https://create-react-app.dev/docs/proxying-api-requests-in-development/) to handle unknown route requests and proxy them while changing their origin. This solves the CORS issue transparently. The problem arises is that we do not know the domain under which this website will be posted so how can we write API request in the format of `/foia` if we're not sure they will share a common sub-domain! To solve this issue an environment variable called `REACT_APP_MUCKROCK_BASE_URL` is utilized to dynamically set the base URL for the API. During dev this means it will just be nothing but when we build a production version we could set it to the real base URL.
+Finally, to run the application on localhost.
 
-This means you'll need to create a `.env` in the format specified by the `./.envTemplate` file. 
+In terminal:
+```
+npm start
+```
+This should automatically open the application on your browser at localhost:3000.
 
-Ask Ian if have any questions.
+# Repo organization
+
+    .
+    ├── github                   
+    ├── frontend                # Contains all code for the frontend
+        ├── public 
+        ├── src                 # Contains source files
+            ├── components      # All React components 
+            ├── images          
+            ├── pages           # All pages of the webapp
+            ├── service         # API calls
+            ├── App             # Main file containing configuration for site
+            └── testData        # Contains test data for some hardcoded pages
+        └── package             # Contains dependencies
+    ├── COLLABORATORS           # GitHub accounts of users contributing
+    ├── LICENSE
+    └── README.md

@@ -1,5 +1,6 @@
 import './RequestCard.css';
 
+/** Component that holds a signle request for the request listing page **/
 const RequestCard = (props) => {
     const { img, title, name, desc } = props;
     return (

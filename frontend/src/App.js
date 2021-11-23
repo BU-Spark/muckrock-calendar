@@ -33,10 +33,6 @@ const App = () => {
         </Switch>
       </HashRouter>
     </div>
-    // <Projects />
-    // <Login />
-    // <DayView/>
-    // <Calendar/>
   );
 };
 

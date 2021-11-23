@@ -1,5 +1,5 @@
 import RequestCard from '../RequestCard/RequestCard';
-
+/** Component that displays all requests for an individual user **/
 const RequestListing = ({ requests }) => {
  
     return (

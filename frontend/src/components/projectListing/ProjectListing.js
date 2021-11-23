@@ -1,12 +1,7 @@
 import ProjectCard from "../ProjectCard/ProjectCard"
 
-/**  Component that takes a list of Project components and displays them
-*/
+/**  Component that takes a list of Project components and displays them **/
 const ProjectListings = ({ projects }) => {
-
-    // console.log(typeof(projects))
-    // console.log(projects)
-
 
     return (
         <div>
