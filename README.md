@@ -75,3 +75,17 @@ To solve this issue an environment variable called `REACT_APP_MUCKROCK_BASE_URL`
 This means you'll need to create a `.env` in the format specified by the `./.envTemplate` file.
 
 Ask Ian if have any questions.
+
+## DEPLOYMENT
+
+We are using GitHub Pages.
+Current URL: https://bu-spark.github.io/se-muckrock-calendar/#/
+
+You must push the build folder to gh-pages branch and the website should automatically update.
+
+In package.json in side frontend folder you should have the scripts:
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build",
+
+    npm run deploy will automatically run predeploy which will make an initial build.
+    You must also make a PAT on github and use that as your password to publish.
