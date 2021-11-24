@@ -74,7 +74,7 @@ The problem arises is that we do not know the domain under which this website wi
 
 To solve this issue an environment variable called `REACT_APP_MUCKROCK_BASE_URL` is utilized to dynamically set the base URL for the API. During dev we set this to nothing (when you want to test locally on your computer), but on production (ie when you compile a build and push it to gh-pages branch) we set this to the real base URL (https://www.muckrock.com/api_v1).
 
-This means you'll need to create a `.env` in the format specified by the `./.envTemplate` file.
+This means you'll need to create a `.env` in the format specified by the `.envTemplate` file.
 
 Summary:
 
@@ -88,10 +88,10 @@ Ask Ian if have any questions.
 We are using GitHub Pages.
 Current URL: https://bu-spark.github.io/se-muckrock-calendar/#/
 
-You must push a build folder to gh-pages branch and the website should automatically update.
+In order to deploy we must push/publish a build folder to gh-pages branch, from there the website should automatically update.
 Assuming everying is in order, skip to step 3.
 
-1. Before deployiung check that you have: `homepage` in `package.json` in frontend
+1. Before deploying check that you have: `homepage` in `package.json` in frontend
 
    This should already be there:
    `"homepage": "https://bu-spark.github.io/se-muckrock-calendar",`
