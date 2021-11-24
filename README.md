@@ -89,22 +89,35 @@ We are using GitHub Pages.
 Current URL: https://bu-spark.github.io/se-muckrock-calendar/#/
 
 You must push a build folder to gh-pages branch and the website should automatically update.
+Assuming everying is in order, skip to step 3.
 
-In package.json in side frontend folder you should have the scripts:
+1. Before deployiung check that you have: `homepage` in `package.json` in frontend
 
-```
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-```
+   This should already be there:
+   `"homepage": "https://bu-spark.github.io/se-muckrock-calendar",`
 
-Running 'npm run deploy' will automatically run predeploy beforehand which will compile a build.
-In order to publish, gh-pages will ask for your github credentials.
-You must also make a PAT (Personal Access Token) on github and use that as your password to publish.
+   This is used to determine root URL.
 
-NOTICE: Make sure you have `REACT_APP_MUCKROCK_BASE_URL=https://www.muckrock.com/api_v1` in .env before you
+2. Also check: In package.json in side frontend folder, check scripts:
+
+   ```
+       "predeploy": "npm run build",
+       "deploy": "gh-pages -d build",
+   ```
+
+3. Assuming everything is fine, run `npm run deploy`
+   This will automatically run `predeploy` beforehand which will compile a build.
+   After that it will run the script to deploy
+
+   In order to publish, gh-pages will ask for your github credentials.
+   You must also make a PAT (Personal Access Token) on github and use that as your password to publish.
+
+NOTE 1: Make sure you have `REACT_APP_MUCKROCK_BASE_URL=https://www.muckrock.com/api_v1` in .env before you
 publish since CRA proxy will no longer function here. This is done to make sure requests are sent to correct url,
 as the muckrock api url is pulled from `REACT_APP_MUCKROCK_BASE_URL` in .env file.
 
 With the proxy deactivated, you will run into an issue with CORS in production.
 We can temporarily bypass this by disabling chrome web security as CORS is enforced by the browser.
 Look at tutorials online how to do this: https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome.
+
+NOTE 2: We use HashRouter instead of BrowserRouter for routing as GH Pages has issues with standard BrowserRouter.
