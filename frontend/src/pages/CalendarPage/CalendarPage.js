@@ -1,5 +1,5 @@
 import React from 'react'
-import './calendar.css'
+import './CalendarPage.css'
 import DayView from '../../components/dayview/DayView'
 import MonthView from '../../components/monthview/MonthView'
 

@@ -1,19 +1,17 @@
 import proj from '../../images/Vectorproj.png';
 import filter from '../../images/Vectorfilter.png';
-import './Projects.css';
+import './ProjectsPage.css';
 import ProjectListing from '../../components/projectListing/ProjectListing'; 
-import { projectTestData } from '../../components/projectListing/projectTestData';
-import { getFOIA, get_headers } from '../../service/foia';
-import { getProjects } from '../../service/foia';
-import ListingHeader from '../../components/listing_header/ListingHeader';
-import { useState, createContext, useContext } from 'react';
+import { get_headers } from '../../service/foia';
+import ListingHeader from '../../components/ListingHeader/ListingHeader';
+import { useState, createContext } from 'react';
 import axios from 'axios';
 
 
 
 export const ProjectsContext = createContext()
 
-const Projects = () => {
+const ProjectsPage = () => {
 
   // projectsList is the list of projects that will be displayed
   // Calling setProjectsList will cause a re-render to display updated projectsList
@@ -53,10 +51,10 @@ const Projects = () => {
       <ListingHeader headerTitle="Projects"/>
 
       <div className="container">
-        <span className="Projectnum"># Active Projects</span>
-        <button className="addProject"><img src={proj}></img></button>
+        <span className="Projectnum">{projectsList.length} Active Projects</span>
+        <button className="addProject"><img src={proj} alt="add_project_button"></img></button>
         <span className="addProjecttxt">Add Project</span>
-        <button className="addFilter"><img src={filter}></img></button>
+        <button className="addFilter"><img src={filter} alt="add_filter_button"></img></button>
         <span className="addFiltertxt">Add Filter</span>
       </div>
 
@@ -70,4 +68,4 @@ const Projects = () => {
   );
 }
 
-export default Projects;
+export default ProjectsPage;

@@ -30,7 +30,7 @@
 }
 
 .RequestTitle {
-  position: absolute;
+  position: relative;
   width: 210px;
   height: 29px;
   left: 110px;
