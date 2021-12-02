@@ -5,10 +5,6 @@ import ProjectCard from "../ProjectCard/ProjectCard"
 */
 const ProjectListings = ({ projects }) => {
 
-    // console.log(typeof(projects))
-    // console.log(projects)
-
-
     return (
         <div>
             {projects.map(curr_project => (

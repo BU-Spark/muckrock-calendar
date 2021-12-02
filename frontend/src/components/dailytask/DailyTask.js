@@ -34,15 +34,15 @@ class DailyTask extends React.Component {
 
             switch (true) {
                 case percentage < 0.5: 
-                    return <img src={Blue}/>
+                    return <img src={Blue} alt="blue_img"/>
                 case percentage < 0.75:
-                    return <img src={Yellow}/>
+                    return <img src={Yellow} alt="yellow_img"/>
                 case percentage < 1:
-                    return <img src={Red}/>
+                    return <img src={Red} alt="red_img"/>
                 case percentage > 1:
-                    return <img src={Green}/>
+                    return <img src={Green} alt="green_img"/>
                 default:
-                    return <img src={Blue}/>
+                    return <img src={Blue} alt="blue_img"/>
             }
         } catch(error) {
             console.log(error)
@@ -60,10 +60,10 @@ class DailyTask extends React.Component {
                     {this.state.isToday ? <p className={"day day-today " + this.state.day}>{this.state.day}</p> : <p className={"day day-other " + this.state.day}>{this.state.day}</p>}
                         <div className="task-group">
                             {this.state.isToday ? <p className="date date-today">{this.state.date}</p> : <p className="date date-other">{this.state.date}</p>}
-                            {this.state.tasks.length==0 ? 
+                            {this.state.tasks.length===0 ? 
                                 <div className="day-group">
                                     <div className="task-group" key="">
-                                        <div className="tag"><img src={Grey}/></div>
+                                        <div className="tag"><img src={Grey}  alt="grey_img"/></div>
                                         <div className="task">None</div>
                                     </div>
                                 </div>

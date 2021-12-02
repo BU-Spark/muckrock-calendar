@@ -1,16 +1,8 @@
-import proj from '../../images/Vectorproj.png';
-import filter from '../../images/Vectorfilter.png';
-import RequestCard from '../../components/RequestCard/RequestCard';
-import Blue from '../../images/Bluesquare.png';
-import Green from '../../images/Greensquare.png';
-import Red from '../../images/Redsquare.png';
-import Yellow from '../../images/Yellowsquare.png';
 import './RequestsPage.css';
-import Navbar from '../../components/NavBar/Navbar';
 import RequestListing from '../../components/RequestListing/RequestListing';
 import ListingHeader from '../../components/ListingHeader/ListingHeader';
-import { getFOIA, get_headers } from '../../service/foia';
-import { useState, createContext, useContext } from 'react';
+import { get_headers } from '../../service/foia';
+import { useState, createContext } from 'react';
 import axios from 'axios';
 
 export const RequestsContext = createContext();

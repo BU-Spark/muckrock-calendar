@@ -1,14 +1,12 @@
-import { getFOIA } from '../../service/foia';
-import axios from 'axios';
 import './ProjectCard.css';
-
+/** Component that holds a single project for the project listing page **/
 const ProjectCard = (props) => {
     // Key == project ID
     const { title, num_articles, summary, img} = props;
 
     return (
         <div className="ProjectContainer">
-            <img src={img} className="ProjectImage"/>                     
+            <img src={img} alt="" className="ProjectImage"/>                     
             <div className="ProjectTitle">{title}</div>
             <div className="ProjectNum">[{num_articles} Articles]</div>
             <div className="ProjectSummary">{summary}</div>

@@ -2,9 +2,12 @@ import axios from 'axios';
 import { apiConfig } from './muckrock';
 
 /**
- * This file provides all the service functions
+ * !! FUNCTIONS HERE NO LONGER IN USE --> ONLY get_headers is used
+ * 
+ * This file provides all the service functions 
  */
 
+// May need this for user auth
 const auth_headers = {'Authorization': 'Token ' + apiConfig.API_KEY,
                  'Access-Control-Allow-Origin': '*',
                  'Access-Control-Allow-Headers': "Origin, X-Requested-With, Content-Type, Accept",

@@ -1,7 +1,5 @@
 import React from 'react'
 import TuiCalendar from '@toast-ui/react-calendar';
-import { ISchedule, ICalendarInfo } from "tui-calendar";
-import axios from 'axios';
 import 'tui-calendar/dist/tui-calendar.css';
 import 'tui-date-picker/dist/tui-date-picker.css';
 import 'tui-time-picker/dist/tui-time-picker.css';

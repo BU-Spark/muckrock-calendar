@@ -1,6 +1,7 @@
 import './SideDrawer.css';
 import {Link} from 'react-router-dom';
 
+/** Component for the navbar on the side of the site (replaces NavBar component) **/
 const SideDrawer = ({show, click}) => {
     const sideDrawerClass = ["sidedrawer"];
 
