@@ -36,17 +36,19 @@ function DashBoard() {
   handleGetProjects()
   return (
     <div className = "dashboard_container">
-      <div className = "progress_pane">
-        <div className="section_title">In Progress</div>
-        <DashboardListing projects={ projectsList }/>
-      </div>
-      <div className = "followup_pane" >
-        <div className="section_title">Follow Up</div>
-        <DashboardListing projects={ projectsList }/>
-      </div>
-      <div className = "completed_pane" >
-        <div className="section_title">Completed</div>
-        <DashboardListing projects={ projectsList }/>
+      <div className = "column_container">
+        <div className = "dashboard_column">
+          <div className="section_title">In Progress</div>
+          <DashboardListing projects={ projectsList }/>
+        </div>
+        <div className = "dashboard_column" >
+          <div className="section_title">Follow Up</div>
+          <DashboardListing projects={ projectsList }/>
+        </div>
+        <div className = "dashboard_column" >
+          <div className="section_title">Completed</div>
+          <DashboardListing projects={ projectsList }/>
+        </div>
       </div>
     </div>
   );

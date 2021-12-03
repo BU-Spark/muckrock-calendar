@@ -11,10 +11,12 @@ const ListingCard = (props) => {
             <div className="ListingTitle">{title}</div>
             <div className="ListingSummary">{summary}</div>
             <div className="ListingInfoContainer">
-                <div className="ListingProgress1"/>
-                <div className="ListingProgress2"/>
-                <div className="ListingTag1"><span className="TagName">Tag</span></div>
-                <div className="ListingTag2"><span className="TagName">Tag</span></div>
+                {/* <div className="ListingProgress1"/>
+                <div className="ListingProgress2"/> */}
+                <div className="ListingTag1">Bigger Tag</div>
+                <div className="ListingTag2">Tag</div>
+                <div className="ListingTag2">Tag</div>
+
             </div>
             
         </div>

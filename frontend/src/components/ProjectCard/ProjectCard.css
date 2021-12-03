@@ -132,17 +132,10 @@
 }
 
 .ProjectTag1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: inline-block;
+  position: relative;
+  height: 22px;
   align-items: center;
-  padding: 4px;
-
-  position: absolute;
-  width: 27px;
-  height: 20px;
-  left: 95%;
-  top: 78%;
 
   /* green success 2BDB91 */
 
@@ -151,24 +144,19 @@
 
   /* Inside Auto Layout */
 
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 10px 0px;
+  margin-right: 8px;
+  padding: 3px 5px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
 }
 
 .ProjectTag2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: inline-block;
+  position: relative;
+  height: 22px;
   align-items: center;
-  padding: 4px;
-
-  position: absolute;
-  width: 27px;
-  height: 20px;
-  left: 90%;
-  top: 78%;
 
   /* yellow warning FFCF3E */
 
@@ -177,33 +165,25 @@
 
   /* Inside Auto Layout */
 
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 10px 0px;
-}
-
-.TagName {
-  position: static;
-  width: 19px;
-  height: 12px;
-  left: 4px;
-  top: 4px;
-
+  margin-right: 8px;
+  padding: 3px 5px;
   font-family: Inter;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 11px;
+}
+
+.TagName {
+  position: relative;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  margin: 0px 5px;
 
   /* black 202122 */
 
   color: #202122;
 
   /* Inside Auto Layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 10px;
 }
