@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/se-muckrock-calendar/static/css/main.b7f307c2.chunk.css",
-    "main.js": "/se-muckrock-calendar/static/js/main.930462ee.chunk.js",
-    "main.js.map": "/se-muckrock-calendar/static/js/main.930462ee.chunk.js.map",
+    "main.js": "/se-muckrock-calendar/static/js/main.0f4101b6.chunk.js",
+    "main.js.map": "/se-muckrock-calendar/static/js/main.0f4101b6.chunk.js.map",
     "runtime-main.js": "/se-muckrock-calendar/static/js/runtime-main.5021a04c.js",
     "runtime-main.js.map": "/se-muckrock-calendar/static/js/runtime-main.5021a04c.js.map",
     "static/css/2.586419a4.chunk.css": "/se-muckrock-calendar/static/css/2.586419a4.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.586419a4.chunk.css",
     "static/js/2.fb6384ac.chunk.js",
     "static/css/main.b7f307c2.chunk.css",
-    "static/js/main.930462ee.chunk.js"
+    "static/js/main.0f4101b6.chunk.js"
   ]
 }
