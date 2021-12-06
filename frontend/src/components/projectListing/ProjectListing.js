@@ -1,6 +1,8 @@
 import ProjectCard from "../ProjectCard/ProjectCard"
 
-/**  Component that takes a list of Project components and displays them **/
+/**  SUB-VIEW
+ * Component that takes a list of Project components and displays them
+*/
 const ProjectListings = ({ projects }) => {
 
     return (
