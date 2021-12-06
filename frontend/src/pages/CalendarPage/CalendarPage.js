@@ -1,6 +1,6 @@
 import React from 'react'
 import './CalendarPage.css'
-import DayView from '../../components/dayview/DayView'
+import DayView from '../../components/DayView/DayView'
 import MonthView from '../../components/monthview/MonthView'
 
 class Calendar extends React.Component {

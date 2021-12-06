@@ -1,5 +1,5 @@
 import './RequestsPage.css';
-import RequestListing from '../../components/requestlisting/RequestListing';
+import RequestListing from '../../components/RequestListing/RequestListing';
 import ListingHeader from '../../components/ListingHeader/ListingHeader';
 import { get_headers } from '../../service/foia';
 import { useState, createContext } from 'react';

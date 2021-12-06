@@ -1,7 +1,7 @@
 import proj from '../../images/Vectorproj.png';
 import filter from '../../images/Vectorfilter.png';
 import './ProjectsPage.css';
-import ProjectListing from '../../components/projectListing/ProjectListing'; 
+import ProjectListing from '../../components/ProjectListing/ProjectListing'; 
 import { get_headers } from '../../service/foia';
 import ListingHeader from '../../components/ListingHeader/ListingHeader';
 import { useState, createContext } from 'react';

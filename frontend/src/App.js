@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import MainPage from "./pages/MainPage/MainPage";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/NavBar/Navbar";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
@@ -9,8 +9,8 @@ import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import RequestsPage from "./pages/RequestsPage/RequestsPage";
 import MonthView from './components/monthview/MonthView';
 import CalendarPage from './pages/CalendarPage/CalendarPage';
-import Backdrop from "./components/backdrop/Backdrop";
-import SideDrawer from "./components/sidedrawer/SideDrawer";
+import Backdrop from "./components/Backdrop/Backdrop";
+import SideDrawer from "./components/SideDrawer/SideDrawer";
 
 const App = () => {
   const [sideToggle, setSideToggle] = useState(false);

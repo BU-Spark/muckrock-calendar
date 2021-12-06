@@ -26,7 +26,7 @@ const Navbar = ({click}) => {
           <i className="fa fa-bell"></i>
         </a>
         &nbsp; &nbsp;
-        <a href="/Profile">
+        <a href="/LoginPage">
           <i className="fa fa-user-circle-o" aria-hidden="true"></i>
           &nbsp;
           Active User
