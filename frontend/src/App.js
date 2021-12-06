@@ -7,7 +7,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import RequestsPage from "./pages/RequestsPage/RequestsPage";
-import MonthView from './components/monthview/MonthView';
+import MonthView from './components/MonthView/MonthView';
 import CalendarPage from './pages/CalendarPage/CalendarPage';
 import Backdrop from "./components/Backdrop/Backdrop";
 import SideDrawer from "./components/SideDrawer/SideDrawer";
