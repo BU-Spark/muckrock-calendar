@@ -58,7 +58,7 @@ const ProjectsPage = () => {
         <span className="addFiltertxt">Add Filter</span>
       </div>
 
-      <div className="contentContainer">
+      <div className="contentContainerProjects">
         {/* <ProjectListing projects={ projectTestData.results }/> */}
         <ProjectListing projects={ projectsList }/>
 

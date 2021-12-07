@@ -1,8 +1,16 @@
-.contentContainer {
+.container {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  /* flex: 0.2; */
+  display: flex;
+}
+
+.contentContainerRequests {
   margin-top: 25px;
   margin-bottom: 15px;
   position: relative;
-  width: 87%;
+  width: 88%;
   left: 6%;
   /* flex: 0.2; */
 }

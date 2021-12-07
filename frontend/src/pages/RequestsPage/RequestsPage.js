@@ -48,7 +48,7 @@ const RequestsPage = () => {
         <span className="Requestnum">{requestsList.length} Active Requests</span>
       </div>
 
-      <div className="contentContainer">
+      <div className="contentContainerRequests">
         <RequestListing requests={ requestsList }/>
 
       </div>
