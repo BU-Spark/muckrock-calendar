@@ -20,9 +20,12 @@ const ProjectsPage = () => {
   /**
    *  Get list of projects from '/project' and set projectsList to it
    */
+  //Currently using a random user with all 3 types of columns
+  const username = "erinmiller";
+  const userid =75863;
   const handleGetProjects = async() => {
     try{
-        const projects = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/project/', {
+        const projects = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/project/?contributors=' + userid, {
             headers: get_headers,
             withCredentials: true
         });

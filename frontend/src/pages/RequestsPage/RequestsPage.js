@@ -16,9 +16,11 @@ const RequestsPage = () => {
   /**
    *  Get list of requests from '/request' and set requestsList to it
    */
+  //Currently using a random user with all 3 types of columns
+  const username = "erinmiller";
   const handleGetRequests = async() => {
     try{
-        const requests = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/foia/', {
+        const requests = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/foia/?user=' + username, {
             headers: get_headers,
             withCredentials: true
         });
