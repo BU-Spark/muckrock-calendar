@@ -66,6 +66,8 @@ const DashboardListing = ({ requests }) => {
                 key = {curr_request.id}
                 title = {curr_request.title}
                 summary = {getAgencyName(curr_request.agency)}
+                datetime = {curr_request.datetime_submitted}
+                due = {curr_request.date_due}
                 />
             ))}
         </div>
