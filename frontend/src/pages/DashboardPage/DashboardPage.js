@@ -11,7 +11,7 @@ const DashBoard = (props) => {
   const [requestsList, setRequestsList] = useState([]);
   //const [username, setUserName] = props;
   //Currently using a random user with all 3 types of columns
-  const username = "ariccio";
+  const username = "erinmiller";
   const handleGetRequests = async() => {
     try{
         const requests = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/foia/?user=' + username, {
