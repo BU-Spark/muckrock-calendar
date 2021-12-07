@@ -1,5 +1,7 @@
 import './SideDrawer.css';
 import {Link} from 'react-router-dom';
+import logo from  '../../images/logo-192x192.png';
+
 
 /** Component for the navbar on the side of the site (replaces NavBar component) **/
 const SideDrawer = ({show, click}) => {
@@ -13,12 +15,15 @@ const SideDrawer = ({show, click}) => {
     return <div className={sideDrawerClass.join(" ")}>
         <ul className="sidedrawer__links" onClick={click}>
             <div className="sidedrawer__menu">
-                <div className="sidedrawer__logoholder"><div className="sidedrawer__muckrocklogo"><h2>M</h2></div></div>
+                <div className="sidedrawer__logoholder">
+                    <img src={logo} alt="logo" className="sidedrawer__muckrocklogo"/>
+                </div>
+
+                <h2>MuckRock</h2>
                 <div className="sidedrawer__link active_menu_link">
                     <i className="fa fa-home"></i>
                     <Link to="/Dashboard">Dashboard</Link>
                 </div>
-                <h2>MuckRock</h2>
                 <div className="sidedrawer__link">
                     <i className="fa fa-user-secret" aria-hidden="true"></i>
                     <Link to="/Projects">Projects</Link>
@@ -36,7 +41,7 @@ const SideDrawer = ({show, click}) => {
                 </div>
                 <div className="sidedrawer__link">
                     <i className="fa fa-bell"></i>
-                    <Link to="/monthview">monthview</Link>
+                    <Link to="/monthview">Month View</Link>
                     {/* <a href="/monthview">monthview</a> */}
                 </div>
                 <div className="sidedrawer__link">
