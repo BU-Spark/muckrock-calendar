@@ -59,15 +59,19 @@ const DashboardListing = ({ requests }) => {
     // const agencies = getAgencyList(requests);
     // console.log(agencies)
 
+
     return (
         <div>
             {requests.map(curr_request => (
+
                 <ListingCard
-                key = {curr_request.id}
-                title = {curr_request.title}
-                summary = {getAgencyName(curr_request.agency)}
-                datetime = {curr_request.datetime_submitted}
-                due = {curr_request.date_due}
+                    key = {curr_request.id}
+                    title = {curr_request.title}
+                    agency = {getAgencyName(curr_request.agency)}
+                    status = {curr_request.status}
+                    submitDate = {new Date(curr_request.datetime_submitted).toLocaleDateString("en-US")}
+                    due = {new Date(curr_request.date_due).toLocaleDateString("en-US")}
+                    tagList = {curr_request.tags}
                 />
             ))}
         </div>

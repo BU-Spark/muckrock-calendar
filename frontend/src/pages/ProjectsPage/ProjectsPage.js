@@ -55,10 +55,10 @@ const ProjectsPage = () => {
 
       <div className="container">
         <span className="Projectnum">{projectsList.length} Active Projects</span>
-        <button className="addProject"><img src={proj} alt="add_project_button"></img></button>
+        {/* <button className="addProject"><img src={proj} alt="add_project_button"></img></button>
         <span className="addProjecttxt">Add Project</span>
         <button className="addFilter"><img src={filter} alt="add_filter_button"></img></button>
-        <span className="addFiltertxt">Add Filter</span>
+        <span className="addFiltertxt">Add Filter</span> */}
       </div>
 
       <div className="contentContainerProjects">

@@ -13,6 +13,9 @@ html {
   width: 100%;
   position: absolute;
   background: #eff5ff;
+  padding: 3%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
 .section_title {

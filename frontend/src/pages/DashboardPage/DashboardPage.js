@@ -73,19 +73,17 @@ function getCompleted(props) {
   const completed = getCompleted(requestsList);
   return (
     <div className = "dashboard_container">
-      <div className = "column_container">
-        <div className = "dashboard_column">
-          <div className="section_title">In Progress</div>
-          <DashboardListing requests={ progress }/>
-        </div>
-        <div className = "dashboard_column" >
-          <div className="section_title">Follow Up</div>
-          <DashboardListing requests={ followUp }/>
-        </div>
-        <div className = "dashboard_column" >
-          <div className="section_title">Completed</div>
-          <DashboardListing requests={ completed }/>
-        </div>
+      <div className = "dashboard_column" >
+        <div className="section_title">Follow Up</div>
+        <DashboardListing requests={ followUp }/>
+      </div>
+      <div className = "dashboard_column">
+        <div className="section_title">In Progress</div>
+        <DashboardListing requests={ progress }/>
+      </div>
+      <div className = "dashboard_column" >
+        <div className="section_title">Completed</div>
+        <DashboardListing requests={ completed }/>
       </div>
     </div>
   );

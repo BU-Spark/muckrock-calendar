@@ -4,8 +4,14 @@ import Redsquare from  '../../images/Redsquare.png';
 import Yellowsquare from '../../images/Yellowsquare.png'
 import Greensquare from '../../images/Greensquare.png';
 
-/** Component that displays all requests for an individual user **/
-
+/**
+ * Colors for the status tag: 
+ * GREEN ==> All statuses signifying records were returned, 'partial', 'done'
+ * YELLOW ==> In Progress, 'ack', 'submitted', 'processed', 'appealing', 'lawsuit' 
+ * ORANGE ==> All statuses that require a fix, 'payment', 'fix'
+ * RED ==> 'abandoned', 'rejected', 'no_docs' 
+ *  
+ */
 const getColor = (props) =>{
     const status = props;
     if(status === "partial" || status === "done" || status === "abandoned" || status === "rejected" || status === "no_docs"){
@@ -18,6 +24,31 @@ const getColor = (props) =>{
         return Redsquare;
     }
 }
+
+
+/**
+ * --- STATUSES ---
+ * 
+ * In Progress:
+ *  'ack' => Request was sent & is Awaiting Acknowledgement
+ *  'submitted' => Processing (MuckRock doing stuff on their end)
+ *  'processed' => Processed & Awaiting Response
+ *  'appealing' => FOIA request Awaiting Appeal
+ *  'lawsuit' => In Litigation
+ *  
+ * Follow Up:
+ *  'payment' => Payment Required
+ *  'fix' => Fix Required
+ *  
+ * Complete:
+ *  'partial' => Partially Completed (Some responsive records released with more coming)
+ *  'done' => Complete (Responsive records released)
+ *  'abandoned' => Withdrawn 
+ *  'rejected' => Rejected (Agency claims the records requested are exempt & requests unprocessable)
+ *  'no_docs' => No Responsive Documents (Agency claimed to find no records)
+ */
+
+/** Component that displays all requests for an individual user **/
 const RequestListing = ({ requests }) => {
  
     return (
