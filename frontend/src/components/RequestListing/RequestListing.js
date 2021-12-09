@@ -1,8 +1,10 @@
 import { red, yellow } from '@material-ui/core/colors';
-import RequestCard from '../RequestCard/RequestCard';
+import axios from 'axios';
+import { get_headers } from '../../service/foia';
 import Redsquare from  '../../images/Redsquare.png';
 import Yellowsquare from '../../images/Yellowsquare.png'
 import Greensquare from '../../images/Greensquare.png';
+import ListingCard from '../ListingCard/ListingCard';
 
 /**
  * Colors for the status tag: 
@@ -22,6 +24,24 @@ const getColor = (props) =>{
     }
     else {
         return Redsquare;
+    }
+}
+
+const getAgencyName = async (agency_id) => {
+    console.log('test')
+    const id = agency_id;
+
+    try{
+        const resp = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + 'agency/' + id, {
+            headers: get_headers,
+            withCredentials: true
+        });
+        const agency = resp.data
+        
+        console.log("AGENCY NAME: " + agency.name)
+        return agency.name
+    } catch (err) {
+        console.error(err)
     }
 }
 
@@ -54,13 +74,15 @@ const RequestListing = ({ requests }) => {
     return (
         <div>
             {requests.map(curr_request => (
-                <RequestCard
-                key = {curr_request.id}
-                img = {getColor(curr_request.status)}
-                title = {curr_request.title}
-                name = "Filed with: undefined"
-                desc1 = {"Filed on: " + curr_request.datetime_submitted}
-                desc2 = {"Due on: " + curr_request.date_due}
+                <ListingCard
+                    key = {curr_request.id}
+                    title = {curr_request.title}
+                    agency = {getAgencyName(curr_request.agency)}
+                    status = {curr_request.status}
+                    submitDate = {new Date(curr_request.datetime_submitted).toLocaleDateString("en-US")}
+                    due = {new Date(curr_request.date_due).toLocaleDateString("en-US")}
+                    tagList = {curr_request.tags}
+                    cardStyle = 'RequestsPage'
                 />
             ))}
         </div>

@@ -85,58 +85,65 @@ const getStatusColor = (status) => {
     }
 }
 
-/** Component that holds a single project/request for the kanban board **/
+/** Component that holds a single FOIA request for the Kanban dashboard **/
 const ListingCard = (props) => {
     // Key == project ID
-    const { title, agency, status, submitDate, due, tagList} = props;
+    const { title, agency, status, submitDate, due, tagList, cardStyle} = props;
     const color = getStatusColor(status)
     const statusName = getStatusName(status)
 
     return (
-        <div className="ListingContainer">                  
-            <div className="ListingTitle">{title}</div>
+        <>
 
-            {/* Change tag color based on status*/}
-            {color === 'green' 
-            ?   <div className="ListingStatusTag" style={{ background:  '#57e0a7' }}>
+            {/* Change CSS slightly based on if cardStyle is for RequestsPage or not */}
+            <div className="ListingContainer" 
+                style={ cardStyle === 'RequestsPage' 
+                ? { background:  '#f8f9fa', width: '330px', display: 'inline-block', verticalAlign: 'top'}            
+                : { background: 'white'} }>                  
+                <div className="ListingTitle">{title}</div>
+
+                {/* Change tag color based on status*/}
+                {color === 'green' 
+                ?   <div className="ListingStatusTag" style={{ background:  '#57e0a7' }}>
+                        {statusName}
+                    </div>
+                :    
+                color === 'blue' 
+                ?   <div className="ListingStatusTag" style={{ background:  '#82c7ff' }}>
+                        {statusName}
+                    </div>
+                : 
+                color === 'yellow' 
+                ?   <div className="ListingStatusTag" style={{ background:  '#ffd967' }}>
+                        {statusName}
+                    </div>
+                : 
+                <div className="ListingStatusTag" style={{ background:  '#ff8181' }}>
                     {statusName}
                 </div>
-            :    
-            color === 'blue' 
-            ?   <div className="ListingStatusTag" style={{ background:  '#82c7ff' }}>
-                    {statusName}
+                }
+
+                <div className="ListingSummaryContainer">
+                    <div className="ListingSummary">{"Filed with: " + agency}</div>
+                    <div className="ListingSummary"> {"Submitted: " + submitDate} </div>
+                    <div className="ListingSummary"> {"Due: " + due}</div>
                 </div>
-            : 
-            color === 'yellow' 
-            ?   <div className="ListingStatusTag" style={{ background:  '#ffd967' }}>
-                    {statusName}
+                <div className="ListingInfoContainer">
+                    {/* <div className="ListingProgress1"/>
+                    <div className="ListingProgress2"/> */}
+
+                    {tagList.map(tag => (
+                        <div className="ListingTag">{tag}</div>
+                    ))}
+
+                    {/* <div className="ListingTag1">Bigger Tag</div>
+                    <div className="ListingTag2">Tag</div>
+                    <div className="ListingTag2">Tag</div> */}
+
                 </div>
-            : 
-            <div className="ListingStatusTag" style={{ background:  '#ff8181' }}>
-                {statusName}
+                
             </div>
-            }
-
-            <div className="ListingSummaryContainer">
-                <div className="ListingSummary">{"Filed with: " + agency}</div>
-                <div className="ListingSummary"> {"Submitted: " + submitDate} </div>
-                <div className="ListingSummary"> {"Due: " + due}</div>
-            </div>
-            <div className="ListingInfoContainer">
-                {/* <div className="ListingProgress1"/>
-                <div className="ListingProgress2"/> */}
-
-                {tagList.map(tag => (
-                    <div className="ListingTag">{tag}</div>
-                ))}
-
-                {/* <div className="ListingTag1">Bigger Tag</div>
-                <div className="ListingTag2">Tag</div>
-                <div className="ListingTag2">Tag</div> */}
-
-            </div>
-            
-        </div>
+        </>
     )
 };
 
