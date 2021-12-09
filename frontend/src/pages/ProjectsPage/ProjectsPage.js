@@ -4,7 +4,7 @@ import './ProjectsPage.css';
 import ProjectListing from '../../components/ProjectListing/ProjectListing'; 
 import { get_headers } from '../../service/foia';
 import ListingHeader from '../../components/ListingHeader/ListingHeader';
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 import axios from 'axios';
 
 
@@ -34,8 +34,8 @@ const ProjectsPage = () => {
         // We take only "results" from the data as it contains the list of projects 
         const {results} = res
 
-        console.log(typeof(results))
-        console.log(projects)
+        // console.log(typeof(results))
+        // console.log(projects)
 
         // console.log("Projects Test")
         // console.log(results)
@@ -46,7 +46,10 @@ const ProjectsPage = () => {
     }
   }
 
-  handleGetProjects()
+  useEffect(() => {
+    handleGetProjects()
+   }, []);
+
 
 
   return (

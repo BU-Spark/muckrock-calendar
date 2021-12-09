@@ -30,21 +30,22 @@ const getColor = (props) =>{
 }
 
 const getAgencyName = async (agency_id) => {
-    console.log('test')
-    const id = agency_id;
+    // const id = agency_id;
 
-    try{
-        const resp = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + 'agency/' + id, {
-            headers: get_headers,
-            withCredentials: true
-        });
-        const agency = resp.data
+    // try{
+    //     const resp = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + 'agency/' + id, {
+    //         headers: get_headers,
+    //         withCredentials: true
+    //     });
+    //     const agency = resp.data
         
-        console.log("AGENCY NAME: " + agency.name)
-        return agency.name
-    } catch (err) {
-        console.error(err)
-    }
+    //     console.log("AGENCY NAME: " + agency.name)
+    //     return agency.name
+    // } catch (err) {
+    //     console.error(err)
+    // }
+
+    return "WIP"
 }
 
 
