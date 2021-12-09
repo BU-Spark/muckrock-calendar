@@ -1,7 +1,8 @@
 import "./Navbar.css";
+import {Link} from 'react-router-dom';
 
 
-const Navbar = ({click}) => {
+const Navbar = ({click, user}) => {
   return (
     <nav className="navbar">
       <div className="hamburger__menu" onClick={click}>
@@ -21,17 +22,21 @@ const Navbar = ({click}) => {
           <i className="fa fa-search"></i>
         </button>
       </form>
+      {(user == "") ? (
       <div className="navbar-right">
-        <a className = "notification-btn" href = "/Notifications">
+        <Link to="/LoginPage">Login</Link>
+      </div>
+      ) : (
+        <div className="navbar-right">
+        <a className = "notification-btn" href = "#">
           <i className="fa fa-bell"></i>
         </a>
         &nbsp; &nbsp;
-        <a href="/LoginPage">
           <i className="fa fa-user-circle-o" aria-hidden="true"></i>
           &nbsp;
-          Active User
-        </a>
+          {user}
       </div>
+      )}
     </nav>
   );
 };

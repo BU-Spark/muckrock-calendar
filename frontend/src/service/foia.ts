@@ -22,6 +22,14 @@ export const get_headers = {
                 "Access-Control-Allow-Credentials": true,
                 "Content-Type": "application/json"};
 
+
+export const get_username = {
+                "mode": "no-cors",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "Access-Control-Allow-Headers, Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers",
+                "Access-Control-Allow-Methods": "GET,HEAD,OPTIONS,POST",
+                "Content-Type": "application/json"};
+
 /**
  * NOTE: Currently only returning first page of foia requests
  *       meaning first 50 foia reqs. 
