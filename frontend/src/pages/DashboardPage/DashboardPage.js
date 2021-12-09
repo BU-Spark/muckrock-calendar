@@ -11,7 +11,7 @@ const DashBoard = (props) => {
   const [requestsList, setRequestsList] = useState([]);
   //const [username, setUserName] = props;
   //Currently using a random user with all 3 types of columns
-  const username = "ariccio";
+  const username = "erinmiller";
   const handleGetRequests = async() => {
     try{
         const requests = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/foia/?user=' + username, {
@@ -73,19 +73,17 @@ function getCompleted(props) {
   const completed = getCompleted(requestsList);
   return (
     <div className = "dashboard_container">
-      <div className = "column_container">
-        <div className = "dashboard_column">
-          <div className="section_title">In Progress</div>
-          <DashboardListing requests={ progress }/>
-        </div>
-        <div className = "dashboard_column" >
-          <div className="section_title">Follow Up</div>
-          <DashboardListing requests={ followUp }/>
-        </div>
-        <div className = "dashboard_column" >
-          <div className="section_title">Completed</div>
-          <DashboardListing requests={ completed }/>
-        </div>
+      <div className = "dashboard_column" >
+        <div className="section_title">Follow Up</div>
+        <DashboardListing requests={ followUp }/>
+      </div>
+      <div className = "dashboard_column">
+        <div className="section_title">In Progress</div>
+        <DashboardListing requests={ progress }/>
+      </div>
+      <div className = "dashboard_column" >
+        <div className="section_title">Completed</div>
+        <DashboardListing requests={ completed }/>
       </div>
     </div>
   );

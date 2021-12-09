@@ -16,9 +16,11 @@ const RequestsPage = () => {
   /**
    *  Get list of requests from '/request' and set requestsList to it
    */
+  //Currently using a random user with all 3 types of columns
+  const username = "erinmiller";
   const handleGetRequests = async() => {
     try{
-        const requests = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/foia/', {
+        const requests = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/foia/?user=' + username, {
             headers: get_headers,
             withCredentials: true
         });
@@ -40,21 +42,20 @@ const RequestsPage = () => {
   }
 
   handleGetRequests()
-    return (
-      <RequestsContext.Provider value={{requestsList, setRequestsList}}>
-      <ListingHeader headerTitle="Request"/>
 
-      <div className="container">
+  return (
+    <RequestsContext.Provider value={{requestsList, setRequestsList}}>
+      <ListingHeader headerTitle="Requests"/>
+
+      <div className="num_requests">
         <span className="Requestnum">{requestsList.length} Active Requests</span>
       </div>
 
-      <div className="contentContainer">
+      <div className="contentContainerRequests">
         <RequestListing requests={ requestsList }/>
-
       </div>
-
-    </RequestsContext.Provider>
-    );
+  </RequestsContext.Provider>
+  );
 }
 
 export default RequestsPage;

@@ -53,16 +53,19 @@ const ListingHeader = ({ headerTitle }) => {
 
     return (
         <div className="lh_container">
-            <div className="container">
+            <div className="simple_container">
                 <span className="lh_title">{ headerTitle }</span>
             </div>
 
-            <div className="container">
+            <div className="simple_container">
                 <Link to="/Projects" className="lh_projectslink">Projects</Link>
                 <Link to="/Requests" className="lh_requestslink">Requests</Link>
-
+                
                 <span className="lh_sortby">Sort by: </span>
-                <button className="lh_sortbtn">Last Updated </button>
+                <select className="lh_sortmenu">
+                    <option value="dueDate">Due Date</option>
+                    <option value="submitDate">Submit Date</option>
+                </select>
 
             </div>
             <hr className="divider"/>

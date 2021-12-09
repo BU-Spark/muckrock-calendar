@@ -1,9 +1,18 @@
-.contentContainer {
+.num_requests {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  /* flex: 0.2; */
+  left: 12%;
+  width: 75%;
+}
+
+.contentContainerRequests {
   margin-top: 25px;
   margin-bottom: 15px;
   position: relative;
-  width: 87%;
-  left: 6%;
+  width: 88%;
+  left: 10.5%;
   /* flex: 0.2; */
 }
 

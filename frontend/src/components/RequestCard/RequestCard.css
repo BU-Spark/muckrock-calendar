@@ -8,6 +8,7 @@
   top: 36%;
   display: block;
   float: left;
+  padding: 24px;
 
   /* off white F8F9FA */
 
@@ -16,12 +17,77 @@
   border-radius: 12px;
 }
 
+.RequestSummary {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  top: 65px;
+
+  /* header 5 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  /* dark gray text 54595D */
+
+  color: #54595d;
+}
+
+.RequestInfoContainer {
+  position: relative;
+  flex-direction: row;
+}
+
+.RequestTag1 {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  text-align: center;
+
+  /* green success 2BDB91 */
+
+  background: #2bdb91;
+  border-radius: 4px;
+
+  /* Inside Auto Layout */
+
+  margin-right: 8px;
+  padding: 3px 5px;
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.RequestTag2 {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  text-align: center;
+
+  /* yellow warning FFCF3E */
+
+  background: #ffcf3e;
+  border-radius: 4px;
+
+  /* Inside Auto Layout */
+
+  margin-right: 8px;
+  padding: 3px 5px;
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+}
+
 .RequestImage {
-  position: absolute;
+  position: relative;
   width: 64px;
   height: 64px;
-  left: 36px;
-  top: 36px;
 
   /* main blue 3E80FF */
 
@@ -34,14 +100,14 @@
   width: 210px;
   height: 29px;
   left: 110px;
-  top: 53px;
+  top: 35px;
 
   /* header 3 */
 
-  font-family: Inter;
+  /* font-family: Inter; */
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
   line-height: 29px;
   /* identical to box height */
 
@@ -51,38 +117,18 @@
 }
 
 .RequestAgencyName {
-  position: absolute;
+  position: relative;
   width: 298px;
   height: 17px;
   left: 29%;
   top: 124px;
 
-  font-family: Inter;
+  /* font-family: Inter; */
   font-style: italic;
   font-weight: normal;
   font-size: 14px;
   line-height: 17px;
   /* identical to box height */
-
-  /* dark gray text 54595D */
-
-  color: #54595d;
-}
-
-.RequestDescription {
-  position: absolute;
-  width: 298px;
-  height: 51px;
-  left: 36px;
-  top: 165px;
-
-  /* header 5 */
-
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 17px;
 
   /* dark gray text 54595D */
 

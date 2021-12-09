@@ -1,18 +1,18 @@
-.container {
-  margin-top: 15px;
-  margin-bottom: 15px;
+.num_projects {
+  margin-top: 10px;
   position: relative;
   /* flex: 0.2; */
-  display: flex;
+  left: 12%;
+  width: 75%;
 }
 
-.contentContainer {
+.contentContainerProjects {
   margin-top: 25px;
   margin-bottom: 15px;
-  position: fixed;
-  width: 87%;
-  left: 6%;
-  /* flex: 0.2; */
+  position: relative;
+  width: 75%;
+  left: 11.5%;
+  padding: 5px;
 }
 
 .ProjectListings {
@@ -23,12 +23,10 @@
   position: relative;
   width: 158px;
   height: 22px;
-  left: 6%;
   top: 35%;
 
   /* header 4 */
 
-  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -44,12 +42,10 @@
   position: relative;
   width: 182px;
   height: 22px;
-  left: 6%;
   top: 35%;
 
   /* header 4 */
 
-  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -65,7 +61,7 @@
   position: relative;
   width: 28px;
   height: 28px;
-  left: 60%;
+  left: 46%;
 
   background: #3e80ff;
   border-radius: 6px;
@@ -76,11 +72,10 @@
   position: relative;
   width: 103px;
   height: 22px;
-  left: 62%;
+  left: 47%;
 
   /* header 4 */
 
-  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -96,7 +91,7 @@
   position: relative;
   width: 28px;
   height: 28px;
-  left: 65%;
+  left: 50%;
 
   background: #3e80ff;
   border-radius: 6px;
@@ -107,11 +102,10 @@
   position: relative;
   width: 86px;
   height: 22px;
-  left: 67%;
+  left: 51%;
 
   /* header 4 */
 
-  font-family: Inter;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
