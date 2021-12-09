@@ -58,7 +58,7 @@ const App = () => {
           <Route exact path="/projects" component={ProjectsPage}/>
           <Route exact path="/calendar" component={CalendarPage}/>
           <Route exact path="/monthview" component={MonthView}/>
-          <Route exact path="/LoginPage"> <LoginPage Login={Login} usernameTest={usernameTest} error={loginError}/> </Route>
+          <Route exact path="/LoginPage"> <LoginPage user={user} Login={Login} usernameTest={usernameTest} error={loginError}/> </Route>
 
         </Switch>
       </HashRouter>
