@@ -63,7 +63,6 @@ const DashboardListing = ({ requests }) => {
     return (
         <div>
             {requests.map(curr_request => (
-
                 <ListingCard
                     key = {curr_request.id}
                     title = {curr_request.title}
