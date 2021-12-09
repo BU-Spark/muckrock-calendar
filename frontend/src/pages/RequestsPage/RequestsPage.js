@@ -19,7 +19,6 @@ const RequestsPage = () => {
   //Currently using a random user with all 3 types of columns
   const username = "erinmiller";
   const handleGetRequests = async() => {
-    return;
     try{
         const requests = await axios.get(process.env.REACT_APP_MUCKROCK_BASE_URL + '/foia/?user=' + username, {
             headers: get_headers,
