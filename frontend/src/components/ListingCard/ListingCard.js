@@ -88,7 +88,7 @@ const getStatusColor = (status) => {
 /** Component that holds a single FOIA request for the Kanban dashboard **/
 const ListingCard = (props) => {
     // Key == project ID
-    const { title, agency, status, submitDate, due, tagList, cardStyle} = props;
+    const { title, agency, status, submitDate, dueDate, doneDate, tagList, cardStyle} = props;
     const color = getStatusColor(status)
     const statusName = getStatusName(status)
 
@@ -126,7 +126,11 @@ const ListingCard = (props) => {
                 <div className="ListingSummaryContainer">
                     <div className="ListingSummary">{"Filed with: " + agency}</div>
                     <div className="ListingSummary"> {"Submitted: " + submitDate} </div>
-                    <div className="ListingSummary"> {"Due: " + due}</div>
+                    {
+                        doneDate 
+                        ?   <div className="ListingSummary"> {"Completed: " + doneDate}</div>
+                        :   <div className="ListingSummary"> {"Due: " + dueDate}</div>
+                    }
                 </div>
                 <div className="ListingInfoContainer">
                     {/* <div className="ListingProgress1"/>

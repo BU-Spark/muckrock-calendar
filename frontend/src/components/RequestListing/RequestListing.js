@@ -80,7 +80,8 @@ const RequestListing = ({ requests }) => {
                     agency = {getAgencyName(curr_request.agency)}
                     status = {curr_request.status}
                     submitDate = {new Date(curr_request.datetime_submitted).toLocaleDateString("en-US")}
-                    due = {new Date(curr_request.date_due).toLocaleDateString("en-US")}
+                    dueDate = {new Date(curr_request.date_due).toLocaleDateString("en-US")}
+                    doneDate = {curr_request.datetime_done ? new Date(curr_request.datetime_done).toLocaleDateString("en-US"): undefined}
                     tagList = {curr_request.tags}
                     cardStyle = 'RequestsPage'
                 />
