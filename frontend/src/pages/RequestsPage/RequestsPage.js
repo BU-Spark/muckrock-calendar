@@ -42,21 +42,20 @@ const RequestsPage = () => {
   }
 
   handleGetRequests()
-    return (
-      <RequestsContext.Provider value={{requestsList, setRequestsList}}>
+
+  return (
+    <RequestsContext.Provider value={{requestsList, setRequestsList}}>
       <ListingHeader headerTitle="Requests"/>
 
-      <div className="container">
+      <div className="num_requests">
         <span className="Requestnum">{requestsList.length} Active Requests</span>
       </div>
 
       <div className="contentContainerRequests">
         <RequestListing requests={ requestsList }/>
-
       </div>
-
-    </RequestsContext.Provider>
-    );
+  </RequestsContext.Provider>
+  );
 }
 
 export default RequestsPage;

@@ -5,6 +5,8 @@ import Redsquare from  '../../images/Redsquare.png';
 import Yellowsquare from '../../images/Yellowsquare.png'
 import Greensquare from '../../images/Greensquare.png';
 import ListingCard from '../ListingCard/ListingCard';
+import { useState } from 'react';
+
 
 /**
  * Colors for the status tag: 
@@ -70,7 +72,7 @@ const getAgencyName = async (agency_id) => {
 
 /** Component that displays all requests for an individual user **/
 const RequestListing = ({ requests }) => {
- 
+
     return (
         <div>
             {requests.map(curr_request => (

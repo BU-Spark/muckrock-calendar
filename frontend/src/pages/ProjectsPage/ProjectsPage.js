@@ -53,7 +53,7 @@ const ProjectsPage = () => {
     <ProjectsContext.Provider value={{projectsList, setProjectsList}}>
       <ListingHeader headerTitle="Projects"/>
 
-      <div className="container">
+      <div className="num_projects">
         <span className="Projectnum">{projectsList.length} Active Projects</span>
         {/* <button className="addProject"><img src={proj} alt="add_project_button"></img></button>
         <span className="addProjecttxt">Add Project</span>

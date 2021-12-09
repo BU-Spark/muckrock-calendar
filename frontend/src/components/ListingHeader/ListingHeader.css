@@ -3,21 +3,17 @@
         lh = "ListingHeader"
 */
 
-.container {
-  margin-top: 15px;
-  margin-bottom: 15px;
+.simple_container {
+  margin-top: 25px;
   position: relative;
   /* flex: 0.2; */
-  display: flex;
 }
 
 .divider {
-  width: 75%;
+  width: 83%;
   height: 0px;
   border: 2px solid #eaecf0;
-  top: 100px;
-  position: absolute;
-  left: 10%;
+  position: relative;
 }
 
 .lh_container {
@@ -30,18 +26,20 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  left: 12%;
+  width: 87%;
 }
 
 .lh_title {
   position: relative;
   width: 1000px;
   height: 44px;
-  top: 15%;
+  top: 24px;
 
   /* font-family: Inter; */
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 44px;
   /* identical to box height */
 
@@ -90,17 +88,17 @@
   color: #c8ccd1;
 }
 
-.lh_sortbtn {
+.lh_sortmenu {
   position: relative;
   width: 138px;
-  height: 22px;
-  left: 55%;
+  height: 24px;
+  left: 53%;
 
   /* font-family: Inter; */
   font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+  /* font-weight: bold; */
+  font-size: 16px;
+  line-height: 18px;
   border: none;
   /* identical to box height */
 
@@ -113,7 +111,7 @@
   position: relative;
   width: 69px;
   height: 22px;
-  left: 53%;
+  left: 52%;
 
   /* header 4 */
 
