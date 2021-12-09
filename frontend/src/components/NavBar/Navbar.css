@@ -13,7 +13,7 @@
 }
 
 .navbar form {
-  width: 45%;
+  width: 47%;
   border: 1px solid rgb(95, 95, 95);
   border-radius: 5px;
   padding: 5px 15px;
@@ -31,18 +31,19 @@
 }
 
 .navbar form button.search-btn {
-    background-color: #227e3e;
-    border-radius: 150px;
-    padding: 7px 12px;
-    color: whitesmoke;
-    transition: ease-in-out 0.3s;
+  background-color: #227e3e;
+  border-radius: 150px;
+  padding: 7px 12px;
+  color: whitesmoke;
+  transition: ease-in-out 0.3s;
 }
 
-.navbar form button.search-btn:hover{
+.navbar form button.search-btn:hover {
   background-color: #37ac5a;
-  padding: 7px 20px;
+  padding: 7px 15px;
   transition: ease-in-out 0.3s;
   color: rgb(224, 221, 221);
+  overflow-y: scroll;
 }
 
 .navbar-right {
@@ -54,7 +55,7 @@
   padding: 6px 20px;
 }
 
-div.navbar-right a{
+div.navbar-right a {
   color: black;
   text-decoration: none;
   font-size: 18px;
@@ -87,7 +88,6 @@ div.navbar-right a.notification-btn {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
   background-color: #227e3e;
-  left: 0;
   padding: 0 20px;
   margin: 5px 5px 0 0;
   cursor: pointer;
@@ -97,7 +97,7 @@ div.navbar-right a.notification-btn {
   cursor: pointer;
   outline: none;
   z-index: 999;
-} 
+}
 
 /*
 Starting css for hamburger styling
@@ -114,12 +114,12 @@ Starting css for hamburger styling
 }
 
 .hamburger__menu:hover > div {
-  background: #3E80FF;
+  background: #3e80ff;
   box-shadow: 0px 5px 15px rgb(62 128 255 / 50%);
 }
 
 .hamburger__menu > div {
   width: 100%;
   height: 10%;
-  background: #C8CCD1;
+  background: #c8ccd1;
 }
