@@ -32,6 +32,7 @@ function Login({ user, Login, usernameTest, error }) {
                     onChange={e => setDetails({...details, userNameOrEmail: e.target.value})} value={details.userNameOrEmail}
                 />
                 <TextField 
+                    type="password"
                     className="login-field"
                     id="password"
                     label="Password"
