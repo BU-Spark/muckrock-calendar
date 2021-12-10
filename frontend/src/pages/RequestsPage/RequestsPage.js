@@ -2,19 +2,20 @@ import './RequestsPage.css';
 import RequestListing from '../../components/RequestListing/RequestListing';
 import ListingHeader from '../../components/ListingHeader/ListingHeader';
 import { get_headers } from '../../service/foia';
-import { useState, createContext, useEffect } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 import axios from 'axios';
 
 export const RequestsContext = createContext();
 let firstRun = true;
 
-const RequestsPage = () => {
+const RequestsPage = ({currentPage, setCurrentPageRequests, setCurrentPageProjects}) => {
 
   // requestsList is the list of requests that will be displayed
   // Calling setrequestsList will cause a re-render to display updated requestsList
   const [requestsList, setRequestsList] = useState([]);
 
   const [sortSelector, setSortSelector] = useState('');
+  const [sortBy, setSortBy] = useState("");
 
     // Will retrieve requestsList from local storage, only run on first render 
     useEffect(async() => {
@@ -66,14 +67,45 @@ const RequestsPage = () => {
     }
   }
 
+    // SORT OPTIONS:
+    //  - 'due_date'
+    //  - 'submit_date'
+
+  const handleSort = () => {
+    const val = sortBy;
+    // console.log(val)
+    // console.log("type of requestsList:" + typeof(requestsList))
+    // console.log(requestsList)
+
+
+    //Sort by due_date (Latest first)
+    if (val == 'due_date') {
+        setRequestsList(requestsList.sort((a, b) => new Date(a.date_due) - new Date(b.date_due)).reverse())
+        // console.log("After Sort:")
+        // console.log(requestsList)
+
+        // console.log(requestsList)
+
+    //Sort by submit_date (Latest first)
+    } else if (val == 'submit_date') {
+        setRequestsList(requestsList.sort((a, b) => new Date(a.datetime_submitted) - new Date(b.datetime_submitted)).reverse())
+        // console.log("After Sort (submitted date):")
+        // console.log(requestsList)
+        // console.log(requestsList)
+        
+    }
+
+}
+
 
   return (
     <RequestsContext.Provider value={{requestsList, setRequestsList}}>
-      <ListingHeader headerTitle="Requests" requestsList={requestsList} setRequestsList={setRequestsList} />
+      <ListingHeader currentPage={currentPage} setCurrentPageRequests={setCurrentPageRequests} setCurrentPageProjects={setCurrentPageProjects} headerTitle="Requests" requestsList={requestsList} setRequestsList={setRequestsList} setSortBy={setSortBy}/>
 
       <div className="num_requests">
         <span className="Requestnum">{requestsList.length} Active Requests</span>
       </div>
+
 
       <div className="contentContainerRequests">
         <RequestListing requests={ requestsList }/>

@@ -11,7 +11,7 @@ import axios from 'axios';
 
 export const ProjectsContext = createContext()
 
-const ProjectsPage = () => {
+const ProjectsPage = ({currentPage, setCurrentPageRequests, setCurrentPageProjects}) => {
 
   // projectsList is the list of projects that will be displayed
   // Calling setProjectsList will cause a re-render to display updated projectsList
@@ -54,7 +54,7 @@ const ProjectsPage = () => {
 
   return (
     <ProjectsContext.Provider value={{projectsList, setProjectsList}}>
-      <ListingHeader headerTitle="Projects"/>
+      <ListingHeader currentPage={currentPage} setCurrentPageRequests={setCurrentPageRequests} setCurrentPageProjects={setCurrentPageProjects} headerTitle="Projects"/>
 
       <div className="num_projects">
         <span className="Projectnum">{projectsList.length} Active Projects</span>
