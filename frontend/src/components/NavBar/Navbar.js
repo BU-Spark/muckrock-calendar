@@ -2,7 +2,7 @@ import "./Navbar.css";
 import {Link} from 'react-router-dom';
 
 
-const Navbar = ({click, user}) => {
+const Navbar = ({click, user,}) => {
   return (
     <nav className="navbar">
       <div className="hamburger__menu" onClick={click}>

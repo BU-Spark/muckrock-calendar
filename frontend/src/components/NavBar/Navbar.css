@@ -43,7 +43,6 @@
   padding: 7px 15px;
   transition: ease-in-out 0.3s;
   color: rgb(224, 221, 221);
-  overflow-y: scroll;
 }
 
 .navbar-right {

@@ -4,7 +4,7 @@ import logo from  '../../images/logo-192x192.png';
 
 
 /** Component for the navbar on the side of the site (replaces NavBar component) **/
-const SideDrawer = ({show, click}) => {
+const SideDrawer = ({show, click, setCurrentPageRequests, setCurrentPageProjects}) => {
     const sideDrawerClass = ["sidedrawer"];
 
     if (show) {
@@ -26,12 +26,12 @@ const SideDrawer = ({show, click}) => {
                 </div>
                 <div className="sidedrawer__link">
                     <i className="fa fa-user-secret" aria-hidden="true"></i>
-                    <Link to="/Projects">Projects</Link>
+                    <Link to="/Projects" onClick={setCurrentPageProjects}>Projects</Link>
                     {/* <a href="/Projects">Projects</a> */}
                 </div>
                 <div className="sidedrawer__link">
                     <i className="fa fa-quote-right"></i>
-                    <Link to="/Requests">Requests</Link>
+                    <Link to="/Requests" onClick={setCurrentPageRequests}>Requests</Link>
                     {/* <a href="/Requests">Requests</a> */}
                 </div>
                 <div className="sidedrawer__link">

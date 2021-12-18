@@ -10,17 +10,17 @@ import slide_3 from '../../images/secure-data.png';
 import slide_4 from '../../images/online-calendar.png';
 
 
-function Login({ Login, usernameTest, error }) {
+function Login({ user, Login, error }) {
     const [details, setDetails] = useState({userNameOrEmail: "", password: ""});
 
     const loginHandler = e => {
         e.preventDefault();
 
         Login(details);
-        usernameTest();
     };
 
     return (
+        
         <container className="loginpage">
             <form className="login" onSubmit={loginHandler}>
                 {/* ERROR! */}
@@ -35,12 +35,13 @@ function Login({ Login, usernameTest, error }) {
                     className="login-field"
                     id="password"
                     label="Password"
+                    type="password"
                     onChange={e => setDetails({...details, password: e.target.value})} value={details.password}
                 />
                 <Button className="submit-button login-field" variant="primary" type="submit">Login</Button>
             </form>
             <div className="information">
-                <Carousel interval="3500" indicators={true} slide={false} controls={false} fade={true} wrap={true}>
+                <Carousel interval={3500} indicators={true} slide={false} controls={false} fade={true} wrap={true}>
                     <Carousel.Item className="carousel-slide">
                         <img
                             className="slide-image"

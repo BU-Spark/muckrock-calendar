@@ -67,6 +67,25 @@
   color: #c8ccd1;
 }
 
+.lh_projectslinkactive {
+  position: relative;
+  width: 73px;
+  height: 22px;
+  top: 25%;
+
+  /* header 4 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #3e80ff;
+  text-shadow: 0px 5px 15px rgb(62 128 255 / 25%);
+}
+
 .lh_requestslink {
   position: relative;
   width: 83px;
@@ -86,6 +105,26 @@
   /* gray C8CCD1 */
 
   color: #c8ccd1;
+}
+
+.lh_requestslinkactive {
+  position: relative;
+  width: 83px;
+  height: 22px;
+  top: 25%;
+  left: 5%;
+
+  /* header 4 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #3e80ff;
+  text-shadow: 0px 5px 15px rgb(62 128 255 / 25%);
 }
 
 .lh_sortmenu {

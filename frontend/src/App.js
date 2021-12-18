@@ -20,26 +20,13 @@ const App = () => {
 
   const [user, setUser] = useState("");
   const [loginError, setLoginError] = useState("");
+  const [currentPage, setCurrentPage] = useState("");
 
   const Login = details => {
     console.log(details);
     setUser(details.userNameOrEmail);
   };
-
-  const usernameTest = () => {
-    console.log(user);
-  }
-
-  /*
-  const usernameTest = async() => {
-      const answer = await axios.post(process.env.REACT_APP_MUCKROCK_BASE_URL + '/user/login/', {
-        username: "ashburnh",
-        password: "",
-        withCredentials: true
-      });
-
-  };
-  */
+  
 
   const Logout = () => {
     console.log("Logout");
@@ -50,17 +37,17 @@ const App = () => {
     <div>
       <HashRouter basename={process.env.PUBLIC_URL} hashType="slash" >
         <Navbar click={() => setSideToggle(true)} user={user} />
-        <SideDrawer show={sideToggle} click={() => setSideToggle(true)} />
+        <SideDrawer show={sideToggle} click={() => setSideToggle(true)} setCurrentPageRequests={() => setCurrentPage("requests")} setCurrentPageProjects={() => setCurrentPage("projects")} />
         <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/dashboard"  component={DashboardPage} />
-          <Route exact path="/requests" component={RequestsPage} />
-          <Route exact path="/projects" component={ProjectsPage}/>
+          <Route exact path="/requests"> <RequestsPage currentPage={currentPage} setCurrentPageRequests={() => setCurrentPage("requests")} setCurrentPageProjects={() => setCurrentPage("projects")}/> </Route>
+          <Route exact path="/projects"> <ProjectsPage currentPage={currentPage} setCurrentPageRequests={() => setCurrentPage("requests")} setCurrentPageProjects={() => setCurrentPage("projects")}/> </Route>
           <Route exact path="/calendar" component={CalendarPage}/>
           <Route exact path="/monthview" component={MonthView}/>
           <Route exact path="/dev" component={DevPage}/>
-          <Route exact path="/LoginPage"> <LoginPage Login={Login} usernameTest={usernameTest} error={loginError}/> </Route>
+          <Route exact path="/LoginPage"> <LoginPage user={user} Login={Login} error={loginError}/> </Route>
 
         </Switch>
       </HashRouter>
