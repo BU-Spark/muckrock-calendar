@@ -67,36 +67,6 @@ const RequestsPage = ({currentPage, setCurrentPageRequests, setCurrentPageProjec
     }
   }
 
-    // SORT OPTIONS:
-    //  - 'due_date'
-    //  - 'submit_date'
-
-  const handleSort = () => {
-    const val = sortBy;
-    // console.log(val)
-    // console.log("type of requestsList:" + typeof(requestsList))
-    // console.log(requestsList)
-
-
-    //Sort by due_date (Latest first)
-    if (val == 'due_date') {
-        setRequestsList(requestsList.sort((a, b) => new Date(a.date_due) - new Date(b.date_due)).reverse())
-        // console.log("After Sort:")
-        // console.log(requestsList)
-
-        // console.log(requestsList)
-
-    //Sort by submit_date (Latest first)
-    } else if (val == 'submit_date') {
-        setRequestsList(requestsList.sort((a, b) => new Date(a.datetime_submitted) - new Date(b.datetime_submitted)).reverse())
-        // console.log("After Sort (submitted date):")
-        // console.log(requestsList)
-        // console.log(requestsList)
-        
-    }
-
-}
-
 
   return (
     <RequestsContext.Provider value={{requestsList, setRequestsList}}>
