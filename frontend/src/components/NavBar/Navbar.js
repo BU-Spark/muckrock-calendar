@@ -29,7 +29,9 @@ const Navbar = ({click, user,}) => {
       ) : (
         <div className="navbar-right">
         <a className = "notification-btn" href = "#">
-          <i className="fa fa-bell"></i>
+          <Link to="/dev" style={{color: 'white'}}>
+            <i className="fa fa-bell"></i>
+          </Link>
         </a>
         &nbsp; &nbsp;
           <i className="fa fa-user-circle-o" aria-hidden="true"></i>

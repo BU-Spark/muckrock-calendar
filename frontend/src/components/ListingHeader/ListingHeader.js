@@ -7,35 +7,36 @@ import { handleSortHelper, RequestsContext } from '../../pages/RequestsPage/Requ
 /**  Header for Projects page and Requests page which will
  *   display the header title and 
 */
-const ListingHeader = ({ currentPage, setCurrentPageRequests, setCurrentPageProjects, headerTitle, requestsList, setRequestsList, setSortBy }) => {
+const ListingHeader = ({ currentPage, setCurrentPageRequests, setCurrentPageProjects, headerTitle, requestsList, setRequestsList }) => {
 
     // SORT OPTIONS:
     //  - 'due_date'
     //  - 'submit_date'
 
-    const handleSort = (e) => {
+    const handleSort = async (e) => {
         const val = e.target.value
-        // console.log(val)
+        console.log("Sort option selected: " + val)
         // console.log("type of requestsList:" + typeof(requestsList))
-        // console.log(requestsList)
+        console.log("RequestList before sort: ")
+        console.log(requestsList)
+
 
 
         //Sort by due_date (Latest first)
         if (val === 'due_date') {
-            setRequestsList(requestsList.sort((a, b) => new Date(a.date_due) - new Date(b.date_due)).reverse())
+            await setRequestsList(requestsList.sort((a, b) => new Date(a.date_due) - new Date(b.date_due)).reverse())
             // console.log("After Sort:")
             // console.log(requestsList)
 
-            // console.log(requestsList)
 
         //Sort by submit_date (Latest first)
         } else if (val === 'submit_date') {
-            setRequestsList(requestsList.sort((a, b) => new Date(a.datetime_submitted) - new Date(b.datetime_submitted)).reverse())
+            await setRequestsList(requestsList.sort((a, b) => new Date(a.datetime_submitted) - new Date(b.datetime_submitted)).reverse())
             // console.log("After Sort (submitted date):")
             // console.log(requestsList)
-            // console.log(requestsList)
-            
         } 
+        console.log("RequestList after sort: ")
+        console.log(requestsList)
 
         window.localStorage.setItem('requestsList', JSON.stringify(requestsList));
 
@@ -53,11 +54,11 @@ const ListingHeader = ({ currentPage, setCurrentPageRequests, setCurrentPageProj
                     <React.Fragment>
                         <Link to="/Projects" onClick={setCurrentPageProjects} className="lh_projectslink">Projects</Link>
                         <Link to="/Requests" className="lh_requestslinkactive">Requests</Link>
-                        <span className="lh_sortby">Sort by: </span>
+                        {/* <span className="lh_sortby">Sort by: </span>
                         <select className="lh_sortmenu" onChange={(e) => handleSort(e)}>
                             <option value="due_date">Due Date</option>
                             <option value="submit_date">Submit Date</option>
-                        </select>
+                        </select> */}
                     </React.Fragment>
                 ) : (
                     <React.Fragment>
