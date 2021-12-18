@@ -9,7 +9,37 @@ import { handleSortHelper, RequestsContext } from '../../pages/RequestsPage/Requ
 */
 const ListingHeader = ({ currentPage, setCurrentPageRequests, setCurrentPageProjects, headerTitle, requestsList, setRequestsList, setSortBy }) => {
 
+    // SORT OPTIONS:
+    //  - 'due_date'
+    //  - 'submit_date'
 
+    const handleSort = (e) => {
+        const val = e.target.value
+        // console.log(val)
+        // console.log("type of requestsList:" + typeof(requestsList))
+        // console.log(requestsList)
+
+
+        //Sort by due_date (Latest first)
+        if (val === 'due_date') {
+            setRequestsList(requestsList.sort((a, b) => new Date(a.date_due) - new Date(b.date_due)).reverse())
+            // console.log("After Sort:")
+            // console.log(requestsList)
+
+            // console.log(requestsList)
+
+        //Sort by submit_date (Latest first)
+        } else if (val === 'submit_date') {
+            setRequestsList(requestsList.sort((a, b) => new Date(a.datetime_submitted) - new Date(b.datetime_submitted)).reverse())
+            // console.log("After Sort (submitted date):")
+            // console.log(requestsList)
+            // console.log(requestsList)
+            
+        } 
+
+        window.localStorage.setItem('requestsList', JSON.stringify(requestsList));
+
+    }
 
 
     return (
@@ -24,7 +54,7 @@ const ListingHeader = ({ currentPage, setCurrentPageRequests, setCurrentPageProj
                         <Link to="/Projects" onClick={setCurrentPageProjects} className="lh_projectslink">Projects</Link>
                         <Link to="/Requests" className="lh_requestslinkactive">Requests</Link>
                         <span className="lh_sortby">Sort by: </span>
-                        <select className="lh_sortmenu" onChange={(e) => setSortBy(e.target.value)}>
+                        <select className="lh_sortmenu" onChange={(e) => handleSort(e)}>
                             <option value="due_date">Due Date</option>
                             <option value="submit_date">Submit Date</option>
                         </select>
