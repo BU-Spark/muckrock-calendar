@@ -139,9 +139,13 @@ NOTE 2: We use HashRouter instead of BrowserRouter for routing as GH Pages has i
 ## Bugs & Errors
 
 - SideDrawer does not highlight the page you are on, permanently highlights Dashboard
+  - View Issue Request Here: https://github.com/BU-Spark/se-muckrock-calendar/issues/22
 - Limit of 50 foia requests shown when on RequestsPage (similar limits on ProjectsPage & DashboardPage)
   - Likely due to MuckRock's API response (only sending one page of information with one get request)
+  - View Issue Request Here: https://github.com/BU-Spark/se-muckrock-calendar/issues/23
 - Unable to permanently fix CORS error. Currently relying on Chrome security being disengaged.
   - Probably requires MuckRock main site to internally list the calendar extention site's URL as a safe URL to send info to.
+  - View Issue Request Here: https://github.com/BU-Spark/se-muckrock-calendar/issues/21
 - Currently have Projets listing, Requests listing, and dashboard functioning. 
   - Do not have search capabilities, notifications, or calendar functionality. Login feature is just a prototype and will likely need to be updated.
+  - View Issue Request Here: https://github.com/BU-Spark/se-muckrock-calendar/issues/24
