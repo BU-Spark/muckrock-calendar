@@ -24,8 +24,8 @@ So far, we have implemented the Project, Request, and Dashboard pages.
     ├── LICENSE
     └── README.md
 
-
 ## Technical Architecture
+
 <img width="831" alt="TechArc" src="https://user-images.githubusercontent.com/60163579/146504955-c4bf99c8-3e31-49b4-bc29-49395ec92d6e.png">
 
 The yellow box represents the frontend.
@@ -136,4 +136,8 @@ Look at tutorials online how to do this: https://stackoverflow.com/questions/310
 
 NOTE 2: We use HashRouter instead of BrowserRouter for routing as GH Pages has issues with standard BrowserRouter.
 
+## Bugs & Errors
 
+- SideDrawer does not highlight the page you are on, permanently highlights Dashboard
+- Limit of 50 foia requests shown when on RequestsPage (similar limits on ProjectsPage & DashboardPage)
+  - Likely due to MuckRock's API response
