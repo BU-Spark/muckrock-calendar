@@ -15,6 +15,8 @@ const RequestsPage = () => {
   const [requestsList, setRequestsList] = useState([]);
 
   const [sortSelector, setSortSelector] = useState('');
+  const [sortBy, setSortBy] = useState("");
+
 
     // Will retrieve requestsList from local storage, only run on first render 
     useEffect(async() => {
