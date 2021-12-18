@@ -5,6 +5,7 @@ import Navbar from "./components/NavBar/Navbar";
 import { HashRouter, Switch, Route } from "react-router-dom";
 import { get_username } from './service/foia';
 import LoginPage from "./pages/LoginPage/LoginPage";
+import DevPage from "./pages/DevPage/DevPage";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
 import RequestsPage from "./pages/RequestsPage/RequestsPage";
@@ -58,6 +59,7 @@ const App = () => {
           <Route exact path="/projects" component={ProjectsPage}/>
           <Route exact path="/calendar" component={CalendarPage}/>
           <Route exact path="/monthview" component={MonthView}/>
+          <Route exact path="/dev" component={DevPage}/>
           <Route exact path="/LoginPage"> <LoginPage Login={Login} usernameTest={usernameTest} error={loginError}/> </Route>
 
         </Switch>

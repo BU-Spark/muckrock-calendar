@@ -36,17 +36,17 @@ const SideDrawer = ({show, click}) => {
                 </div>
                 <div className="sidedrawer__link">
                     <i className="fa fa-calendar"></i>
-                    <Link to="/Calendar">Calendar</Link>
+                    <Link to="/dev">Calendar</Link>
                     {/* <a href="/Calendar">Calendar</a> */}
                 </div>
                 <div className="sidedrawer__link">
                     <i className="fa fa-bell"></i>
-                    <Link to="/monthview">Month View</Link>
+                    <Link to="/dev">Month View</Link>
                     {/* <a href="/monthview">monthview</a> */}
                 </div>
                 <div className="sidedrawer__link">
                     <i className="fa fa-cog"></i>
-                    <Link to="/Settings">Settings</Link>
+                    <Link to="/dev">Settings</Link>
                     {/* <a href="/Settings">Settings</a> */}
                 </div>
             </div>
