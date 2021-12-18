@@ -1,6 +1,38 @@
 # muckrock-calendar
 
-A calendar/timeline view of MuckRock requests. A sister service in collaboration with MuckRock
+A calendar/timeline view of MuckRock requests. A sister service in collaboration with MuckRock.
+The goal of our project is to build an extension of the existing website, displaying a user’s requests and projects in a kanban board, calendar, list, and other aggregated forms.
+This extension would also provide users with notifications and reminders about specific requests that might need attention or have a deadline that is approaching.
+
+So far, we have implemented the Project, Request, and Dashboard pages.
+
+## Repo organization
+
+    .
+    ├── github
+    ├── frontend                # Contains all code for the frontend
+        ├── public
+        ├── src                 # Contains source files
+            ├── components      # All React components
+            ├── images
+            ├── pages           # All pages of the webapp
+            ├── service         # API calls
+            ├── App             # Main file containing configuration for site
+            └── testData        # Contains test data for some hardcoded pages
+        └── package             # Contains dependencies
+    ├── COLLABORATORS           # GitHub accounts of users contributing
+    ├── LICENSE
+    └── README.md
+
+
+## Technical Architecture
+<img width="831" alt="TechArc" src="https://user-images.githubusercontent.com/60163579/146504955-c4bf99c8-3e31-49b4-bc29-49395ec92d6e.png">
+
+The yellow box represents the frontend.
+The small colored boxes with text represent React components.
+Starting from the top, we have the main views/pages to our project: Settings, Calendar, Listings, Kanban Dashboard
+Next we have what we called “sub-views” which are basically large containers that make backend calls to populate them dynamically.
+The final white box below shows all the smaller components.
 
 ## To run locally
 
@@ -30,27 +62,9 @@ npm start
 
 This should automatically open the application on your browser at localhost:3000.
 
-## Repo organization
-
-    .
-    ├── github
-    ├── frontend                # Contains all code for the frontend
-        ├── public
-        ├── src                 # Contains source files
-            ├── components      # All React components
-            ├── images
-            ├── pages           # All pages of the webapp
-            ├── service         # API calls
-            ├── App             # Main file containing configuration for site
-            └── testData        # Contains test data for some hardcoded pages
-        └── package             # Contains dependencies
-    ├── COLLABORATORS           # GitHub accounts of users contributing
-    ├── LICENSE
-    └── README.md
-
 ## Authentication header
 
-Please register an account on Muckruck, and get your API KEY. Your token can be obtained on the bottom left-hand side of your [profile page](https://www.muckrock.com/accounts/profile/). When making a request, token should be placed under /frontend/muckrock.ts, the token should be included as an authentication header.
+Please register an account on MuckRock, and get your API KEY. Your token can be obtained on the bottom left-hand side of your [profile page](https://www.muckrock.com/accounts/profile/). When making a request, token should be placed under /frontend/muckrock.ts, the token should be included as an authentication header.
 
 ```
 headers = {'Authorization': 'Token %s' % token}
@@ -121,3 +135,5 @@ We can temporarily bypass this by disabling chrome web security as CORS is enfor
 Look at tutorials online how to do this: https://stackoverflow.com/questions/3102819/disable-same-origin-policy-in-chrome.
 
 NOTE 2: We use HashRouter instead of BrowserRouter for routing as GH Pages has issues with standard BrowserRouter.
+
+
