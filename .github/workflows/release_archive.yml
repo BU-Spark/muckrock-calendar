@@ -13,7 +13,7 @@ jobs:
       - name: Exit if not on main/master
         if: (endsWith(github.ref, 'master') == false) && (endsWith(github.ref, 'main') == false)
         run: |
-          core.setFailed(github.ref)
+          echo "Ref: $GITHUB_REF"
 
       - name: Release
         uses: softprops/action-gh-release@v1
