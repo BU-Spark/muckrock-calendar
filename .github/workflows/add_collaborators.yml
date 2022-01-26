@@ -40,6 +40,8 @@ jobs:
                             username: line,
                             permission: 'push'
                             });
+                } else {
+                  core.setFailed(err.toString())
                 }
               }
             });
