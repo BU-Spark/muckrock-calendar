@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Exit if not on main/master
-        if: endsWith(github.ref, 'master') == false && endsWith(github.ref, 'main') == false
+        if: (endsWith(github.ref, 'master') == false) && (endsWith(github.ref, 'main') == false)
         run: core.setFailed("Not on main or master, skipping release build")
       - name: Release
         uses: softprops/action-gh-release@v1
