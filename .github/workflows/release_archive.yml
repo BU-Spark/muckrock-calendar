@@ -13,8 +13,7 @@ jobs:
       - name: Exit if not on main/master
         if: (endsWith(github.ref, 'master') == false) && (endsWith(github.ref, 'main') == false)
         run: |
-          echo github.ref
-          core.setFailed("Not on main or master, skipping release build")
+          core.setFailed(github.ref)
 
       - name: Release
         uses: softprops/action-gh-release@v1
