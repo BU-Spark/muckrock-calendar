@@ -13,7 +13,7 @@ jobs:
       - name: Exit if not on main/master
         if: (endsWith(github.ref, 'master') == false) && (endsWith(github.ref, 'main') == false)
         run: |
-          console.log(github.ref)
+          echo github.ref
           core.setFailed("Not on main or master, skipping release build")
 
       - name: Release
