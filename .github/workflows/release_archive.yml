@@ -11,10 +11,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Exit if not on main/master
-        if: (endsWith(github.ref, 'master') == false) && (endsWith(github.ref, 'main') == false)
         run: |
-          echo "Ref: $GITHUB_REF"
-
+          if git branch main --contains $GITHUB_REF | grep -q 'main'; then echo "Tag sourced from valid branch"; else echo "Tag sourced from invalid brach" && exit -1; fi
+          if git branch master --contains $GITHUB_REF | grep -q 'master'; then echo "Tag sourced from valid branch"; else echo "Tag sourced from invalid brach" && exit -1; fi
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
