@@ -12,8 +12,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Exit if not on main/master
         run: |
-          if git branch main --contains $GITHUB_REF | grep -q 'main'; then echo "Tag sourced from valid branch"; else echo "Tag sourced from invalid brach" && exit -1; fi
-          if git branch master --contains $GITHUB_REF | grep -q 'master'; then echo "Tag sourced from valid branch"; else echo "Tag sourced from invalid brach" && exit -1; fi
+          chmod +x "./.github/verify-source.sh"
+          "./.github/verify-source.sh"
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
