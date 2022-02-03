@@ -7,8 +7,11 @@ function verify_source {
 }
 
 if verify_source "main" || verify_source "master"; then
+    echo "Good Source"
     exit 0
 else
     # Didn't come from master or main
+    echo "Bad Source"
     exit -1
+
 fi
