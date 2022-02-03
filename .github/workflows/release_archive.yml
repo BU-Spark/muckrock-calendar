@@ -12,7 +12,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Exit if not on main/master
         run: |
-          # "./.github/workflows/verify-source.sh"
           function verify_source {
           if git branch $1 --contains $GITHUB_REF | grep -q $1; then
               return 0
