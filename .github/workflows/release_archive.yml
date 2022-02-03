@@ -13,7 +13,7 @@ jobs:
       - name: Exit if not on main/master
         run: |
           chmod +x "./.github/workflows/verify-source.sh"
-          ""./.github/workflows/verify-source.sh""
+          "./.github/workflows/verify-source.sh"
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
