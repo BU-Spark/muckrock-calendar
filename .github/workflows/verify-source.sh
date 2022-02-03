@@ -12,8 +12,8 @@ if verify_source "main" || verify_source "master"; then
 else
     # Didn't come from master or main
     echo "Bad Source"
-    echo ${git branch main --contains $GITHUB_REF | grep -q main}
-    echo ${git branch master --contains $GITHUB_REF | grep -q master}
+    echo git branch main --contains $GITHUB_REF
+    echo git branch master --contains $GITHUB_REF
     exit -1
 
 fi
