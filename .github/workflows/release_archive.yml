@@ -1,4 +1,4 @@
-name: Archive Repository into Release
+name: Archive Repository into Release v1.0
 on: 
   push:
     tags:
@@ -10,10 +10,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Exit if not on main/master
-        run: |
-          ./.github/workflows/verify-source.sh
-        shell: bash
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
