@@ -1,48 +1,57 @@
 import { useState } from "react";
 import "./App.css";
-import Main from "./pages/main/Main";
-import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/sidebar/Sidebar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "./pages/Login/Login";
-import Home from "./pages/Home";
-import Projects from "./pages/Projects/Projects";
-import Project from "./components/project/Project";
-import Request from "./components/request/Request";
-import Requests from "./pages/Requests/Requests";
-import DayView from "./components/dayview/DayView";
-import MonthView from './components/monthview/MonthView';
-import Calendar from './pages/calendar/Calendar'
+import MainPage from "./pages/MainPage/MainPage";
+import Navbar from "./components/NavBar/Navbar";
+import { HashRouter, Switch, Route } from "react-router-dom";
+import { get_username } from './service/foia';
+import LoginPage from "./pages/LoginPage/LoginPage";
+import DevPage from "./pages/DevPage/DevPage";
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import ProjectsPage from "./pages/ProjectsPage/ProjectsPage";
+import RequestsPage from "./pages/RequestsPage/RequestsPage";
+import MonthView from './components/MonthView/MonthView';
+import CalendarPage from './pages/CalendarPage/CalendarPage';
+import Backdrop from "./components/Backdrop/Backdrop";
+import SideDrawer from "./components/SideDrawer/SideDrawer";
+import axios from 'axios';
 
 const App = () => {
-  const [sidebarOpen, setsidebarOpen] = useState(false);
-  const openSidebar = () => {
-    setsidebarOpen(true);
+  const [sideToggle, setSideToggle] = useState(false);
+
+  const [user, setUser] = useState("");
+  const [loginError, setLoginError] = useState("");
+  const [currentPage, setCurrentPage] = useState("");
+
+  const Login = details => {
+    console.log(details);
+    setUser(details.userNameOrEmail);
   };
-  const closeSidebar = () => {
-    setsidebarOpen(false);
-  };
+  
+
+  const Logout = () => {
+    console.log("Logout");
+  }
+
   return (
 
-    <div className="container">
-      <Router>
-        <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+    <div>
+      <HashRouter basename={process.env.PUBLIC_URL} hashType="slash" >
+        <Navbar click={() => setSideToggle(true)} user={user} />
+        <SideDrawer show={sideToggle} click={() => setSideToggle(true)} setCurrentPageRequests={() => setCurrentPage("requests")} setCurrentPageProjects={() => setCurrentPage("projects")} />
+        <Backdrop show={sideToggle} click={() => setSideToggle(false)} />
         <Switch>
-          <Route path="/" exact component={Main}></Route>
-          <Route path="/home" exact component={Home} />
-          <Route path="/requests" exact component={Requests}/>
-          <Route path="/projects"><Projects/></Route>
-          <Route path="/calendar"><Calendar/></Route>
-          <Route path="/monthview"><MonthView/></Route>
+          <Route exact path="/" component={MainPage} />
+          <Route exact path="/dashboard"  component={DashboardPage} />
+          <Route exact path="/requests"> <RequestsPage currentPage={currentPage} setCurrentPageRequests={() => setCurrentPage("requests")} setCurrentPageProjects={() => setCurrentPage("projects")}/> </Route>
+          <Route exact path="/projects"> <ProjectsPage currentPage={currentPage} setCurrentPageRequests={() => setCurrentPage("requests")} setCurrentPageProjects={() => setCurrentPage("projects")}/> </Route>
+          <Route exact path="/calendar" component={CalendarPage}/>
+          <Route exact path="/monthview" component={MonthView}/>
+          <Route exact path="/dev" component={DevPage}/>
+          <Route exact path="/LoginPage"> <LoginPage user={user} Login={Login} error={loginError}/> </Route>
 
         </Switch>
-        <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
-      </Router>
+      </HashRouter>
     </div>
-    // <Projects />
-    // <Login />
-    // <DayView/>
-    // <Calendar/>
   );
 };
 

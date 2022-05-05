@@ -1,0 +1,200 @@
+.ProjectContainer {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  /* off white F8F9FA */
+
+  background: #f8f9fa;
+  box-shadow: 0px 5px 15px rgba(200, 204, 209, 0.25);
+  border-radius: 12px;
+}
+
+.ProjectContentContainer {
+  position: relative;
+  display: inline-block;
+  width: 92%;
+  padding-left: 30px;
+}
+
+.ProjectImage {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  float: left;
+
+  /* main blue 3E80FF */
+
+  /* background: #3e80ff; */
+  border-radius: 12px;
+}
+
+.ProjectTitle {
+  position: relative;
+  width: 45%;
+  display: inline-block;
+  /* header 3 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  /* identical to box height */
+
+  /* black 202122 */
+
+  color: #202122;
+}
+
+.ProjectNum {
+  position: absolute;
+  display: inline-block;
+  right: 3%;
+  /* header 3 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  /* identical to box height */
+
+  /* dark gray text 54595D */
+
+  color: #54595d;
+}
+
+.ProjectAgencyName {
+  position: relative;
+  width: 10%;
+  height: 17px;
+  left: 4%;
+  top: 124px;
+
+  /* font-family: Inter; */
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  /* dark gray text 54595D */
+
+  color: #54595d;
+}
+
+.ProjectSummary {
+  position: relative;
+  width: 90%;
+  /* header 5 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  /* identical to box height */
+
+  /* dark gray text 54595D */
+
+  color: #54595d;
+}
+.ProjectInfoContainer {
+  float: left;
+}
+.ProjectProgress1 {
+  position: absolute;
+  width: 350px;
+  height: 4px;
+  left: 4%;
+  top: 92%;
+
+  /* white fff */
+
+  background: #ffff;
+  border-radius: 10px;
+  z-index: 50;
+}
+
+.ProjectProgress2 {
+  position: absolute;
+  width: 700px;
+  height: 8px;
+  left: 3%;
+  top: 91%;
+
+  /* main blue 3E80FF */
+
+  background: #3e80ff;
+  border-radius: 10px;
+}
+
+.ProjectInfoTag2 {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  text-align: center;
+
+  /* green success 2BDB91 */
+
+  /* background: #c9c9c9; */
+  border-radius: 4px;
+  outline-style: solid;
+  outline-width: thin;
+
+  /* Inside Auto Layout */
+
+  margin-right: 8px;
+  padding: 3px 5px;
+  /* font-family: Inter; */
+  font-style: normal;
+  /* font-weight: bold; */
+  font-size: 10px;
+}
+
+.ProjectInfoTag {
+  display: inline-block;
+  position: relative;
+  height: 24px;
+  text-align: center;
+  outline-style: solid;
+  outline-width: thin;
+
+  /* green success 2BDB91 */
+
+  background: #5372ff;
+  border-radius: 4px;
+
+  /* Inside Auto Layout */
+
+  margin-right: 8px;
+  padding: 3px 8px;
+  /* font-family: Inter; */
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.TagName {
+  position: relative;
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  margin: 0px 5px;
+
+  /* black 202122 */
+
+  color: #202122;
+
+  /* Inside Auto Layout */
+}

@@ -1,6 +1,11 @@
 {
-  "dependencies": {
-    "react-pro-sidebar": "^0.6.0",
-    "react-sidebar": "^3.0.2"
+  "private": true,
+  "scripts": {
+    "predeploy": "cd frontend && npm run build",
+    "deploy": "cd frontend && npm run deploy",
+    "start": "cd frontend && npm run start",
+    "build": "cd frontend && npm run build",
+    "test": "cd frontend && npm run test",
+    "eject": "cd frontend && npm run eject"
   }
 }

@@ -1,0 +1,71 @@
+.num_requests {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  /* flex: 0.2; */
+  left: 12%;
+  width: 75%;
+}
+
+.contentContainerRequests {
+  margin-top: 25px;
+  margin-bottom: 15px;
+  position: relative;
+  width: 88%;
+  left: 10.5%;
+  /* flex: 0.2; */
+}
+
+.requestsPage_sortMenu {
+  position: relative;
+  width: 138px;
+  height: 24px;
+  left: 62%;
+
+  /* font-family: Inter; */
+  font-style: normal;
+  /* font-weight: bold; */
+  font-size: 16px;
+  line-height: 18px;
+  border: none;
+  /* identical to box height */
+
+  /* dark gray text 54595D */
+
+  /* color: #54595D; */
+}
+
+.requestsPage_sortBy {
+  position: relative;
+  width: 69px;
+  height: 22px;
+  left: 61%;
+
+  /* header 4 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  /* gray C8CCD1 */
+
+  color: #c8ccd1;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */

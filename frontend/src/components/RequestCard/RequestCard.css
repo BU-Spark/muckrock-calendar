@@ -1,0 +1,136 @@
+.RequestContainer {
+  position: relative;
+  margin: 12px;
+  height: 200px;
+  width: 27%;
+  left: 5%;
+  right: 0%;
+  top: 36%;
+  display: block;
+  float: left;
+  padding: 24px;
+
+  /* off white F8F9FA */
+
+  background: #f8f9fa;
+  box-shadow: 0px 5px 15px rgba(200, 204, 209, 0.25);
+  border-radius: 12px;
+}
+
+.RequestSummary {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  top: 65px;
+
+  /* header 5 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height */
+
+  /* dark gray text 54595D */
+
+  color: #54595d;
+}
+
+.RequestInfoContainer {
+  position: relative;
+  flex-direction: row;
+}
+
+.RequestTag1 {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  text-align: center;
+
+  /* green success 2BDB91 */
+
+  background: #2bdb91;
+  border-radius: 4px;
+
+  /* Inside Auto Layout */
+
+  margin-right: 8px;
+  padding: 3px 5px;
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.RequestTag2 {
+  display: inline-block;
+  position: relative;
+  height: 22px;
+  text-align: center;
+
+  /* yellow warning FFCF3E */
+
+  background: #ffcf3e;
+  border-radius: 4px;
+
+  /* Inside Auto Layout */
+
+  margin-right: 8px;
+  padding: 3px 5px;
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.RequestImage {
+  position: relative;
+  width: 64px;
+  height: 64px;
+
+  /* main blue 3E80FF */
+
+  /* background: #3E80FF; */
+  border-radius: 8px;
+}
+
+.RequestTitle {
+  position: relative;
+  width: 210px;
+  height: 29px;
+  left: 110px;
+  top: 35px;
+
+  /* header 3 */
+
+  /* font-family: Inter; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 29px;
+  /* identical to box height */
+
+  /* black 202122 */
+
+  color: #202122;
+}
+
+.RequestAgencyName {
+  position: relative;
+  width: 298px;
+  height: 17px;
+  left: 29%;
+  top: 124px;
+
+  /* font-family: Inter; */
+  font-style: italic;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  /* dark gray text 54595D */
+
+  color: #54595d;
+}
